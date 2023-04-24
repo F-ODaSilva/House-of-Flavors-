@@ -1,0 +1,1173 @@
+<!-- CAPSTONE PROJECT II -->
+
+<!--
+    In this Capstone project I will be creating an online store, in which the user will be eable to view the restaurant,
+    its products, its various sections and a cart where every product chosen by the user is sent so it can keep track of
+    his/hers buys.
+-->
+<!--
+    The online store will have the following components:
+    ****** HOMEPAGE ******
+       - Navbar 
+       - Hero Section
+       - Category Section
+       - Features Section
+       - Explore Section
+         //Restaurant 
+         //Bar
+         //Winery
+         //Events
+       - Footer Section
+    
+    ***** MENU PAGE *****
+      - Navbar 
+      - Hero Section
+      - New Arrivals
+      - Top Choices 
+      - In Promotion 
+      - Burguers
+      - Pizzas 
+      - Steaks
+      - Chicken
+      - Sushi
+      - Extras
+      - Drinks
+    
+    ***** PRODUCT PAGE *****
+     - Navbar
+     - Image
+     - Information
+     - Price
+     - Star Rate
+     - Cart Button 
+     - Quantity Select Box 
+     - Testimonials
+
+    ***** ABOUT US PAGE *****
+
+     - Navbar 
+     - Video 
+     - Our Story
+     - What Is Our Value
+         /Our Meat
+         /Our Wine 
+         /Our Beer
+         /Our Clients
+    - What Is Our Purpouse
+    - How We Contribute
+    
+    ***** CART PAGE *****
+
+     - Navbar 
+     - Intro Section
+     - Cart
+ -->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome Kit's Code Link -->
+  <script src="https://kit.fontawesome.com/f7ccd0c567.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts External Link Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto+Slab&family=Cookie:wght@400&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap Stylesheet Link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <!-- Basal Patterns CSS link -->
+  <link href="https://unpkg.com/pattern.css" rel="stylesheet">
+  
+  <!-- AOS (ANIMATION ON SCROLL) Link -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- CSS Stylesheet Link -->
+  <link rel="stylesheet" href="../CSS/stylesheet.css" />
+
+  <!-- This will contain the title of the Website (in this case for being the Homepage it will carry the name of the online-store) -->
+  <title>House of Flavors</title>
+</head>
+
+<body>
+
+  <header>
+    <!-- HERO IMAGE SLIDER SECTION STARTS HERE-->
+    <div id="carouselHeroImages" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselHeroImages" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselHeroImages" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselHeroImages" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item" data-bs-interval="3000">
+          <img src="../Images/heroImage1.jpg" class="d-block w-100 c-img" alt="Restaurant Entrance">
+          <div class="carousel-caption">
+            <h3>Welcome</h3>
+            <h5>to</h5>
+            <h1>House of Flavors</h1>
+          </div>
+        </div>
+        <div class="carousel-item c-item" data-bs-interval="5000">
+          <img src="../Images/heroImage2.jpg" class="d-block w-100 c-img" alt="Black man with dreads making tea">
+          <div class="carousel-caption">
+            <h2>Espiritual Sundays</h2>
+            <span class="underline1"></span>
+            <p>Come join our espiritual sunday's with our spiritual guru Jack Pella & Melissa Cabelo where they teach
+              you about chackras and open them not only that but embrace the word of God as well, have meditation
+              sessions and lessons on how to have a healthy way of living .</p>
+            <button class="btn btn-primary">Book a sit</button>
+          </div>
+        </div>
+        <div class="carousel-item c-item" data-bs-interval="5000">
+          <video autoplay loop muted src="../Videos/bigSteak.mp4" class="d-block w-100 c-img" alt="..."></video>
+          <div class="carousel-caption">
+            <h4>10th Aniversary</h4>
+            <p>We are proud to annouce our 10th aniversary and with it we want to celebrate it with you and have a BBQ
+              buffet from 11am to 10pm, all drinks will have a 25% disscount. Come join us this next Saturday.</p>
+            <button class="btn btn-primary">Book a table</button>b
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeroImages" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselHeroImages" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- HERO IMAGE SLIDER SECTION ENDS HERE -->
+
+    <!-- NAVIGATION BAR STARTS HERE-->
+    <nav class="navbar navbar-expand-lg header-nav  navbar-custom sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-3 fs-3 " href="#">House of Flavors</a>
+        <button class="navbar-toggler me-3 text-white" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" class="justify-content-between" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-between">
+            <li class="nav-item mx-3 whitesmoke" class="nav-menu">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mx-3" class="nav-menu">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item mx-3 dropdown" class="nav-menu">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Our Menu
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mx-3 class=" nav-menu"">
+              <a class="nav-link" id="logInNavTab" href="#">Disabled</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto mx-3">
+            <button class="btn">
+              <a class="nav-link " href="./cartPage"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                  <path
+                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
+                </svg></a>
+            </button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVIGATION BAR SECTION ENDS HERE-->
+  </header>
+  <main>
+    <!-- CATEGORY SECTION STARTS HERE -->
+    <!-- I wasn't eable to make the grid as its shown on the page by only using bootstrap so I created a second container and made its position relative so I could position the columns and styled it on CSS to make it look as its shown -->
+    <!-- I tried resources such as Youtube, Stackoverflow, Bootstrap Doc, and even asked for help on Discord regarding the matter but had no replies -->
+    <div class="cat-heading">
+      <h2>We Serve</h2>
+      <p>In House of Flavors we have a range of delights, check the menu and pick what you are craving for.</p>
+    </div>
+    <section class="categorySection" ->
+      <div class="container"><!-- Bootstrap containers like these already come with margins-->
+        <!--This diagonal pattern line was made with the help of https://bansal.io/pattern-css#usage-->
+        <div class="pattern-diagonal-lines-sm"></div>
+
+        <div class="skewed"></div>
+        <!--  This is  the white horizontal stripe in the background of the category section part of the page -->
+
+        <!--  In this next div I'll be using Bootsrap responsive rows to tell it to create a row with two columns inside these columns there will be anchor tags encapsulating  some image cards with the card title on the top left side overlaying the img itself, when images are clicked the user will be redirected to the specific part of the page which contains the subject -->
+        <div class="row">
+          <div class="col-md-3 g-3 first">
+            <div class="categoryCard">
+              <a href="./menuPage.html#hamburguerHotdogs">
+                <div class="card" style="margin-top:-0.6rem; height:22.6rem;">
+                  <img src="../Images/categorySection1.jpg" class="card-img-top" alt="Hamburguer & Hotdogs">
+                  <div class="card-body card-img-overlay">
+                    <h6 class="card-title">Hamburguers & Hotdogs</h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8 g-3 m-1">
+            <div class="row">
+              <div class="col-md-4 g-1 second">
+                <div class="categoryCard">
+                  <a href="./menuPage.html#seafood">
+                    <div class="card">
+                      <img src="../Images/categorySection14.jpg" class="card-img-top" alt="Seafood">
+                      <div class="card-body card-img-overlay">
+                        <h6 class="card-title">Seafood</h6>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 g-1 third">
+                <div class="categoryCard">
+                  <a href="./menuPage.html#sushi">
+                    <div class="card">
+                      <img src="../Images/categorySection13.jpg" class="card-img-top" alt="Sushi">
+                      <div class="card-body card-img-overlay">
+                        <h6 class="card-title">Sushi</h6>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 g-1 fourth">
+                <div class="categoryCard">
+                  <a href="./menuPage.html#drinks">
+                    <div class="card">
+                      <img src="../Images/categorySection4.jpg" class="card-img-top" alt="Drinks">
+                      <div class="card-body card-img-overlay">
+                        <h6 class="card-title">Drinks</h6>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 g-1 fifth">
+                <div class="categoryCard">
+                  <a href="./menuPage.html#pizza">
+                    <div class="card" style="height: 11.7rem">
+                      <img src="../Images/categorySection2.jpg" class="card-img-top" alt="Pizza">
+                      <div class="card-body card-img-overlay">
+                        <h6 class="card-title">Pizza</h6>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 g-1 sixth">
+                <div class="categoryCard">
+                  <a href="./menuPage.html#steaksWings">
+                    <div class="card" style="height: 11.7rem">
+                      <img src="../Images/categorySection11.jpg" class="card-img-top" alt="Steaks & Wings">
+                      <div class="card-body card-img-overlay">
+                        <h6 class="card-title">Steaks & Wings</h6>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOD CATEGORY SECTION ENDS HERE-->
+
+
+    <!-- FEAUTURES SECTION -->
+    <!-- In this section I will be making a caroussel animation with the top choices as cards containing the images of the products once the user clicks it will open a box in the same page of with its details. Underneath all of this there will be a container with an image and some text and buttom to  add to cart -->
+    <section class="feautureSection">
+      <div class="container-fluid">
+        <div class="feauture-heading">
+          <h1>New Arrivals</h1>
+        </div>
+        <!-- FIRST CARD-->
+        <div class="row">
+          <div class="col-md-4 g-3">
+            <div class="card vh-80" data-tilt data-tilt-perspective="1100" data-tilt-scale="1" data-aos="fade-up" data-aos-duration="800">
+              <img src="../Images/burger5.jpg" class="card-img-top" alt="Burguer">
+              <div class="card-body">
+                <h3 class="card-title">Crispy Chicken Burguer</h3>
+                <h5 class="cardPrice">30R</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                  necessitatibus.</p>
+                <span class="starsRating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <p>80%</p>
+                </span>
+
+                <div class="rateButton">
+                  <span class="likeButton">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                  </span>
+                  <span class="dislikeButton">
+                    <i class="fa-regular fa-thumbs-down"></i>
+                  </span>
+                </div>
+
+                <div class="card-footer">
+                  <span>
+                    <p>Details:</p>
+                    <i class="fa-solid fa-pepper-hot"></i>
+                    <i class="fa-solid fa-drumstick-bite"></i>
+                  </span>
+
+                  <span class="cart-buttons">
+                    <button>
+                      <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                    <button>
+                      <i class="fa-solid fa-cart-arrow-down"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SECOND CARD -->
+          <div class="col-md-4 g-3">
+            <div class="card vh-80" data-tilt data-tilt-perspective="1100" data-tilt-scale="1" data-aos="fade-up" data-aos-duration="800">
+              <img src="../Images/categorySection5.jpg" class="card-img-top" alt="Burguer">
+              <div class="card-body">
+                <h3 class="card-title">Beau Salmon</h3>
+                <h5 class="cardPrice">68R</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                  necessitatibus.</p>
+                <span class="starsRating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <p>69%</p>
+                </span>
+
+                <div class="rateButton">
+                  <span class="likeButton">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                  </span>
+                  <span class="dislikeButton">
+                    <i class="fa-regular fa-thumbs-down"></i>
+                  </span>
+                </div>
+
+                <div class="card-footer">
+                  <span>
+                    <p>Details:</p>
+                    <i class="fa-solid fa-pepper-hot"></i>
+                    <i class="fa-solid fa-drumstick-bite"></i>
+                  </span>
+
+                  <span class="cart-buttons">
+                    <button>
+                      <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                    <button>
+                      <i class="fa-solid fa-cart-arrow-down"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- THIRD CARD -->
+          <div class="col-md-4 g-3">
+            <div class="card vh-80" data-tilt data-tilt-perspective="1100" data-tilt-scale="1" data-aos="fade-up" data-aos-duration="800">
+              <img src="../Images/categorySection12.jpg" class="card-img-top" alt="Burguer">
+              <div class="card-body">
+                <h3 class="card-title">24 Flavors of Osaka</h3>
+                <h5 class="cardPrice">30R</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                  necessitatibus.</p>
+                <span class="starsRating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <p>80%</p>
+                </span>
+
+                <div class="rateButton">
+                  <span class="likeButton">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                  </span>
+                  <span class="dislikeButton">
+                    <i class="fa-regular fa-thumbs-down"></i>
+                  </span>
+                </div>
+
+                <div class="card-footer">
+                  <span>
+                    <p>Details:</p>
+                    <i class="fa-solid fa-pepper-hot"></i>
+                    <i class="fa-solid fa-drumstick-bite"></i>
+                  </span>
+
+                  <span class="cart-buttons">
+                    <button>
+                      <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                    <button>
+                      <i class="fa-solid fa-cart-arrow-down"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!--COOUPON DISCOUNT SECTION-->
+    <section class="couponSection">
+      <div class="container">
+        <div class="left" data-aos="fade-in">
+          <img src="../Images/exploreImage2.jpg" alt="">
+        </div>
+        <div class="right" data-aos="zoom-in" data-aos-duration="1500">
+          <h1>Get 50% off your first purchase</h1>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Order Now!
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">First buy Coupon</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h3>Congratulations</h3>
+                  <p>You can get</p>
+                  <h2>50% OFF</h2>
+                  <p>Here is your code</p>
+                  <h4>YLJF37S05</h4>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Copy Code</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--TOP CHOICES SECTION-->
+    <!-- Nine cards will be displayed in a carousel with a sliding animation using Bootstrap 5, this carousel has buttons and  there will be interactive.
+    Each card will have its own image but all will own the same structure color scheme and lay-out, these cards will have a star rating system and avaliation system represented each with its own appearance  the user can interact with the last element mentioned. It will have a footer and it will encapsulate all the details of the product(chicken, sushi, seafood, cow meat, pork meat, shrimp, alcoholl)  -->
+    <section class="topChoicesSection" id="topChoicesSection">
+      <!-- TOP CHOICES HEADING -->
+      <div class="topChoicesHeading">
+      <h1>Top Choices</h1>
+      </div>
+    <!-- TOP CHOICES CAROUSEL-->
+    <!-- This is the bootstrap carousel slider indicators they are buttons that will help the user navigate through the sliders and view the cards  -->
+    <div id="carouselTopChoices" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselTopChoices" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselTopChoices" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselTopChoices" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+
+      <!-- CAROUSEL CARDS  -->
+      <!-- I tried to do the carousel slider by my own using only bootstrap and I couldn't manage to make as I wanted too, I stayed stuck for a while and searched for resources that could help me on this matter, gladly I found what I was looing for at 00000000000000000 
+      
+      The carousel cards for them function they must be wrapped in a div with the class of card-wrapper, this div will have three cards, the content of the cards itself have a 3d effect and depth in relation to the card, makeing a tilting effect too when user moves around the card. Some buttons have a popup bubble once hoverd to help the user understand better there functionality -->
+
+
+      <div class="carousel-inner">
+        <!-- FIRST SLIDE -->
+        <div class="carousel-item active">
+          <div class="cards-wrapper">
+            <!-- FIRST CARD -->
+            <div class="card vh-80" data-tilt data-tilt-perspective="1100" data-tilt-scale="1" data-aos="zoom-in">
+              <div class="img-wrapper">
+                <img src="../Images/burger5.jpg" class="card-img-top" alt="Burguer">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Crispy Chicken Burguer</h3>
+                <h5 class="cardPrice">35R</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                  necessitatibus.</p>
+                <span class="starsRating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>100%</p>
+                </span>
+
+                <div class="rateButton">
+                  <span class="likeButton">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                      <i class="fa-regular fa-thumbs-up"></i>
+                    </button>
+                  </span>
+                  <span class="dislikeButton">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Disike">
+                      <i class="fa-regular fa-thumbs-down"></i>
+                    </button>
+                  </span>
+                </div>
+
+                <div class="card-footer">
+                  <span>
+                    <p>Details:</p>
+                     <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spicy">
+                       <i class="fa-solid fa-pepper-hot"></i>
+                     </button>
+                     <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Chicken">
+                       <i class="fa-solid fa-drumstick-bite"></i>
+                     </button>
+                  </span>
+
+                  <span class="cart-buttons">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                      <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save To Cart">
+                      <i class="fa-solid fa-cart-arrow-down"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- SECOND CARD -->
+            <div class="card vh-80" data-tilt data-tilt-perspective="1100" data-tilt-scale="1" data-aos="zoom-in">
+              <div class="img-wrapper">
+                <img src="../Images/steak4.jpg" class="card-img-top" alt="Burguer">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Beef On Sticks</h3>
+                <h5 class="cardPrice">78R</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                  necessitatibus.</p>
+                <span class="starsRating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>100%</p>
+                </span>
+
+                <div class="rateButton">
+                  <span class="likeButton">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                      <i class="fa-regular fa-thumbs-up"></i>
+                    </button>
+                  </span>
+                  <span class="dislikeButton">
+                    <button data-bs-toggle="tooltip" data-bs-palcement="top" title="Dislike">
+                      <i class="fa-regular fa-thumbs-down"></i>
+                    </button>
+                  </span>
+                </div>
+
+                <div class="card-footer">
+                  <span>
+                    <p>Details:</p>
+                     <button data-bs-toggle="tooltip" data-bs-palcement="right" title="Spicy">
+                       <i class="fa-solid fa-pepper-hot"></i>
+                     </button>
+                     <button data-bs-toggle="tooltip" data-bs-palcement="right" title="Cow Meat">
+                       <i class="fa-solid fa-drumstick-bite"></i>
+                     </button>
+                  </span>
+
+                  <span class="cart-buttons">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                      <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save to Cart">
+                      <i class="fa-solid fa-cart-arrow-down"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- THIRD CARD -->
+            <div class="card vh-80" data-tilt data-tilt-perspective="1100" data-tilt-scale="1" data-aos="zoom-in">
+              <div class="img-wrapper">
+                <img src="../Images/fish2.jpg" class="card-img-top" alt="Burguer">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Sunshine Fish Fillets</h3>
+                <h5 class="cardPrice">105R</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                  necessitatibus.</p>
+                <span class="starsRating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>100%</p>
+                </span>
+
+                <div class="rateButton">
+                  <span class="likeButton">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                      <i class="fa-regular fa-thumbs-up"></i>
+                    </button>
+                  </span>
+                  <span class="dislikeButton">
+                    <button data-bs-toggle="tooltip" data-bs-palcement="top" title="Dislike">
+                      <i class="fa-regular fa-thumbs-down"></i>
+                    </button>
+                  </span>
+                </div>
+
+                <div class="card-footer">
+                  <span>
+                    <p>Details:</p>
+                     <button data-bs-toggle="tooltip" data-bs-palcement="right" title="Spicy">
+                       <i class="fa-solid fa-pepper-hot"></i>
+                     </button>
+                     <button data-bs-toggle="tooltip" data-bs-palcement="right" title="Cow Meat">
+                       <i class="fa-solid fa-drumstick-bite"></i>
+                     </button>
+                  </span>
+
+                  <span class="cart-buttons">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                      <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save to Cart">
+                      <i class="fa-solid fa-cart-arrow-down"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <!-- SECOND SLIDE -->
+        <div class="carousel-item">
+          <div class="cards-wrapper">
+            <!-- FIRST CARD -->
+            <div class="card vh-80" data-tilt data-tilt-perspective="1100" data-tilt-scale="1" data-aos="zoom-in">
+              <div class="img-wrapper">
+                <img src="../Images/steak5.jpg" class="card-img-top" alt="Burguer">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Large Beef Roasted Potatos</h3>
+                <h5 class="cardPrice">92R</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                  necessitatibus.</p>
+                <span class="starsRating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>100%</p>
+                </span>
+
+                <div class="rateButton">
+                  <span class="likeButton">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                      <i class="fa-regular fa-thumbs-up"></i>
+                    </button>
+                  </span>
+                  <span class="dislikeButton">
+                    <button  data-bs-toggle="tooltip" data-bs-placement="top" title="Dislike">
+                      <i class="fa-regular fa-thumbs-down"></i>
+                    </button>
+                  </span>
+                </div>
+
+                <div class="card-footer">
+                  <span>
+                    <p>Details:</p>
+                     <button data-bs-toggle="tooltip" data-bs-placement="top" title="Hot">
+                       <i class="fa-solid fa-pepper-hot"></i>
+                     </button>
+                     <button data-bs-toggle="tooltip" data-bs-placement="top" title="Cow Meat">
+                       <i class="fa-solid fa-drumstick-bite"></i>
+                     </button>
+                  </span>
+
+                  <span class="cart-buttons">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                      <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save To Cart">
+                      <i class="fa-solid fa-cart-arrow-down"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- SECOND CARD -->
+            <div class="card vh-80" data-tilt data-tilt-perspective="1100" data-tilt-scale="1" data-aos="zoom-in">
+              <div class="img-wrapper">
+                <img src="../Images/sushi1.jpg" class="card-img-top" alt="Burguer">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">36 Flavors Of Kyoto</h3>
+                <h5 class="cardPrice">220R</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                  necessitatibus.</p>
+                <span class="starsRating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>100%</p>
+                </span>
+
+                <div class="rateButton">
+                  <span class="likeButton">
+                    <button  data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                      <i class="fa-regular fa-thumbs-up"></i>
+                    </button>
+                  </span>
+                  <span class="dislikeButton">
+                    <button  data-bs-toggle="tooltip" data-bs-placement="top" title="Dislike">
+                      <i class="fa-regular fa-thumbs-down"></i>
+                    </button>
+                  </span>
+                </div>
+
+                <div class="card-footer">
+                  <span>
+                    <p>Details:</p>
+                     <button data-bs-toggle="tooltip" data-bs-placement="top" title="Hot">
+                       <i class="fa-solid fa-pepper-hot"></i>
+                     </button>
+                     <button data-bs-toggle="tooltip" data-bs-placement="top" title="Sushi">
+                       <i class="fa-solid fa-drumstick-bite"></i>
+                     </button>
+                  </span>
+
+                  <span class="cart-buttons">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                      <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save to Cart">
+                      <i class="fa-solid fa-cart-arrow-down"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- THIRD CARD -->
+            <div class="card vh-80" data-tilt data-tilt-perspective="1100" data-tilt-scale="1" data-aos="zoom-in">
+                  <div class="img-wrapper">
+                    <img src="../Images/pizza2.jpg" class="card-img-top" alt="Burguer">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Mystery Avocado Pizza</h3>
+                    <h5 class="cardPrice">75R</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                      necessitatibus.</p>
+                    <span class="starsRating">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <p>80%</p>
+                    </span>
+
+                    <div class="rateButton">
+                      <span class="likeButton">
+                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                          <i class="fa-regular fa-thumbs-up"></i>
+                        </button>
+                      </span>
+                      <span class="dislikeButton">
+                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Dislike">
+                          <i class="fa-regular fa-thumbs-down"></i>
+                        </button>
+                      </span>
+                    </div>
+    
+                    <div class="card-footer">
+                      <span>
+                        <p>Details:</p>
+                         <button data-bs-toggle="tooltip" data-bs-placement="top" title="Hot">
+                           <i class="fa-solid fa-pepper-hot"></i>
+                         </button>
+                         <button data-bs-toggle="tooltip" data-bs-placement="top" title="Chicken">
+                           <i class="fa-solid fa-drumstick-bite"></i>
+                         </button>
+                      </span>
+                      <span class="cart-buttons">
+                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                          <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="SSave To Cart">
+                          <i class="fa-solid fa-cart-arrow-down"></i>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- THIRD SLIDE -->
+        <div class="carousel-item">
+          <div class="cards-wrapper">
+            <!-- FIRST CARD -->
+            <div class="card vh-80" data-tilt data-tilt-perspective="1100" data-tilt-scale="1" data-aos="zoom-in">
+              <div class="img-wrapper">
+                <img src="../Images/categorySection13.jpg" class="card-img-top" alt="Burguer">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">12 Piece Suhsi </h3>
+                <h5 class="cardPrice">70R</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                  necessitatibus.</p>
+                <span class="starsRating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <p>90%</p>
+                </span>
+
+                <div class="rateButton">
+                  <span class="likeButton">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                      <i class="fa-regular fa-thumbs-up"></i>
+                    </button>
+                  </span>
+                  <span class="dislikeButton">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Dislike">
+                      <i class="fa-regular fa-thumbs-down"></i>
+                    </button>
+                  </span>
+                </div>
+
+                <div class="card-footer">
+                  <span>
+                    <p>Details:</p>
+                     <button data-bs-toggle="tooltip" data-bs-placement="top" title="Hot">
+                       <i class="fa-solid fa-pepper-hot"></i>
+                     </button>
+                     <button data-bs-toggle="tooltip" data-bs-placement="top" title="Shushi">
+                       <i class="fa-solid fa-drumstick-bite"></i>
+                     </button>
+                  </span>
+
+                  <span class="cart-buttons">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                      <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                    <button data-bs-toggle="tooltip" data-bs-palcement="top" title="Save To Cart">
+                      <i class="fa-solid fa-cart-arrow-down"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- SECOND CARD -->
+            <div class="card vh-80" data-tilt data-tilt-perspective="1100" data-tilt-scale="1" data-aos="zoom-in">
+              <div class="img-wrapper">
+                <img src="../Images/burger8.jpg" class="card-img-top" alt="Burguer">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Rainbow BBQ Burguer</h3>
+                <h5 class="cardPrice">42R</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                  necessitatibus.</p>
+                <span class="starsRating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <p>82%</p>
+                </span>
+
+                <div class="rateButton">
+                  <span class="likeButton">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                      <i class="fa-regular fa-thumbs-up"></i>
+                    </button>
+                  </span>
+                  <span class="dislikeButton">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Dislike">
+                      <i class="fa-regular fa-thumbs-down"></i>
+                    </button>
+                  </span>
+                </div>
+
+                <div class="card-footer">
+                  <span>
+                    <p>Details:</p>
+                     <button data-bs-toggle="tooltip" data-bs-placement="top" title="Hot">
+                       <i class="fa-solid fa-pepper-hot"></i>
+                     </button>
+                     <button data-bs-toggle="tooltip" data-bs-placement="top" title="Chicken">
+                       <i class="fa-solid fa-drumstick-bite"></i>
+                     </button>
+                  </span>
+
+                  <span class="cart-buttons">
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                      <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save to Cart">
+                      <i class="fa-solid fa-cart-arrow-down"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- THIRD CARD -->
+            <div class="card vh-80" data-tilt data-tilt-perspective="1100" data-tilt-scale="1" data-aos="zoom-in">
+                  <div class="img-wrapper">
+                    <img src="../Images/fish3.jpg" class="card-img-top" alt="Burguer">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Special Tiger Shrimps</h3>
+                    <h5 class="cardPrice">150R</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                      necessitatibus.</p>
+                    <span class="starsRating">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <p>100%</p>
+                    </span>
+
+                    <div class="rateButton">
+                      <span class="likeButton">
+                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                          <i class="fa-regular fa-thumbs-up"></i>
+                        </button>
+                      </span>
+                      <span class="dislikeButton">
+                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Dislike">
+                          <i class="fa-regular fa-thumbs-down"></i>
+                        </button>
+                      </span>
+                    </div>
+    
+                    <div class="card-footer">
+                      <span>
+                        <p>Details:</p>
+                         <button data-bs-toggle="tooltip" data-bs-placement="top" title="Hot">
+                           <i class="fa-solid fa-pepper-hot"></i>
+                         </button>
+                         <button data-bs-toggle="tooltip" data-bs-placement="top" title="Seafood">
+                           <i class="fa-solid fa-drumstick-bite"></i>
+                         </button>
+                      </span>
+
+                      <span class="cart-buttons">
+                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                          <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save To Cart">
+                          <i class="fa-solid fa-cart-arrow-down"></i>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+             </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TOP CHOICES CAROUSEL CARDS CONTROL ICONS -->
+      <!-- This is where the buttons for the previous and next functionality are, they are respresented by comparasion signs, they are in black and on the side of each side card -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselTopChoices" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselTopChoices" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <!-- END OF TOP CHOICES SECTION -->
+
+  <!-- OTHER INFORMATION SECTION -->
+  <!-- In this section there will be additional information about the restaurant with some images and text, they will be stacked in two blocks and each has its lay-out reversed (one image on the left and its text on the right the other withe the text on the left and the image on the right)
+  The contents of this section will have an animation everytime the user scrolls down -->
+  <!-- This animation will be done using a tool that I found on the internet  -->
+
+  <section class="othersSection" id="othersSection">
+    <div class="container-fluid">
+      <div class="first-block">
+        <div class="left" data-aos="fade-right" data-aos-duration="1200">
+          <img src="../Images/exploreImage1.jpg" alt="">
+        </div>
+        <div class="right" data-aos="fade-up" data-aos-duration="1800">
+          <h2>New Space</h2>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad saepe quibusdam a quia sunt fuga, eum nesciunt rerum non incidunt fugiat ex? Eum amet, nisi obcaecati, id sint facere nam assumenda in explicabo quia eius, facilis vero exercitationem recusandae? Ducimus deleniti laudantium, voluptatem minus, rem ad voluptas repudiandae ratione numquam consectetur perferendis saepe quisquam, molestiae eveniet rerum. Doloribus, corrupti, dolores accusamus aspernatur recusandae porro quasi veritatis amet repudiandae necessitatibus provident! </p>
+        </div>
+      </div>
+      <div class="second-block">
+        <div class="left" data-aos="fade-right" data-aos-duration="1200">
+          <h2>Allways Inovating</h2>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad saepe quibusdam a quia sunt fuga, eum nesciunt rerum non incidunt fugiat ex? Eum amet, nisi obcaecati, id sint facere nam assumenda in explicabo quia eius, facilis vero exercitationem recusandae? Ducimus deleniti laudantium, voluptatem minus, rem ad voluptas repudiandae ratione numquam consectetur perferendis saepe quisquam, molestiae eveniet rerum. Doloribus, corrupti, dolores accusamus aspernatur recusandae porro quasi veritatis amet repudiandae necessitatibus provident! </p>
+        </div>
+        <div class="right" data-aos="fade-down" data-aos-duration="1500">
+          <img src="../Images/exploreImage3.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- OTHER SECTION ENDS HERE -->
+
+  <!-- EXPLORE SECTION STARTS HERE  -->
+  <!-- In this section there will be four blocks that will represent different pages once they are clicked it will redirect to a different page -->
+  <section class="exploreSection" id="exploreSection">
+    <div class="wavySeparator"></div>
+    <div class="exploreHeading ">
+      <h2>Explore</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, ducimus ipsam, inventore molestiae provident non, facilis nam tenetur vero sequi tempore praesentium deserunt voluptates commodi saepe molestias similique et dicta?</p>
+    </div>
+   
+    <div class="container">
+      <div class="row">
+        <!-- Restaurant Box -->
+        <div class="col-sm-12 g-3">
+          <div class="card">
+            <img src="../Images/guyEating.jpg" class="card-img" id="restaurantBlock" alt="Restaurant">
+            <div class="card-img-overlay">
+              <h4>Restaurant</h4>
+              <p>Come join our restaurant and have a a taste of our cousine.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Bar Box -->
+        <div class="col-sm-12 g-3">
+          <div class="card">
+            <img src="../Images/heroImage-5.jpg" class="card-img" id="barBlock" alt="Restaurant">
+            <div class="card-img-overlay">
+              <h4>Bar</h4>
+              <p>Delight yourself with our unique amazing beverages.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Events Box -->
+        <div class="col-sm-12 g-3">
+          <div class="card">
+            <img src="../Images/syed-ahmad-kgjQ1AGDwE0-unsplash.jpg" class="card-img" id="eventsBlock"alt="Restaurant">
+            <div class="card-img-overlay">
+              <h4>Events</h4>
+              <p>Come join our restaurant and have a a taste of our cousine.</p>
+            </div>
+          </div>
+        </div>
+        <!-- About Us Box-->
+        <div class="col-sm-12 g-3">
+          <div class="card">
+            <img src="../Images/about2.jpg" class="card-img" id="aboutBlock" alt="Restaurant">
+            <div class="card-img-overlay">
+              <h4>About Us</h4>
+              <p>Learn more about our house.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+</main>
+
+
+
+  <!-- JAVASCRIPT-->
+  <script src="javascript.html"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <script type="text/javascript" src="../JQuery/tilt.jquery.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init()
+  </script>
+
+  <!-- Script that enables the tooltip functionality on the icons and card-icons -->
+  <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+</body>
+
+</html>
