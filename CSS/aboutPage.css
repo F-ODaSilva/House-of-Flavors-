@@ -15,15 +15,13 @@ html, body{
 };
 
 body{
-    background-color: black;
+    background-color: #43c867 ;
 }
 
 
 /* BACKGROUND IMAGE HEADER */
 /* The height of the header will be set to 100 so the bg-img will acomodate its size */
-header{
-    height: 100vh;
-}
+
 
 /* For a better look on mobile the image height will be set to cover the 100% of the view port height. The width will be set to 100vw so it covers and respects the window scale so that the image fits to it */
 .bg-img{
@@ -219,4 +217,86 @@ transition: all 0.7s;
     }
 }
 
+/* .custom-shape-divider-bottom-1686574857 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
 
+.custom-shape-divider-bottom-1686574857 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.4px);
+    height: 120px;
+}
+
+.custom-shape-divider-bottom-1686574857 .shape-fill {
+    fill: white;
+}
+
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1686574857 svg {
+        width: calc(100% + 1.3px);
+        height: 98px;
+    }
+} 
+*/
+
+.custom-shape-divider-bottom-1686575576 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1686575576 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+}
+
+.custom-shape-divider-bottom-1686575576 .shape-fill {
+    fill: #43c867;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1686575576 svg {
+        width: calc(100% + 1.3px);
+        height: 100px;
+    }
+}
+
+/* OUR STORY SECTION */
+
+/* Move the Our story section lower than shape diver set its padding change the background color so it matches with the divider section color, give the leters a different color and alignt all text to the  center */
+ .ourStory .row{
+    margin-top: 18%;
+    background-color:#43c867;
+    color: black;
+    font-family: "Eagle Lake";
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+
+.ourStory .row h1{
+    font-size: 60px;
+    padding: 2rem 0 6rem;
+    
+}
+
+.ourStory .row .col-md-5 p{
+    text-align: justify;
+    margin-left: 8rem;
+    font-family: 'Roboto Slab';
+    font-weight: 600;
+    padding-right: 0rem;
+}
