@@ -1,0 +1,234 @@
+<!-- CAPSTONE PROJECT II -->
+
+<!-- 
+    This file will contain the "About Us" section of the website and it will have all the important information about the restaurant and services.
+
+    It will have some visual effects, a form, a frequently asked questions section (FAQ´s), some buttons, images, videos.  
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome Kit's Code Link -->
+    <script src="https://kit.fontawesome.com/f7ccd0c567.js" crossorigin="anonymous"></script>
+
+    <!-- Gooole Fonts External Link Fonts -->
+    <link rel="preconnect" href="https://fonts.gooogleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto+Slab&family=Cookie:wght@400&display=swap"
+      rel="stylesheet" />
+
+    <!-- Bootstrap Stylesheet Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Basal Patterns CSS Link -->
+    <link href="https://unpkg.com/pattern.css" rel="stylesheet">
+
+    <!-- AOS (Animation On Scroll) Link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- CSS Stylesheet Link -->
+    <link rel="stylesheet" href="../CSS/aboutPage.css" />
+
+    <!-- This will contain the title of the page, for it being the About Us page it will carry the same name -->
+    <title>About Us</title>
+</head>
+<body>
+    
+    <header id="header">
+
+        <!-- BACKGROUND IMAGE STARTS HERE -->
+        <!-- The background image will be behind everything on the header section, the class "bg-img" is a custom class check the CSS stylesheet for a better explanation -->
+        <img class="bg-img" src="../Images/about1.jpg" alt="Background Image">
+
+
+
+        <!-- NAVIGATION BAR STARTS HERE  -->
+        <!-- The navigation bar will be the same as the one in the "homePage.html", It will have the navbar brand  on the left of the and its remaining items on th right of the page (Home, Our Menu, About Us, Events, Cart ) 
+        
+        The Our Menu tab will have a dropdown link menu with all the categories that the restaurant serves. 
+
+
+        The navbar will have a visual effect that changes it background from transparent set to a solid color. This was made with the help of 
+        Check the CSS stylesheet for more information
+        -->
+        <nav class="navbar navbar-expand-lg  fixed-top">
+            <!-- In the above line the nav element has a bootstrap class the enables the nabar to be allways shown on top when the user scrolls called "fixed top" this will be a feauture that helps the user navigate at all times. -->
+            <div class="container-fluid">
+                <a href="./homePage.html" class="navbar-brand mx-3 fs-3">House Of Flavors</a>
+                <button
+                    class="navbar-toggler me-3 "
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Collapsible Wrapper -->
+                <div class="collapse navbar-collapse" class="justify-content-between" id="navbarSupportedContent">
+                <!-- Right links -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-between">
+                        <li class="nav-item mx-3 whitesmoke" class="nav-menu">
+                            <a href="./homePage.html" class="nav-link">Home</a>
+                        </li>
+                
+                        <!-- Navbar Dropdown  -->
+                        <li class="nav-item mx-3 dropdown" class="nav-menu">
+                            <a 
+                            href="#"
+                            class="nav-link dropdown-toggle"
+                            id="navbarDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            >
+                            Our Menu
+                            </a>
+                            
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                       
+                                <li>
+                                    <a href="#" class="dropdown-item">Burgers</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Pizza</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Seafood</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Steak</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Sushi</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Drinks</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item mx-3" class="nav-menu">
+                            <a href="./eventPage.html" class="nav-link">Events</a>
+                        </li>
+
+                        <li class="nav-item mx-3" class="nav-menu">
+                            <a href="#" class="nav-link active" aria-current="page">About Us</a>
+                        </li>
+
+                        <li class="navbar-nav ml-auto mx-2">
+                            <button class="btn">
+                              <a class="nav-link " href="./cartPage"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                  fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                                  <path
+                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
+                                </svg></a>
+                            </button>
+                          </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <!-- NAVBAR SECTION ENDS HERE -->
+
+        <!-- HERO SECTION STARTS HERE -->
+        <!-- Here is where the content of the hero section its created, the heading and the paragraphs, it will be simpler than the hero section from the homepage  -->
+
+        <div class="hero-section" id="hero-section">
+          <div class="heading p-5 text-center" >
+            <h1 class="mb-3" data-aos="zoom-in" data-aos-duration="2000">About Us</h1>
+            <h4 class="mb-3" data-aos="zoom-in" data-aos-duration="200">The creation, the process, the members</h4>
+          </div>
+        </div>
+    </header>
+      <main>
+          <!-- OUR STORY SECTION -->
+          <!-- The background of this section will be overlaping the bottom part of the background image of the hero section it will work as a divider bewtween both too-->
+            <!-- This section will present the information about the founding and founders of the restaurant it will be encapsulated in a div that will hold to more divs representing two blocks each on its side of the screen.
+            The left block will have the text that explains a brief story of the restaurant. It will have ist own animation (Zoom in).
+            The right block will have two images or more each one is positioned in its own way but they will overlap each other. 
+            -->
+           <div class="custom-shape-divider-bottom-1686575576">
+             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                  <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                 <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                 <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+             </svg>
+            </div>
+            <section class="ourStory" id="ourStory" >
+                <div class="container-fluid">
+                    <div class="row">
+                        <h1>Our Story</h1>
+                        <div class="col-md-5" data-aos="fade-left" data-aos-duration="2000" >
+                            <div class="pattern-cross-dots-xl overflow-visible">
+                                <div class="text-block">
+
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quia labore illum fugiat magni aperiam consequatur non at harum enim sunt quae esse impedit, quo blanditiis dignissimos iste minima praesentium unde, ea cumque sed. Aut maxime quia dignissimos ipsam. Molestiae perferendis expedita accusamus rem, corrupti odit laborum id ducimus illo quasi assumenda magni repudiandae qui adipisci ipsa voluptates nesciunt! Laudantium!</p>
+                                    
+                                    
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quia labore illum fugiat magni aperiam consequatur non at harum enim sunt quae esse impedit, quo blanditiis dignissimos iste minima praesentium unde, ea cumque sed. Aut maxime quia dignissimos ipsam. Molestiae perferendis expedita accusamus rem, corrupti odit laborum id ducimus illo quasi assumenda magni repudiandae qui adipisci ipsa voluptates nesciunt! Laudantium!</p>
+
+
+                                </div>
+                                    
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-7" data-aos="zoom-in" data-aos-duration="2200">
+                         <img src="../Images/serving1.jpg" loading="lazy"  alt="Serving 1">                        
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5" data-aos="flip-up" data-aos-duration="200">
+                            <img src="../Images/serving2.jpg" loading="lazy" alt="Serving 2">
+                        </div>
+                        <div class="col-md-7">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure quis, molestiae quibusdam sint, nemo facilis odit repellat blanditiis neque eos reprehenderit fugiat harum saepe fuga earum vitae quidem id.</p>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, necessitatibus sint quasi, maiores enim nam asperiores commodi soluta quia reiciendis sit consectetur eveniet dolore qui et explicabo dolorum vel? Dolor, vitae qui! Possimus, delectus velit ipsam doloribus quaerat aliquid. Dolorem minus iste iure minima aspernatur accusantium recusandae! Ab, dolore a!</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+      </main> 
+      
+      
+    <!-- JAVASCRIPT SCRIPT LINK -->
+    <script src="../Javascript/aboutPage.js "></script>
+
+    <!-- BOOTSTRAP 5 JAVASCRIPT CDN LINK -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- GOOGLE FONT API  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- ANIMATION ON SCROLL SCRIPT LINK   -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script>
+    
+    <!-- Script that enables the tooltip functionality on the icons and card-icons -->
+      <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+      </script>
+
+
+</body>
+</html>
