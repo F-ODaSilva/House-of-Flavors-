@@ -169,8 +169,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <h1>Our Story</h1>
-                        <div class="col-md-5" data-aos="fade-left" data-aos-duration="2000" >
-                            <div class="pattern-cross-dots-xl overflow-visible">
+                        <div class="col-md-5" data-aos="fade-left" data-aos-duration="2000"  >
                                 <div class="text-block">
 
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quia labore illum fugiat magni aperiam consequatur non at harum enim sunt quae esse impedit, quo blanditiis dignissimos iste minima praesentium unde, ea cumque sed. Aut maxime quia dignissimos ipsam. Molestiae perferendis expedita accusamus rem, corrupti odit laborum id ducimus illo quasi assumenda magni repudiandae qui adipisci ipsa voluptates nesciunt! Laudantium!</p>
@@ -180,28 +179,40 @@
 
 
                                 </div>
-                                    
-
+                                
                             </div>
+
+                            <div class="col-md-7" data-aos="zoom-in" data-aos-duration="2200" data-tilt data-tilt-max="40"  data-tilt-perspective="1000">
+                                <img src="../Images/serving1.jpg" loading="lazy"  alt="Serving 1">                        
+                            </div>
+                            
                         </div>
 
-                        <div class="col-md-7" data-aos="zoom-in" data-aos-duration="2200">
-                         <img src="../Images/serving1.jpg" loading="lazy"  alt="Serving 1">                        
-                        </div>
+
                     </div>
+
+
                     <div class="row">
-                        <div class="col-md-5" data-aos="flip-up" data-aos-duration="200">
+                        <div class="col-md-5" data-aos="flip-up" data-aos-duration="2200" data-tilt data-tilt-max="45" data-tilt-perspective="1000">
                             <img src="../Images/serving2.jpg" loading="lazy" alt="Serving 2">
                         </div>
-                        <div class="col-md-7">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure quis, molestiae quibusdam sint, nemo facilis odit repellat blanditiis neque eos reprehenderit fugiat harum saepe fuga earum vitae quidem id.</p>
+                        <div class="col-md-7" data-aos="fade-right" data-asos-duration="4000">
+                            <div class="text-block">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, eum laboriosam? Omnis, beatae ipsa. Nisi iusto expedita aut maiores facilis cupiditate nulla minus architecto harum, maxime animi incidunt mollitia perferendis culpa? Officia impedit totam saepe sequi corrupti ducimus asperiores autem?</p>
 
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, necessitatibus sint quasi, maiores enim nam asperiores commodi soluta quia reiciendis sit consectetur eveniet dolore qui et explicabo dolorum vel? Dolor, vitae qui! Possimus, delectus velit ipsam doloribus quaerat aliquid. Dolorem minus iste iure minima aspernatur accusantium recusandae! Ab, dolore a!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure quis, molestiae quibusdam sint, nemo facilis odit repellat blanditiis neque eos reprehenderit fugiat harum saepe fuga earum vitae quidem id.</p>
+
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, necessitatibus sint quasi, maiores enim nam asperiores commodi soluta quia reiciendis sit consectetur eveniet dolore qui et explicabo dolorum vel? Dolor, vitae qui! Possimus, delectus velit ipsam doloribus quaerat aliquid. Dolorem minus iste iure minima aspernatur accusantium recusandae! Ab, dolore a!</p>
+                            
+                            </div>
                             
                         </div>
                     </div>
                 </div>
             </section>
+
+            <!-- DETAILS SECTION STARTS HERE -->
+            <!-- In this section there will be a  row with  -->
 
       </main> 
       
@@ -221,6 +232,9 @@
         AOS.init()
     </script>
     
+    <!-- TILT.JS SCRIPT LINK  -->
+    <script type="text/javascript" src="../JQuery/tilt.jquery.js"></script>
+
     <!-- Script that enables the tooltip functionality on the icons and card-icons -->
       <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
