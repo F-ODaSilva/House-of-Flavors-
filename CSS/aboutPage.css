@@ -259,7 +259,7 @@ transition: all 0.7s;
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 61px;
+    height: 80px;
 }
 
 .custom-shape-divider-bottom-1686575576 .shape-fill {
@@ -277,12 +277,13 @@ transition: all 0.7s;
 /* OUR STORY SECTION */
 
 /* Move the Our story section lower than shape diver set its padding change the background color so it matches with the divider section color, give the leters a different color and alignt all text to the  center */
- .ourStory .row{
+ .ourStory .row:first-child{
     margin-top: 18%;
     background-color:#43c867;
     color: black;
     font-family: "Eagle Lake";
-    text-align: center;
+    text-align: center; 
+    padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
@@ -292,11 +293,47 @@ transition: all 0.7s;
     padding: 2rem 0 6rem;
     
 }
+/* .ourStory .row .pattern-cross-dots{
+    color:white;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    width: 93%;
+} */
+.ourStory .row .col-md-5 .text-block{
+    background-color:#43c867;
+    margin: 20px 40px;
 
+}
 .ourStory .row .col-md-5 p{
     text-align: justify;
-    margin-left: 8rem;
-    font-family: 'Roboto Slab';
-    font-weight: 600;
-    padding-right: 0rem;
+    font-family: 'Eagle Lake';
+    font-weight: 500;
+    color:black;
+}
+
+.ourStory .row .col-md-5{
+    height: 100%
+}
+
+.ourStory .row .col-md-7 img:first-child{
+    object-fit: cover;
+    width: 95.5%;
+    border-radius: 12px;
+}
+
+.ourStory .row:nth-child(2){
+    background-color:#43c867;
+}
+
+
+
+.ourStory .row .col-md-5 img{
+    object-fit: cover;
+    width: 77%;
+    margin: 20px 0px 0px 119px;
+    border-radius:17px
+}
+
+.ourStory .row .col-md-7:nth-child(2) {
+    padding-top: 12rem;
 }

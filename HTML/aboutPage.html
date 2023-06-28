@@ -30,7 +30,7 @@
     <link href="https://unpkg.com/pattern.css" rel="stylesheet">
 
     <!-- AOS (Animation On Scroll) Link -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next-dist-aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- CSS Stylesheet Link -->
     <link rel="stylesheet" href="../CSS/aboutPage.css" />
@@ -146,8 +146,8 @@
 
         <div class="hero-section" id="hero-section">
           <div class="heading p-5 text-center" >
-            <h1 class="mb-3">About Us</h1>
-            <h4 class="mb-3">The creation, the process, the members</h4>
+            <h1 class="mb-3" data-aos="zoom-in" data-aos-duration="2000">About Us</h1>
+            <h4 class="mb-3" data-aos="zoom-in" data-aos-duration="200">The creation, the process, the members</h4>
           </div>
         </div>
     </header>
@@ -167,21 +167,37 @@
             </div>
             <section class="ourStory" id="ourStory" >
                 <div class="container-fluid">
-                    <div class="row " data-aos="fade-right">
+                    <div class="row">
                         <h1>Our Story</h1>
-                        <div class="col-md-5">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quia labore illum fugiat magni aperiam consequatur non at harum enim sunt quae esse impedit, quo blanditiis dignissimos iste minima praesentium unde, ea cumque sed. Aut maxime quia dignissimos ipsam. Molestiae perferendis expedita accusamus rem, corrupti odit laborum id ducimus illo quasi assumenda magni repudiandae qui adipisci ipsa voluptates nesciunt! Laudantium!</p>
-                            
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quia labore illum fugiat magni aperiam consequatur non at harum enim sunt quae esse impedit, quo blanditiis dignissimos iste minima praesentium unde, ea cumque sed. Aut maxime quia dignissimos ipsam. Molestiae perferendis expedita accusamus rem, corrupti odit laborum id ducimus illo quasi assumenda magni repudiandae qui adipisci ipsa voluptates nesciunt! Laudantium!</p>
+                        <div class="col-md-5" data-aos="fade-left" data-aos-duration="2000" >
+                            <div class="pattern-cross-dots-xl overflow-visible">
+                                <div class="text-block">
+
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quia labore illum fugiat magni aperiam consequatur non at harum enim sunt quae esse impedit, quo blanditiis dignissimos iste minima praesentium unde, ea cumque sed. Aut maxime quia dignissimos ipsam. Molestiae perferendis expedita accusamus rem, corrupti odit laborum id ducimus illo quasi assumenda magni repudiandae qui adipisci ipsa voluptates nesciunt! Laudantium!</p>
+                                    
+                                    
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quia labore illum fugiat magni aperiam consequatur non at harum enim sunt quae esse impedit, quo blanditiis dignissimos iste minima praesentium unde, ea cumque sed. Aut maxime quia dignissimos ipsam. Molestiae perferendis expedita accusamus rem, corrupti odit laborum id ducimus illo quasi assumenda magni repudiandae qui adipisci ipsa voluptates nesciunt! Laudantium!</p>
+
+
+                                </div>
+                                    
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-7" data-aos="zoom-in" data-aos-duration="2200">
+                         <img src="../Images/serving1.jpg" loading="lazy"  alt="Serving 1">                        
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5" data-aos="flip-up" data-aos-duration="200">
+                            <img src="../Images/serving2.jpg" loading="lazy" alt="Serving 2">
+                        </div>
                         <div class="col-md-7">
-                            <div class="col-md-2">
-                                <img src="../Images/serving1.jpg" alt="Tattoed chef serving">
-                            </div>
-                            <div class="col-md-2">
-                                
-                            </div>
-                        </div>  
-            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure quis, molestiae quibusdam sint, nemo facilis odit repellat blanditiis neque eos reprehenderit fugiat harum saepe fuga earum vitae quidem id.</p>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, necessitatibus sint quasi, maiores enim nam asperiores commodi soluta quia reiciendis sit consectetur eveniet dolore qui et explicabo dolorum vel? Dolor, vitae qui! Possimus, delectus velit ipsam doloribus quaerat aliquid. Dolorem minus iste iure minima aspernatur accusantium recusandae! Ab, dolore a!</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -199,7 +215,7 @@
     <!-- GOOGLE FONT API  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
-    
+    <!-- ANIMATION ON SCROLL SCRIPT LINK   -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init()
