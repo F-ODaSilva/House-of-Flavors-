@@ -32,6 +32,10 @@
     <!-- AOS (Animation On Scroll) Link -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
     <!-- CSS Stylesheet Link -->
     <link rel="stylesheet" href="../CSS/aboutPage.css" />
 
@@ -152,19 +156,404 @@
         </div>
     </header>
       <main>
-          <!-- OUR STORY SECTION -->
-          <!-- The background of this section will be overlaping the bottom part of the background image of the hero section it will work as a divider bewtween both too-->
-            <!-- This section will present the information about the founding and founders of the restaurant it will be encapsulated in a div that will hold to more divs representing two blocks each on its side of the screen.
-            The left block will have the text that explains a brief story of the restaurant. It will have ist own animation (Zoom in).
-            The right block will have two images or more each one is positioned in its own way but they will overlap each other. 
-            -->
-           <div class="custom-shape-divider-bottom-1686575576">
-             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                  <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-                 <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-                 <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-             </svg>
+        <!-- CUSTOM SHAPE DIVIDER -->
+        <!-- This custom shape divider was made with the help of a CSS plug-in found on the internet.Here is the link https://www.shapedivider.app/ -->
+            <div class="custom-shape-divider-bottom-1686575576">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
             </div>
+        <!-- CUSTOM SHAPE DIVIDER ENDS HERE -->
+
+        <!-- DETAIL SECTION STARTS HERE -->
+        <!-- This section will be bellow the shape divider and it will have a background-color matching the shape divider color. It will posses 6 buttons that represent the various details of the restaurant, once the user clicks, it will pop a modal with the  so called details and information.
+            The modal will have a gradient color and will close when the user clicks outside of it. 
+            Inside of some of the modals ther will be a a "click me" button that will trigger a JQUERY function that will make the previous paragraphs including the button dissapear and show additional content  
+        There will be numbers bellow the button that will slowly increase to the predefined  value, this will be done with the help of a Javascript function. Check Javascript file for more information on how its done.
+        -->
+        <section class="detailSection">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="detailHeading">
+                        <h1>Details</h1>
+                        <p>Click on the buttons various buttons bellow and play around with the information inside them </p>
+                    </div>
+                    <div class="col m-4 py-3 justify-content-center align-content-center country">
+                         <div class="button">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#countryModal">
+    
+                                        <i class="fa-solid fa-earth-africa fa-sm">
+    
+                                            <span >
+        
+                                                <hr>
+                                                <p class="detailName">Country</p>
+                                                <div class="detailNumber" data-val="12">12</div>
+                                                
+                                            </span>
+    
+                                        </i>
+                                    </button>
+    
+                                    <div class="modal fade" id="countryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                 <h5 class="modal-title" id="exampleModalLabel">Country</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                              </div>
+                                              <div class="modal-body">
+                                                    <div class="container-fluid">
+                                                        <div class="row p-1">
+                                                            <div class="col-md-8 col-sm-8">  
+                                                                <img src="../Images/map1.jpg "  width="100%" height="100%" alt="">
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-3 align-items justify-content text-white ">
+                                                                <div class="text-block">
+                                                                    <h1>Countries</h1>
+                                                                    <p class="modal-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, qui quae, voluptas corrupti eaque commodi consequatur quis sint aspernatur nihil error cumque consectetur, eum dolorem aut velit mollitia minus incidunt.</p>
+                                                                    <h6 class="clickMeButton">Click me</h6>
+    
+                                                                    <span class="country list">
+                                                                        <p>We are based in:</p>
+                                                                        <ul>
+                                                                            <li> U.S.A </li>
+                                                                            <li> Portugal </li>
+                                                                            <li> Spain </li>
+                                                                            <li> Canada </li>
+                                                                            <li> Italy </li>
+                                                                            <li> France </li>
+                                                                            <li> Mozambique</li>
+                                                                            <li> South Africa </li>
+                                                                            <li> Turkey </li>
+                                                                            <li> Russia </li>
+                                                                            <li> Greece </li>
+                                                                            <li> Monaco </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                
+                                                                </div>
+                                                            </div>
+    
+                                                        
+                                                        </div>
+                                                    </div>
+                                              </div>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                    
+     
+                    </div>
+                    <div class="col m-4 py-3 justify-content-center align-content-center ">
+                         <div class="button">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#housesModal">
+    
+                                        <i class="fa-solid fa-house fa-sm">
+    
+                                            <span >
+        
+                                                <hr>
+                                                <p class="detailName">Houses</p>
+                                                <div class="detailNumber" data-val="18">18</div>
+                                                
+                                            </span>
+    
+                                        </i>
+                                    </button>
+    
+                                    <div class="modal fade" id="housesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <div class="container-fluid">
+                                                        <div class="row p-1">
+                                                            <div class="col-md-8 col-sm-8">  
+                                                                <img src="../Images/house.jpg "  width="100%" height="100%" alt="">
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-3 align-items justify-content text-white ">
+                                                                <div class="text-block">
+                                                                    <h1>Houses</h1>
+                                                                    <p class="modal-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, qui quae, voluptas corrupti eaque commodi consequatur quis sint aspernatur nihil error cumque consectetur, eum dolorem aut velit mollitia minus incidunt.</p>
+                                                                    <h6 class="clickMeButton">Click me</h6>
+    
+                                                                    <span class="houses list">
+                                                                        <p>Find us at in:</p>
+                                                                        <ul>
+                                                                            <li> U.S.A </li>
+                                                                            <li> Portugal </li>
+                                                                            <li> Spain </li>
+                                                                            <li> Canada </li>
+                                                                            <li> Italy </li>
+                                                                            <li> France </li>
+                                                                            <li> Mozambique</li>
+                                                                            <li> South Africa </li>
+                                                                            <li> Turkey </li>
+                                                                            <li> Russia </li>
+                                                                            <li> Greece </li>
+                                                                            <li> Monaco </li>
+                                                                        </ul>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                              </div>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                    </div>
+                    <div class="col m-4 py-3 ps-sm-4 justify-content-center align-content-center chefs">
+                         <div class="button">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chefModal">
+    
+                                        <i class="fa-solid fa-kitchen-set fa-sm">
+    
+                                            <span >
+        
+                                                <hr>
+                                                <p class="detailName">Chefs</p>
+                                                <div class="detailNumber" data-val="10">10</div>
+                                                
+                                            </span>
+    
+                                        </i>
+                                    </button>
+    
+                                    <div class="modal fade" id="chefModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <div class="container-fluid">
+                                                        <div class="row p-1">
+                                                            <div class="col-md-8 col-sm-8">  
+                                                                <img src="../Images/chef3.jpg"  width="100%" height="100%" alt="">
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-3 align-items justify-content text-white ">
+                                                                <div class="text-block">
+                                                                    <h1>Chefs</h1>
+                                                                    <p class="modal-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, qui quae, voluptas corrupti eaque commodi consequatur quis sint aspernatur nihil error cumque consectetur, eum dolorem aut velit mollitia minus incidunt.</p>
+                                                                    <h6 class="clickMeButton">Click me</h6>
+                                                                    
+                                                                    <span class="chefs list">
+                                                                        <p>The chefs:</p>
+                                                                        <ul>
+                                                                            <li> David Mikes</li>
+                                                                            <li> Lawrence Phil</li>
+                                                                            <li> Michelle Duvier</li>
+                                                                            <li> Camila Silva </li>
+                                                                            <li> Joao Bosques </li>
+                                                                            <li> Milena Belata </li>
+                                                                            <li> Carlos Mirel </li>
+                                                                            <li> Aki Nuhai </li>
+                                                                            <li> Ira Nuhai </li>
+                                                                            <li> Ykrag Munsof</li>
+                                                                        </ul>
+                                                                    </span>
+                                                                
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                              </div>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                    </div>
+                    <div class="col m-4 py-3 justify-content-center align-content-center clients">
+                         <div class="button">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ordersModal">
+    
+                                        <i class="fa-solid fa-hand-holding-heart fa-sm">
+    
+                                            <span >
+        
+                                                <hr>
+                                                <p class="detailName">Orders</p>
+                                                <div class="detailNumber"  data-val="3057">3057</div>
+                                                
+                                            </span>
+    
+                                        </i>
+                                    </button>
+    
+                                    <div class="modal fade" id="ordersModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <div class="container-fluid">
+                                                        <div class="row p-1">
+                                                            <div class="col-md-8 col-sm-8">  
+                                                                <img src="../Images/serving3.jpg "  width="100%" height="100%" alt="">
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-3 align-items justify-content text-white ">
+                                                                <div class="text-block">
+                                                                    <h1>Orders</h1>
+                                                                    <p class="modal-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, qui quae, voluptas corrupti eaque commodi consequatur quis sint aspernatur nihil error cumque consectetur, eum dolorem aut velit mollitia minus incidunt.</p>
+                                                                    <h6 class="clickMeButton">Click me</h6>
+                                                                    
+                                                                    <span class="orders list">
+                                                                        <p>The favorites:</p>
+                                                                        <ul>
+                                                                            <li> Lorem ipsum. </li>
+                                                                            <li> Lorem ipsum. </li>
+                                                                            <li> Lorem ipsum. </li>
+                                                                            <li> Lorem ipsum.  </li>
+                                                                            <li> Lorem ipsum. </li>
+                                                                            <li> Lorem ipsum.  </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                              </div>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                    </div>
+                    <div class="col m-4 py-3 justify-content-center align-content-center clients">
+                         <div class="button">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#clientsModal">
+    
+                                        <i class="fa-solid fa-users fa-sm">
+    
+                                            <span >
+        
+                                                <hr>
+                                                <p class="detailName">Clients</p>
+                                                <div class="detailNumber" data-val="1834">1834</div>
+                                                
+                                            </span>
+    
+                                        </i>
+                                    </button>
+    
+                                    <div class="modal fade" id="clientsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-top">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <div class="container-fluid">
+                                                        <div class="row p-1">
+                                                            <div class="col-md-8 col-sm-8">  
+                                                                <img src="../Images/clients.jpg "  width="100%" height="100%" alt="">
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-3 align-items justify-content text-white ">
+                                                                <div class="text-block">
+                                                                    <h1>Clients</h1>
+                                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, qui quae, voluptas corrupti eaque commodi consequatur quis sint aspernatur nihil error cumque consectetur, eum dolorem aut velit mollitia minus incidunt.</p>
+                                                                    
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                              </div>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                    </div>
+                    <div class="col m-4 py-3 justify-content-center align-content-center">
+                         <div class="button">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal">
+    
+                                        <i class="fa-solid fa-champagne-glasses fa-sm">
+    
+                                            <span >
+        
+                                                <hr>
+                                                <p class="detailName">Events</p>
+                                                <div class="detailNumber" data-val="47">47</div>
+                                                
+                                            </span>
+    
+                                        </i>
+                                    </button>
+                               </div>
+                          </div> 
+                            <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <div class="container-fluid">
+                                                <div class="row p-3 ">
+                                                    <div class="col-md-8 col-sm-8">  
+                                                        <img src="../Images/event2.jpg"  width="100%" height="100%" alt="">
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-3 align-items justify-content text-white ">
+                                                        <div class="text-block">
+                                                            <h1>Events</h1>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, qui quae, voluptas corrupti eaque commodi consequatur quis sint aspernatur nihil error cumque consectetur, eum dolorem aut velit mollitia minus incidunt.</p>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                      </div>
+                                        <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </section>
+        <!-- DETAIL SECTION ENDS HERE  -->
+
+
+        <!-- OUR STORY SECTION STARTS HERE -->
+        <!-- There will be two rows inside of them two images with animation on scroll  and two text-blocks with some information they will have a buttons to hide and display new paragraphs  -->
             <section class="ourStory" id="ourStory" >
                 <div class="container-fluid">
                     <div class="row">
@@ -172,17 +561,23 @@
                         <div class="col-md-5" data-aos="fade-left" data-aos-duration="2000"  >
                                 <div class="text-block">
 
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quia labore illum fugiat magni aperiam consequatur non at harum enim sunt quae esse impedit, quo blanditiis dignissimos iste minima praesentium unde, ea cumque sed. Aut maxime quia dignissimos ipsam. Molestiae perferendis expedita accusamus rem, corrupti odit laborum id ducimus illo quasi assumenda magni repudiandae qui adipisci ipsa voluptates nesciunt! Laudantium!</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quia labore illum fugiat magni aperiam consequatur non at harum enim sunt quae esse impedit, quo blanditiis dignissimos iste minima praesentium unde, ea cumque sed. Aut maxime quia dignissimos ipsam. Molestiae perferendis expedita accusamus rem, corrupti odit laborum id ducimus illo quasi assumenda magni repudiandae qui adipisci ipsa voluptates nesciunt! Laudantium! 
+                                        <span id="showMore-1">Show more</span>
+                                    </p>
                                     
                                     
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quia labore illum fugiat magni aperiam consequatur non at harum enim sunt quae esse impedit, quo blanditiis dignissimos iste minima praesentium unde, ea cumque sed. Aut maxime quia dignissimos ipsam. Molestiae perferendis expedita accusamus rem, corrupti odit laborum id ducimus illo quasi assumenda magni repudiandae qui adipisci ipsa voluptates nesciunt! Laudantium!</p>
+                                    <p class="storyParagraph">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quia labore illum fugiat magni aperiam consequatur non at harum enim sunt quae esse impedit, quo blanditiis dignissimos iste minima praesentium unde, ea cumque sed. Aut maxime quia dignissimos ipsam. Molestiae perferendis expedita accusamus rem, corrupti odit laborum id ducimus illo quasi assumenda magni repudiandae qui adipisci ipsa voluptates nesciunt! Laudantium!
+                                        <span id="showLess-1">Show less</span>
+                                    </p>
 
 
                                 </div>
                                 
                             </div>
 
-                            <div class="col-md-7" data-aos="zoom-in" data-aos-duration="2200" data-tilt data-tilt-max="40"  data-tilt-perspective="1000">
+                            <div class="col-md-7" data-aos="zoom-in" data-aos-duration="2200">
                                 <img src="../Images/serving1.jpg" loading="lazy"  alt="Serving 1">                        
                             </div>
                             
@@ -193,16 +588,25 @@
 
 
                     <div class="row">
-                        <div class="col-md-5" data-aos="flip-up" data-aos-duration="2200" data-tilt data-tilt-max="45" data-tilt-perspective="1000">
+                        <div class="col-md-5 order-1" data-aos="flip-up" data-aos-duration="2200">
                             <img src="../Images/serving2.jpg" loading="lazy" alt="Serving 2">
                         </div>
-                        <div class="col-md-7" data-aos="fade-right" data-asos-duration="4000">
+                        <div class="col-md-7 order-sm-3" data-aos="fade-right" data-asos-duration="4000">
                             <div class="text-block">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, eum laboriosam? Omnis, beatae ipsa. Nisi iusto expedita aut maiores facilis cupiditate nulla minus architecto harum, maxime animi incidunt mollitia perferendis culpa? Officia impedit totam saepe sequi corrupti ducimus asperiores autem?</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, eum laboriosam? Omnis, beatae ipsa. Nisi iusto expedita aut maiores facilis cupiditate nulla minus architecto harum, maxime animi incidunt mollitia perferendis culpa? Officia impedit totam saepe sequi corrupti ducimus asperiores autem?
+                                </p>
 
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure quis, molestiae quibusdam sint, nemo facilis odit repellat blanditiis neque eos reprehenderit fugiat harum saepe fuga earum vitae quidem id.</p>
+                                <p>
+                                    nesciunt expedita consequatur labore veniam temporibus cumque.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure quis, molestiae quibusdam sint, nemo facilis odit repellat blanditiis neque eos reprehenderit fugiat harum saepe fuga earum vitae quidem id.
+                                    <span id="showMore-2">Show more</span>
+                                </p>
 
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, necessitatibus sint quasi, maiores enim nam asperiores commodi soluta quia reiciendis sit consectetur eveniet dolore qui et explicabo dolorum vel? Dolor, vitae qui! Possimus, delectus velit ipsam doloribus quaerat aliquid. Dolorem minus iste iure minima aspernatur accusantium recusandae! Ab, dolore a!</p>
+                                <p class="storyParagraph">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, necessitatibus sint quasi, maiores enim nam asperiores commodi soluta quia reiciendis sit consectetur eveniet dolore qui et explicabo dolorum vel? Dolor, vitae qui! Possimus, delectus velit ipsam doloribus quaerat aliquid. Dolorem minus iste iure minima aspernatur accusantium recusandae! Ab, dolore a!
+                                    <span id="showLess-2">Show less</span>
+                                </p>
                             
                             </div>
                             
@@ -211,9 +615,46 @@
                 </div>
             </section>
 
-            <!-- DETAILS SECTION STARTS HERE -->
-            <!-- In this section there will be a  row with  -->
+            <!-- OUR STORY SECTION ENDS HERE -->
 
+            <!-- OUR PURPOUSE SECTION STARTS HERE -->
+            <!-- In this section theere will be 3 cards inside a row representing each purpouse that the restaurant has, these cards will have a backgroundimage and some text inside of them. The cards will have an on scroll animation and there layout will be the same in every viewport -->
+             <section class="ourPurpouse" id="ourPurpouse">
+                <div class="container">
+                    <h1>Our Purpouse</h1>
+                    <div class="row">
+                        <div class=" col-4 col-md-4" >
+                            <div class="card text-center" data-aos="fade-down" data-aos-duration="3000">
+                                 <img src="../Images/serving4.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h4 class="card-title">Serve</h4>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis laborum, voluptates fuga excepturi voluptas sapiente blanditiis dolores nisi qui deserunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-4 col-md-4">
+                            <div class="card text-center" data-aos="fade-down" data-aos-duration="3000" >
+                                 <img src="../Images/cuisine1.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h4 class="card-title">Create</h4>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis laborum, voluptates fuga excepturi voluptas sapiente blanditiis dolores nisi qui deserunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-4 col-md-4">
+                            <div class="card text-center" data-aos="fade-down" data-aos-duration="3000">
+                                 <img src="../Images/map2.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h4 class="card-title">Expand</h4>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis laborum, voluptates fuga excepturi voluptas sapiente blanditiis dolores nisi qui deserunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </section>
+         
+          
       </main> 
       
       
