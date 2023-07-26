@@ -245,7 +245,7 @@ main .cat-heading p{
     padding-bottom: 15px;
 }
 .feautureSection .row{
-    margin-left: 4rem;
+    margin-left: 4rem; 
     margin-right: 4rem;
     padding-bottom: 2rem;
     perspective: 1500px;

@@ -208,7 +208,7 @@
                                                     <div class="container-fluid">
                                                         <div class="row p-1">
                                                             <div class="col-md-8 col-sm-8">  
-                                                                <img src="../Images/map1.jpg "  width="100%" height="100%" alt="">
+                                                                <img src="../Images/map1.jpg "  width="100%" height="100%">
                                                             </div>
                                                             <div class="col-md-4 col-sm-3 align-items justify-content text-white ">
                                                                 <div class="text-block">
@@ -280,7 +280,7 @@
                                                   <div class="container-fluid">
                                                         <div class="row p-1">
                                                             <div class="col-md-8 col-sm-8">  
-                                                                <img src="../Images/house.jpg "  width="100%" height="100%" alt="">
+                                                                <img src="../Images/house.jpg "  width="100%" height="100%">
                                                             </div>
                                                             <div class="col-md-4 col-sm-3 align-items justify-content text-white ">
                                                                 <div class="text-block">
@@ -348,7 +348,7 @@
                                                   <div class="container-fluid">
                                                         <div class="row p-1">
                                                             <div class="col-md-8 col-sm-8">  
-                                                                <img src="../Images/chef3.jpg"  width="100%" height="100%" alt="">
+                                                                <img src="../Images/chef3.jpg"  width="100%" height="100%">
                                                             </div>
                                                             <div class="col-md-4 col-sm-3 align-items justify-content text-white ">
                                                                 <div class="text-block">
@@ -414,7 +414,7 @@
                                                   <div class="container-fluid">
                                                         <div class="row p-1">
                                                             <div class="col-md-8 col-sm-8">  
-                                                                <img src="../Images/serving3.jpg "  width="100%" height="100%" alt="">
+                                                                <img src="../Images/serving3.jpg "  width="100%" height="100%">
                                                             </div>
                                                             <div class="col-md-4 col-sm-3 align-items justify-content text-white ">
                                                                 <div class="text-block">
@@ -476,7 +476,7 @@
                                                   <div class="container-fluid">
                                                         <div class="row p-1">
                                                             <div class="col-md-8 col-sm-8">  
-                                                                <img src="../Images/clients.jpg "  width="100%" height="100%" alt="">
+                                                                <img src="../Images/clients.jpg "  width="100%" height="100%">
                                                             </div>
                                                             <div class="col-md-4 col-sm-3 align-items justify-content text-white ">
                                                                 <div class="text-block">
@@ -528,7 +528,7 @@
                                           <div class="container-fluid">
                                                 <div class="row p-3 ">
                                                     <div class="col-md-8 col-sm-8">  
-                                                        <img src="../Images/event2.jpg"  width="100%" height="100%" alt="">
+                                                        <img src="../Images/event2.jpg"  width="100%" height="100%">
                                                     </div>
                                                     <div class="col-md-4 col-sm-3 align-items justify-content text-white ">
                                                         <div class="text-block">
@@ -618,14 +618,15 @@
             <!-- OUR STORY SECTION ENDS HERE -->
 
             <!-- OUR PURPOUSE SECTION STARTS HERE -->
-            <!-- In this section theere will be 3 cards inside a row representing each purpouse that the restaurant has, these cards will have a backgroundimage and some text inside of them. The cards will have an on scroll animation and there layout will be the same in every viewport -->
+            <!-- In this section theere will be 3 cards inside a row representing each purpouse that the restaurant has, these cards will have a background image and some text inside of them overlaying the image. The cards will have an on scroll animation and there layout will be the same in every viewport -->
+            <!-- When displayed in smaller screens the cards will mantain the same layout as displayed on medium and larger screens  -->
              <section class="ourPurpouse" id="ourPurpouse">
                 <div class="container">
                     <h1>Our Purpouse</h1>
                     <div class="row">
                         <div class=" col-4 col-md-4" >
                             <div class="card text-center" data-aos="fade-down" data-aos-duration="3000">
-                                 <img src="../Images/serving4.jpg" class="card-img" alt="...">
+                                 <img src="../Images/serving4.jpg" class="card-img serve" alt="...">
                                 <div class="card-img-overlay">
                                     <h4 class="card-title">Serve</h4>
                                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis laborum, voluptates fuga excepturi voluptas sapiente blanditiis dolores nisi qui deserunt.</p>
@@ -653,6 +654,97 @@
                     </div>
                 </div>
              </section>
+
+             <!-- OUR PURPOUSE SECTION ENDS HERE -->
+             
+             <!-- OUR DIVERSITY SECTION STARTS HERE  -->
+             <!-- This section will be made up of a carousel image slider with infinite scrolling. The scrolling will stop as soon as the user hovers the mouse on the cards, plus there will be a zoom inn animation when the user hovers the mouse on top the images -->
+             <!-- At first I used the bootstrap carousel functionality but struggled as I couldnt make the carousel to continuously slide through the webpage without the need of buttons or anything else -->
+             <!-- So I looked up on the internedt and stumboled upon several youtube videos that could help me with this matter -->
+
+             <div class="ourDiversity">
+                <div class="slider">
+                    <div class="heading">
+
+                        <h1>Our Diversity</h1>
+                        <h5>Take a look of some of what we offer in our menu</h5>
+                        <p>hover your mouse throught the images and slider and see what happens</p>
+
+                    </div>
+                    <div class="slider-track">
+                        <!-- It is important to know that this whole section besides the actual cards, its not part of the bootstrap syntax nor documentation, therefore the cards wont be encapsulated in a container nor row -->
+                        
+                        <!-- Check the CSS for more information about what is happening -->
+                        
+                        <!-- 8 Slides -->
+                        <div class="slide">
+                            <img src="../Images/categorySection8.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/categorySection3.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/seafood1.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/categorySection4.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/fish2.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/categorySection2.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/categorySection10.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/burger8.jpg">
+                        </div>
+
+                        <!-- Same 8 cards are duplicated because they will be in a loop -->
+                        <div class="slide">
+                            <img src="../Images/categorySection8.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/categorySection3.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/seafood1.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/categorySection4.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/fish2.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/categorySection2.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/categorySection10.jpg">
+                        </div>
+
+                        <div class="slide">
+                            <img src="../Images/burger8.jpg">
+                        </div>
+
+                    </div>
+                </div>
+             </div>
          
           
       </main> 
