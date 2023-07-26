@@ -690,11 +690,14 @@ transition: all 0.7s;
 .ourPurpouse .row .card{
     border: 5px solid black;
     border-radius: 0.6rem;
+    height: 85%;
 }
 
 /* Reducing the brightness of all the images */
 .ourPurpouse .row img{
     filter: brightness(0.5);
+    object-fit: cover;
+    height: 100%;
 }
 
 
