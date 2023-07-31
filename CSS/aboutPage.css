@@ -757,6 +757,7 @@ transition: all 0.7s;
 /* OUR DIVERSITY  STARTS HERE */
 .ourDiversity{
     padding-top: 4rem;
+    padding-bottom: 3rem;
     background: linear-gradient(180deg, #031217 15%, #0f412c 83%, #1b8b21 98%);
 }
 
@@ -878,3 +879,74 @@ transition: all 0.7s;
         margin: 6px;
     }
 }
+
+/* OUR DIVERSITY SECTION ENDS HERE */
+
+/* JOIN US SECTION STARTS HERE */
+.joinUs{
+    background-color: whitesmoke;
+    padding-top: 2rem;
+    font-family: "Eagle Lake";
+}
+
+.joinUs .heading{
+    font-size: 50px;
+    text-align: center;
+}
+
+.joinUs .container-fluid .row{
+    height: 80vh;
+}
+
+.joinUs .row .col .co-md-6 .col-lg-6{
+    height: 100%;
+}
+
+.joinUs .row img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.joinUs .row .card{
+    height: 100%;
+    padding: 0;
+    margin: 0 -15px;
+}
+
+.joinUs .row .card .card-title{
+    padding-top: 3%;
+    font-size: 40px;
+}
+.joinUs .row .ourComu .card{
+    text-align: end;
+} 
+.joinUs .row .ourComu .card h5{
+    margin-right: 0;
+    margin-left: 22rem
+}
+
+.joinUs .row .card  h5{
+    margin-right: 22rem;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 600;
+}
+.joinUs .row .card  p{
+    font-size: 12px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="../CSS/aboutPage.css" />
 
     <!-- This will contain the title of the page, for it being the About Us page it will carry the same name -->
-    <title>About Us</title>
+    <title>About Us</title>  
 </head>
 <body>
     
@@ -659,10 +659,12 @@
              
              <!-- OUR DIVERSITY SECTION STARTS HERE  -->
              <!-- This section will be made up of a carousel image slider with infinite scrolling. The scrolling will stop as soon as the user hovers the mouse on the cards, plus there will be a zoom inn animation when the user hovers the mouse on top the images -->
-             <!-- At first I used the bootstrap carousel functionality but struggled as I couldnt make the carousel to continuously slide through the webpage without the need of buttons or anything else -->
-             <!-- So I looked up on the internedt and stumboled upon several youtube videos that could help me with this matter -->
 
-             <div class="ourDiversity">
+             <!-- The images will have a black and white filter so and as soon as the user hovers on them they will regain there normal color -->
+             <!-- At first I used the bootstrap carousel functionality but struggled as I couldnt make the carousel to continuously slide through the webpage without the need of buttons or anything else -->
+             <!-- So I looked up on the internet and stumboled upon several youtube videos that could help me with this matter -->
+
+            <section class="ourDiversity">
                 <div class="slider">
                     <div class="heading">
 
@@ -744,7 +746,46 @@
 
                     </div>
                 </div>
-             </div>
+            </section>
+
+            <!-- OUR DIVERSITY SECTION STOPS HERE -->
+
+            <!-- JOIN US SECTION STARTS HERE -->
+
+            <section class="joinUs">
+                <div class="heading">
+                 <h1>Join US</h1>   
+                </div>
+
+          
+               <div class="container-fluid">
+                    <div class="row jusitfy-content-center">
+                        <div class="col col-md-6 col-lg-6 ourTeam">
+                            <div class="card text-white">
+                                <img src="../Images/about2.jpg" class="card-img" alt="">
+                                <div class="card-img-overlay">
+                                        <h3 class="card-title"> Our Team</h3>
+                                        <h5 class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam molestiae atque deserunt? Cupiditate aut esse nihil, commodi tempore libero.</h5>
+                                        <p class="card-text">click me to fill up the form</p>
+                                        <button type="button" class="btn btn-primary">Join Us</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-6 col-lg-6 ourComu">
+                            <div class="card text-white">
+                                <img src="../Images/comunity.jpg" class="card-img" alt="">
+                                <div class="card-img-overlay">
+                                        <h3 class="card-title"> Our Comunnity</h3>
+                                        <h5 class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam molestiae atque deserunt? Cupiditate aut esse nihil, commodi tempore libero.</h5>
+                                        <p class="card-text">click me to fill up the form</p>
+                                        <button type="button" class="btn btn-primary">Join Us</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+               </div>
+            </section>
+
          
           
       </main> 
