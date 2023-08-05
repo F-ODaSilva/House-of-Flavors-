@@ -482,8 +482,8 @@ transition: all 0.7s;
     }
 
     .detailSection .modal .modal-body .col-md-4 .list ul{
-        -webkit-column-count: 2;
-        -webkit-column-rule: 6px single grey;
+        column-count: 2;
+        column-rule: 6px single grey;
         margin-top: -12px;
     }
  
