@@ -106,6 +106,8 @@ $(function(){
 
 // JOIN US SECTION STARTS HERE 
 // Form validation script
+// This next lines of codes will make the forms more dynamic in terms of validation instead of hardd coding it using bootstrap classes bootstrap provided me with this so the feedback automatically are ddisplayed
+ 
      // Fetch all the forms we want to apply custom Bootstrap validation styles to
      var forms = document.querySelectorAll('.needs-validation')
 

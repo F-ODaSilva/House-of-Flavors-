@@ -885,15 +885,15 @@ transition: all 0.7s;
 /* JOIN US SECTION STARTS HERE */
 .joinUs{
     background-color: whitesmoke;
-    padding-top: 2rem;
     font-family: "Eagle Lake";
 }
 
 .joinUs .heading{
     font-size: 50px;
     text-align: center;
+    padding-top: 1rem;
 }
-
+/* Setting te height of the row so the columns can fit the 100% of its height along with there respective images */
 .joinUs .container-fluid .row{
     height: 80vh;
 }
@@ -931,10 +931,9 @@ transition: all 0.7s;
     text-align: justify;
     font-size: 14px;
     font-weight: 600;
+    padding-bottom: 1rem;
 }
-.joinUs .row .card  p{
-    font-size: 12px;
-} 
+
 .joinUs .row .card button{
     background-color: limegreen;
     border-color: limegreen;
