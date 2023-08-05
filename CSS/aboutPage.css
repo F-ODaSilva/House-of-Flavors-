@@ -911,7 +911,7 @@ transition: all 0.7s;
 .joinUs .row .card{
     height: 100%;
     padding: 0;
-    margin: 0 -15px;
+    margin: 0 -13px;
 }
 
 .joinUs .row .card .card-title{
@@ -935,6 +935,11 @@ transition: all 0.7s;
 .joinUs .row .card  p{
     font-size: 12px;
 } 
+.joinUs .row .card button{
+    background-color: limegreen;
+    border-color: limegreen;
+    color: black;
+}
 
 
 

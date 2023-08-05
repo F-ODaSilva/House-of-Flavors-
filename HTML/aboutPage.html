@@ -754,7 +754,7 @@
 
             <section class="joinUs">
                 <div class="heading">
-                 <h1>Join US</h1>   
+                 <h1>Join</h1>   
                 </div>
 
           
@@ -766,22 +766,182 @@
                                 <div class="card-img-overlay">
                                         <h3 class="card-title"> Our Team</h3>
                                         <h5 class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam molestiae atque deserunt? Cupiditate aut esse nihil, commodi tempore libero.</h5>
-                                        <p class="card-text">click me to fill up the form</p>
-                                        <button type="button" class="btn btn-primary">Join Us</button>
+                                      
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ourTeamModal">Join Us</button>
                                 </div>
                             </div>
                         </div>
+                        <!-- Modal Form -->
+                        <div class="modal mt-0 fade" id="ourTeamModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <form class="row g-3 needs-validation" novalidate>
+                                    <div class="col-md-6">
+                                        <label for="firstNameTeam" class="form-label">First Name</label>
+                                        <input type="text" class="form-control"  placeholder="First Name" aria-label="First Name" id="firstNameTeam" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid first name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastNameTeam" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" id="lastNameTeam" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid last name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputCountryTeam" class="form-label">Country</label>
+                                        <select id="inputCountryTeam" class="form-select">
+                                            <option selected> </option>
+                                            <option>USA</option>
+                                            <option>Spain</option>
+                                            <option>Portugal</option>
+                                            <option>Canada</option>
+                                            <option>Italy</option>
+                                            <option>France</option>
+                                            <option>Mozambique</option>
+                                            <option>South Africa</option>
+                                            <option>Greece</option>
+                                            <option>Turkey</option>
+                                            <option>Monaco</option>
+                                        </select required>
+                                        <div class="invalid-feedback">
+                                            Please choose a country
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputCityTeam" class="form-label">City</label>
+                                        <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" id="inputCityTeam" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid city.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputAddressTeam" class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="inputAddressTeam" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid adress.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="emailTeam" class="form-label">Email</label>
+                                        <input type="email" class="form-control"  placeholder="Email" aria-label="Email" id="emailTeam" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid email.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phoneTeam" class="form-label">Phone Number</label>
+                                        <input type="text" class="form-control" placeholder="Phone Number" aria-label="Phone Number" id="phoneTeam" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid phone number.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12 mb-2 text-center">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
                         <div class="col col-md-6 col-lg-6 ourComu">
                             <div class="card text-white">
                                 <img src="../Images/comunity.jpg" class="card-img" alt="">
                                 <div class="card-img-overlay">
                                         <h3 class="card-title"> Our Comunnity</h3>
                                         <h5 class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam molestiae atque deserunt? Cupiditate aut esse nihil, commodi tempore libero.</h5>
-                                        <p class="card-text">click me to fill up the form</p>
-                                        <button type="button" class="btn btn-primary">Join Us</button>
+                                      
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ourComuModal">Join Us</button>
                                 </div>
                             </div>
                         </div>
+                        <div class="modal mt-0 fade" id="ourComuModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <form class="row g-3 needs-validation" novalidate>
+                                    <div class="col-md-6">
+                                        <label for="firstNameComu" class="form-label">First Name</label>
+                                        <input type="text" class="form-control"  placeholder="First Name" aria-label="First Name" id="firstNameComu" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid first name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastNameComu" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" id="lastNameComu" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid last name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputCountryComu" class="form-label">Country</label>
+                                        <select id="inputCountryComu" class="form-select">
+                                            <option selected> </option>
+                                            <option>USA</option>
+                                            <option>Spain</option>
+                                            <option>Portugal</option>
+                                            <option>Canada</option>
+                                            <option>Italy</option>
+                                            <option>France</option>
+                                            <option>Mozambique</option>
+                                            <option>South Africa</option>
+                                            <option>Greece</option>
+                                            <option>Turkey</option>
+                                            <option>Monaco</option>
+                                        </select required>
+                                        <div class="invalid-feedback">
+                                            Please choose a country
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputCityComu" class="form-label">City</label>
+                                        <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" id="inputCityComu" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid city.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputAddressComu" class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="inputAddressComu" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid adress.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="emailComu" class="form-label">Email</label>
+                                        <input type="email" class="form-control"  placeholder="Email" aria-label="Email" id="emailComu" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid email.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phoneComu" class="form-label">Phone Number</label>
+                                        <input type="text" class="form-control" placeholder="Phone Number" aria- label="Phone Number" id="phoneComu" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid phone number.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12 mb-2 text-center">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                     </div>  
                </div>
             </section>
@@ -792,6 +952,25 @@
       
       
     <!-- JAVASCRIPT SCRIPT LINK -->
+    <script>
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms).forEach(function (form) 
+            {
+                    form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            });
+
+    </script>
     <script src="../Javascript/aboutPage.js "></script>
 
     <!-- BOOTSTRAP 5 JAVASCRIPT CDN LINK -->
