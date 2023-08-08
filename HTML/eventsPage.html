@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome Kit's Code Link -->
+    <script src="https://kit.fontawesome.com/f7ccd0c567.js" crossorigin="anonymous"></script>
+
+    <!-- Gooole Fonts External Link Fonts -->
+    <link rel="preconnect" href="https://fonts.gooogleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto+Slab&family=Cookie:wght@400&display=swap"
+      rel="stylesheet" />
+
+    <!-- Bootstrap Stylesheet Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Boostrap CDN Icon Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Basal Patterns CSS Link -->
+    <link href="https://unpkg.com/pattern.css" rel="stylesheet">
+
+    <!-- AOS (Animation On Scroll) Link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!-- CSS Stylesheet Link -->
+    <link rel="stylesheet" href="../CSS/eventsPage.css" />
+
+    <!-- This will contain the title of the page, for it being the About Us page it will carry the same name -->
+    <title>Events</title> 
+</head>
+<body>
+    <header id="header">
+
+        <!-- BACKGROUND IMAGE STARTS HERE -->
+        <!-- The background image will be behind everything on the header section, the class "bg-img" is a custom class check the CSS stylesheet for a better explanation -->
+        <img class="bg-img" src="../Images/eventFest.jpg" alt="Background Image">
+
+
+
+        <!-- NAVIGATION BAR STARTS HERE  -->
+        <!-- The navigation bar will be the same as the one in the "homePage.html", It will have the navbar brand  on the left of the and its remaining items on th right of the page (Home, Our Menu, About Us, Events, Cart ) 
+        
+        The Our Menu tab will have a dropdown link menu with all the categories that the restaurant serves. 
+
+
+        The navbar will have a visual effect that changes it background from transparent set to a solid color. This was made with the help of 
+        Check the CSS stylesheet for more information
+        -->
+        <nav class="navbar navbar-expand-lg  fixed-top">
+            <!-- In the above line the nav element has a bootstrap class the enables the nabar to be allways shown on top when the user scrolls called "fixed top" this will be a feauture that helps the user navigate at all times. -->
+            <div class="container-fluid">
+                <a href="./homePage.html" class="navbar-brand mx-3 fs-3">House Of Flavors</a>
+                <button
+                    class="navbar-toggler me-3 "
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Collapsible Wrapper -->
+                <div class="collapse navbar-collapse" class="justify-content-between" id="navbarSupportedContent">
+                <!-- Right links -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-between">
+                        <li class="nav-item mx-3 whitesmoke" class="nav-menu">
+                            <a href="./homePage.html" class="nav-link">Home</a>
+                        </li>
+                
+                        <!-- Navbar Dropdown  -->
+                        <li class="nav-item mx-3 dropdown" class="nav-menu">
+                            <a 
+                            href="#"
+                            class="nav-link dropdown-toggle"
+                            id="navbarDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            >
+                            Our Menu
+                            </a>
+                            
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                       
+                                <li>
+                                    <a href="#" class="dropdown-item">Burgers</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Pizza</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Seafood</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Steak</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Sushi</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">Drinks</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item mx-3" class="nav-menu">
+                            <a href="./eventPage.html" class="nav-link">Events</a>
+                        </li>
+
+                        <li class="nav-item mx-3" class="nav-menu">
+                            <a href="#" class="nav-link active" aria-current="page">About Us</a>
+                        </li>
+
+                        <li class="navbar-nav ml-auto mx-2">
+                            <button class="btn">
+                              <a class="nav-link " href="./cartPage.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                  fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                                  <path
+                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
+                                </svg></a>
+                            </button>
+                          </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <!-- NAVBAR SECTION ENDS HERE -->
+
+        <!-- HERO SECTION STARTS HERE -->
+        <!-- Here is where the content of the hero section its created, the heading and the paragraphs, it will be simpler than the hero section from the homepage  -->
+
+        <div class="hero-section" id="hero-section">
+          <div class="heading p-5 text-center" >
+            <h1 class="mb-3" data-aos="zoom-in" data-aos-duration="2000">Events</h1>
+            <h4 class="mb-3" data-aos="zoom-in" data-aos-duration="200">This is where you will explore, enjoy & live</h4>
+          </div>
+        </div>
+    </header>
+    
+    <main>
+
+    </main>
+
+
+     <!-- FOOTER SECTION STARTS HERE  -->
+            <!-- The footer will be the same as the other pages -->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-5">
+                            <div class="row">
+                                <!-- Left side of the fooeter where some text from the restaurant is shown -->
+                                <div class="col-md-12 col-lg-8 mb-md-0 mb-4">
+                                    <h2 class="footer-heading">
+                                        House of Flavors
+                                    </h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates assumenda reiciendis cum autem, cupiditate animi non eligendi quibusdam exercitationem perspiciatis quisquam quia sit? Ullam, consequuntur?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right side of the footer where the links and external links from various sections of the website are listed -->
+                        <div class="col-md-8 col-lg-7">
+                            <div class="row">
+                                <div class="col-md-3 mb-md-0 mb-4 border-left">
+                                    <h2 class="footer-heading">Home</h2>
+                                    <ul class="link-list">
+        
+                                        <li class="link-item">
+                                            <a href="../HTML/homePage.html#newArrivals" class="py-1 d-block">New Arrivals</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/homePage.html#topChoicesSection" class="py-1 d-block">Top Choices</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/homePage.html#othersSection" class="py-1 d-block">News</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/homePage.html#exploreSection" class="py-1 d-block">Explore</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 mb-md-0 mb-4 border-left">
+                                    <h2 class="footer-heading">About</h2>
+                                    <ul class="link-list">
+        
+                                        <li class="link-item">
+                                            <a href="../HTML/aboutPage.html#detailSection" class="py-1 d-block">Details</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/aboutPage.html#ourStorySection" class="py-1 d-block">Our Story</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/aboutPage.html#ourPurpouseSection" class="py-1 d-block">Our Purpouse</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/aboutPage.html#ourDiversitySection" class="py-1 d-block">Our Diversity</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/aboutPage.html#ourDiversitySection" class="py-1 d-block">Join Us</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 mb-md-0 mb-4 border-left">
+                                    <h2 class="footer-heading">Our Menu</h2>
+                                    <ul class="link-list">
+        
+                                        <li class="link-item">
+                                            <a href="../HTML/menuPage.html#newArrivals" class="py-1 d-block">New Arrivals</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/menuPage.html#topChoicesSection" class="py-1 d-block">Top Choices</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/menuPage.html#othersSection" class="py-1 d-block">News</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/menuPage.html#exploreSection" class="py-1 d-block">Explore</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 mb-md-0 mb-4 border-left">
+                                    <h2 class="footer-heading">Events</h2>
+                                    <ul class="link-list">
+        
+                                        <li class="link-item">
+                                            <a href="../HTML/eventsPage.html#newEventsSection" class="py-1 d-block">New</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/eventsPage.html#lastMonthSection" class="py-1 d-block">Last Month</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/eventsPage.html#seasonalSection" class="py-1 d-block">Seasonal</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/eventsPage.html#upcomingSection" class="py-1 d-block">Upcoming</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bottom side of the foooter where all the social media links are displayed -->
+                        <div class="row social mt-5">
+                            <div class="col-md-12">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h3 class="mb-0">
+                                            Social Media:
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <p class="social-icons mb-0">
+                                            <i class="bi bi-facebook"></i>
+                                            <i class="bi bi-instagram"></i>
+                                            <i class="bi bi-twitter"></i>
+                                            <i class="bi bi-whatsapp"></i>
+                                            <i class="bi bi-linkedin"></i>
+                                            <i class="bi bi-youtube"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Final part of the footer witch represents the creator and owner of the website (myself kkkkkkk) -->
+                        <div class="row mt-3">
+                            <div class="col-md-12 col-lg-8">
+                                <p class="copyright">
+                                    Copyright © 2023 All rights reserved | This website is made with 
+                                    <i class="bi bi-suit-heart-fill"></i> by Francisco Lourenço Do Ó Da Silva
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </footer>
+        <!-- FOOOTER SECTIONS ENDS HERE -->
+      
+
+
+
+
+        
+    <!-- JAVASCRIPT SCRIPT LINK -->
+    <script src="../Javascript/aboutPage.js "></script>
+
+    <!-- BOOTSTRAP 5 JAVASCRIPT CDN LINK -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- GOOGLE FONT API  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- ANIMATION ON SCROLL SCRIPT LINK   -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script>
+    
+    <!-- TILT.JS SCRIPT LINK  -->
+    <script type="text/javascript" src="../JQuery/tilt.jquery.js"></script>
+
+    <!-- Script that enables the tooltip functionality on the icons and card-icons -->
+      <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+      </script>
+</body>
+</html>
