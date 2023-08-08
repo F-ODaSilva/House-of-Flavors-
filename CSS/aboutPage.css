@@ -940,17 +940,56 @@ transition: all 0.7s;
     color: black;
 }
 
+/* FOOTER SECTION STARTS HERE */
+footer{
+    background-color: black;
+    padding: 4rem 0 2rem 0;
+    font-family: "Eagle Lake";
+}
+/* Styling for the left column of the footer */
+footer .row .col-md-12 p{
+    margin-right: -9rem;
+    text-align: justify;
+}
+/* Styling for every heading of the footer */
+footer .footer-heading{
+    color: whitesmoke;
+}
+/* Make the headings of the right side of the footer smaller */
+footer .row .border-left .footer-heading{
+    font-size:20px;
+}
+/* Changing the border-color and centering the ul */
+footer .row .border-left{
+    border-left: solid limegreen;
+}
 
+footer .row .link-list{
+    margin-left: -12px;
+}
+/* Set text-decoration to none to every list item, even when visited */
+footer .row .link-item a{
+    color: white;
+    text-decoration: none;  
+    font-size: 12px;
+}
+footer .row .social h3{
+    font-size: 20px;
+    color: whitesmoke;
+}
 
+footer .row .social-icons i{
+    margin-right: 2rem;
+    font-size: 15px;
+    color:white;
+}
+footer .row .copyright{
+    font-size: 12px
+}
+.bi-suit-heart-fill{
+    color: red;
+}
 
-
-
-
-
-
-
-
-
-
+/* FOOTER ENDS HERE */
 
 

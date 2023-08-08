@@ -25,6 +25,8 @@
 
     <!-- Bootstrap Stylesheet Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Boostrap CDN Icon Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Basal Patterns CSS Link -->
     <link href="https://unpkg.com/pattern.css" rel="stylesheet">
@@ -173,7 +175,7 @@
             Inside of some of the modals ther will be a a "click me" button that will trigger a JQUERY function that will make the previous paragraphs including the button dissapear and show additional content  
         There will be numbers bellow the button that will slowly increase to the predefined  value, this will be done with the help of a Javascript function. Check Javascript file for more information on how its done.
         -->
-        <section class="detailSection">
+        <section class="detailSection" id="detailSection">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="detailHeading">
@@ -554,7 +556,7 @@
 
         <!-- OUR STORY SECTION STARTS HERE -->
         <!-- There will be two rows inside of them two images with animation on scroll  and two text-blocks with some information they will have a buttons to hide and display new paragraphs  -->
-            <section class="ourStory" id="ourStory" >
+            <section class="ourStory" id="ourStorySection" >
                 <div class="container-fluid">
                     <div class="row">
                         <h1>Our Story</h1>
@@ -620,7 +622,7 @@
             <!-- OUR PURPOUSE SECTION STARTS HERE -->
             <!-- In this section theere will be 3 cards inside a row representing each purpouse that the restaurant has, these cards will have a background image and some text inside of them overlaying the image. The cards will have an on scroll animation and there layout will be the same in every viewport -->
             <!-- When displayed in smaller screens the cards will mantain the same layout as displayed on medium and larger screens  -->
-             <section class="ourPurpouse" id="ourPurpouse">
+             <section class="ourPurpouse" id="ourPurpouseSection">
                 <div class="container">
                     <h1>Our Purpouse</h1>
                     <div class="row">
@@ -664,7 +666,7 @@
              <!-- At first I used the bootstrap carousel functionality but struggled as I couldnt make the carousel to continuously slide through the webpage without the need of buttons or anything else -->
              <!-- So I looked up on the internet and stumboled upon several youtube videos that could help me with this matter -->
 
-            <section class="ourDiversity">
+            <section class="ourDiversity" id="ourDiversitySection">
                 <div class="slider">
                     <div class="heading">
 
@@ -753,7 +755,7 @@
             <!-- JOIN US SECTION STARTS HERE -->
             <!-- This will be where the section where the user will be eable to select from two options "Join Our Team" and "Join Our Comunnity" each of these options will have be inside a row and will have a button inside that will display a modal with a form inside it, this form will have inputs and select boxes where the user provides its own information and submits it, if the user doesn't provide the proper information in will notify him, and the form will not be validated. (Form has validation system)-->
             <!-- For more information about the validation check the "../aboutPage.js"-->
-            <section class="joinUs">
+            <section class="joinUs" id="joinUsSection">
                 <div class="heading">
                  <h1>Join</h1>   
                 </div>
@@ -947,10 +949,150 @@
                </div>
             </section>
 
-         
-          
+            <!-- JOIN US SECTION ENDS HERE --          
       </main> 
       
+                  <!-- FOOTER SECTION STARTS HERE  -->
+            <!-- The footer will be the same as the other pages -->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-5">
+                            <div class="row">
+                                <!-- Left side of the fooeter where some text from the restaurant is shown -->
+                                <div class="col-md-12 col-lg-8 mb-md-0 mb-4">
+                                    <h2 class="footer-heading">
+                                        House of Flavors
+                                    </h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates assumenda reiciendis cum autem, cupiditate animi non eligendi quibusdam exercitationem perspiciatis quisquam quia sit? Ullam, consequuntur?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right side of the footer where the links and external links from various sections of the website are listed -->
+                        <div class="col-md-8 col-lg-7">
+                            <div class="row">
+                                <div class="col-md-3 mb-md-0 mb-4 border-left">
+                                    <h2 class="footer-heading">Home</h2>
+                                    <ul class="link-list">
+        
+                                        <li class="link-item">
+                                            <a href="../HTML/homePage.html#newArrivals" class="py-1 d-block">New Arrivals</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/homePage.html#topChoicesSection" class="py-1 d-block">Top Choices</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/homePage.html#othersSection" class="py-1 d-block">News</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/homePage.html#exploreSection" class="py-1 d-block">Explore</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 mb-md-0 mb-4 border-left">
+                                    <h2 class="footer-heading">About</h2>
+                                    <ul class="link-list">
+        
+                                        <li class="link-item">
+                                            <a href="../HTML/aboutPage.html#detailSection" class="py-1 d-block">Details</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/aboutPage.html#ourStorySection" class="py-1 d-block">Our Story</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/aboutPage.html#ourPurpouseSection" class="py-1 d-block">Our Purpouse</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/aboutPage.html#ourDiversitySection" class="py-1 d-block">Our Diversity</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/aboutPage.html#ourDiversitySection" class="py-1 d-block">Join Us</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 mb-md-0 mb-4 border-left">
+                                    <h2 class="footer-heading">Our Menu</h2>
+                                    <ul class="link-list">
+        
+                                        <li class="link-item">
+                                            <a href="../HTML/menuPage.html#newArrivals" class="py-1 d-block">New Arrivals</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/menuPage.html#topChoicesSection" class="py-1 d-block">Top Choices</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/menuPage.html#othersSection" class="py-1 d-block">News</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/menuPage.html#exploreSection" class="py-1 d-block">Explore</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 mb-md-0 mb-4 border-left">
+                                    <h2 class="footer-heading">Events</h2>
+                                    <ul class="link-list">
+        
+                                        <li class="link-item">
+                                            <a href="../HTML/eventsPage.html#newEventsSection" class="py-1 d-block">New</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/eventsPage.html#lastMonthSection" class="py-1 d-block">Last Month</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/eventsPage.html#seasonalSection" class="py-1 d-block">Seasonal</a>
+                                        </li>
+                                        <li class="link-item">
+                                            <a href="../HTML/eventsPage.html#upcomingSection" class="py-1 d-block">Upcoming</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bottom side of the foooter where all the social media links are displayed -->
+                        <div class="row social mt-5">
+                            <div class="col-md-12">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h3 class="mb-0">
+                                            Social Media:
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <p class="social-icons mb-0">
+                                            <i class="bi bi-facebook"></i>
+                                            <i class="bi bi-instagram"></i>
+                                            <i class="bi bi-twitter"></i>
+                                            <i class="bi bi-whatsapp"></i>
+                                            <i class="bi bi-linkedin"></i>
+                                            <i class="bi bi-youtube"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Final part of the footer witch represents the creator and owner of the website (myself kkkkkkk) -->
+                        <div class="row mt-3">
+                            <div class="col-md-12 col-lg-8">
+                                <p class="copyright">
+                                    Copyright © 2023 All rights reserved | This website is made with 
+                                    <i class="bi bi-suit-heart-fill"></i> by Francisco Lourenço Do Ó Da Silva
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </footer>
+        <!-- FOOOTER SECTIONS ENDS HERE -->
+      
+
+<!-- END OF ABOUT PAGE -->
+
+
       
     <!-- JAVASCRIPT SCRIPT LINK -->
     <script src="../Javascript/aboutPage.js "></script>
