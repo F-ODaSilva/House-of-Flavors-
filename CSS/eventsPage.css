@@ -206,6 +206,34 @@ transition: all 0.7s;
     }
 }
 
+/* BACKGROUND COLOR FOR THE MAIN SECTION OF THE PAGE */
+main{
+    background-image: linear-gradient(140deg, rgb(29, 208, 91), rgb(239, 36, 255));
+    border-top:solid black 10px;
+}
+/* EVENTS SEARCH BAR STARTS HERE */
+.searchBar{
+    background-color: black;
+    font-family: "Eagle Lake";
+    text-align: center;
+    color: whitesmoke;
+}
+
+.searchBar .col-md-2{
+    text-align: center;
+}
+
+.searchBar .btn-success{
+    border: solid 2px limegreen;
+    background-color: black;
+}
+
+.searchBar .btn-success:hover{
+    border: solid 2px limegreen;
+    background-color: limegreen;
+    color: black;
+}
+/* EVENTS SEARCH BAR ENS HERE */
 
 /* FOOTER SECTION STARTS HERE */
 footer{
