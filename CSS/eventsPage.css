@@ -210,6 +210,7 @@ transition: all 0.7s;
 main{
     background-image: linear-gradient(140deg, rgb(29, 208, 91), rgb(239, 36, 255));
     border-top:solid black 10px;
+    overflow-y:hidden;
 }
 /* EVENTS SEARCH BAR STARTS HERE */
 .searchBar{
@@ -234,12 +235,59 @@ main{
     color: black;
 }
 /* EVENTS SEARCH BAR ENS HERE */
+.eventsBox{
+    border-radius: 25px;
+    background-color: white!important;
+    filter: drop-shadow(-15px 80px 40px black);
+    margin-bottom: 4rem;
+}
+.eventsBox .d-block{
+    filter: saturate(1.5);
+    font-family: "Eagle Lake";
+}
+
+.eventsBox .card{
+    height: 230px;
+    background-color: black;
+    border: 5px solid black;
+    filter: drop-shadow(10px 16px 15px black);
+}
+.eventsBox .card img{
+    object-fit: cover;
+    height: 100%;
+    transform: scale(20px);
+    filter: brightness(0.8);
+}
+.eventsBox h5{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: black;
+}
+.eventsBox p{
+    font-size: smaller;
+	font-weight: bolder;
+	color: black;
+	margin-right: 30rem;
+	text-align: start;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* FOOTER SECTION STARTS HERE */
 footer{
     background-color: black;
     padding: 4rem 0 2rem 0;
     font-family: "Eagle Lake";
+    position: relative;
+
 }
 /* Styling for the left column of the footer */
 footer .row .col-md-12 p{
