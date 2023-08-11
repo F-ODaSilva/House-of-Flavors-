@@ -235,47 +235,81 @@ main{
     color: black;
 }
 /* EVENTS SEARCH BAR ENS HERE */
+
+/* EVENT CARDS BOX  STARTS  HERE */
+/* The background color for the container/column that holds the event cards will be styled first aalong with its border and margin bottom and it will have a drop-shadow  */
 .eventsBox{
     border-radius: 25px;
     background-color: white!important;
     filter: drop-shadow(-15px 80px 40px black);
     margin-bottom: 4rem;
 }
+/* Thuis will enhance the colors of every column that has a card in it */
 .eventsBox .d-block{
     filter: saturate(1.5);
     font-family: "Eagle Lake";
 }
-
+/* The cards will have a drop-shadow and a height that will make the image more visable */
 .eventsBox .card{
-    height: 230px;
+    height: 250px;
     background-color: black;
     border: 5px solid black;
     filter: drop-shadow(10px 16px 15px black);
 }
+/* The images inside the cards will have a brighntess filter to lower it  */
 .eventsBox .card img{
     object-fit: cover;
     height: 100%;
-    transform: scale(20px);
-    filter: brightness(0.8);
+    filter: brightness(0.7);
 }
+/* Card text styling */
 .eventsBox h5{
     font-size: 2.5rem;
     font-weight: bolder;
-    color: black;
+    color: white;
 }
 .eventsBox p{
     font-size: smaller;
 	font-weight: bolder;
-	color: black;
+	color: white;
 	margin-right: 30rem;
 	text-align: start;
 }
 
+/* Card button styling */
+.eventsBox button{
+    margin-top: -12px;
+    padding: 2px 15px;
+}
 
-
-
-
-
+/* Using the object-position attribute to set how I want the images to be displayed on the cards */
+.eventsBox .imgColor{
+    object-position: 0 62%;
+}
+.eventsBox .imgSunday{
+    object-position: 0 25%;
+}
+.eventsBox .imgKids{
+    object-position: 0 71%;
+}
+.eventsBox .imgFire{
+    object-position: 0 83%;
+}
+.eventsBox .imgFest{
+    object-position: bottoom;
+}
+.eventsBox .imgWed{
+    object-position: 0 55%;
+}
+.eventsBox .imgTaste{
+    object-position: 0 60%;
+}
+.eventsBox .imgFather{
+    object-position: 0 58%;
+}
+.eventsBox .imgVal{
+    object-position: 0 62%;
+}
 
 
 
