@@ -148,12 +148,15 @@
           </div>
         </div>
     </header>
-    
+    <!-- EVENT SEARCH/NAVIGATION BAR -->
     <main>
+        <!-- In this container there will be a row encapsulating a big column and four columns with a button in each.
+        When the user clicks on a button the respective category of the cards will be displayed and the other ones hidden-->
         <div class="container">
             <div class="row justify-content-center">
                 <!-- Small navigation bar  -->
                 <div class="col-md-8 col-lg-10  searchBar mt-5 mb-5 py-2 rounded-pill">
+
                     <div class="row justify-content-evenly">
                         <div class="col-md-2 d-inline">
                             <button type="button" class="btn btn-success rounded-pill searchButton" id="allEventsSection">All</button>
@@ -168,7 +171,12 @@
                             <button type="button" class="btn btn-success rounded-pill searchButton" id="upcomingSection">Upcoming</button>
                         </div>
                     </div>
+
                 </div>
+            
+
+                <!-- EVENT CARDS BOX -->
+                <!-- The cards from the events will be insie a column and will have a button -->
 
                 <div class="col-md-10 col-lg-12 eventsBox p-4 bg-dark">
                     <div class="row justify-content-center">
@@ -185,7 +193,7 @@
                             </div>
                         </div>
                         <div class="col-md-10 col-lg-12 d-block mb-4 seasonal new">
-                            <div class="card">
+                            <div class="card new">
                                 <img src="../Images/heroImage2.jpg" alt="" class="card-img imgSunday">
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">
