@@ -20,9 +20,9 @@ body{
 /* BACKGROUND IMAGE HEADER */
 /* The height of the header will be set to 100 so the bg-img will acomodate its size */
 .bg-img{
-    height: 100vh;
     width: 100vw;
     object-fit: cover;
+    object-position: 0 70%;
     position: absolute;
     top: 0;
     left: 0;
@@ -172,7 +172,7 @@ transition: all 0.7s;
 /* First for the content on the hero section to be in the center, it is necessary to set its margin-top  */
 .hero-section{
     margin-top: 15rem;
-    height: 66vh;
+    height: 470px;
 }
 
 
@@ -312,6 +312,11 @@ main{
 }
 
 
+/* EVENT NAVBAR */
+/* Here will be the functionlity for the buttons on the search/navbar  */
+.searchBar .searchButton{
+    display: contents;
+}
 
 
 
