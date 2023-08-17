@@ -81,7 +81,7 @@
                         <!-- Navbar Dropdown  -->
                         <li class="nav-item mx-3 dropdown" class="nav-menu">
                             <a 
-                            href="#"
+                            href="./menuPage.html"
                             class="nav-link dropdown-toggle"
                             id="navbarDropdown"
                             role="button"
@@ -119,7 +119,7 @@
                         </li>
 
                         <li class="nav-item mx-3" class="nav-menu">
-                            <a href="#" class="nav-link active" aria-current="page">About Us</a>
+                            <a href="./aboutPage.html" class="nav-link active" aria-current="page">About Us</a>
                         </li>
 
                         <li class="navbar-nav ml-auto mx-2">
@@ -144,7 +144,7 @@
         <div class="hero-section" id="hero-section">
           <div class="heading p-5 text-center" >
             <h1 class="mb-3" data-aos="zoom-in" data-aos-duration="2000">Events</h1>
-            <h4 class="mb-3" data-aos="zoom-in" data-aos-duration="200">This is where you will explore, enjoy & live</h4>
+            <h4 class="mb-3" data-aos="zoom-in" data-aos-duration="2000">This is where you will explore, enjoy & live</h4>
           </div>
         </div>
     </header>
@@ -159,29 +159,29 @@
 
                     <div class="row justify-content-evenly">
                         <div class="col-md-2 d-inline">
-                            <button type="button" class="btn btn-success rounded-pill searchButton" id="allEventsSection">All</button>
+                            <button type="button" class="btn btn-success rounded-pill searchButton" id="allEventsSection" data-category="card">All</button>
                         </div>
                         <div class="col-md-2 d-inline">
-                            <button type="button" class="btn btn-success rounded-pill searchButton" id="newEventsSection">New</button>
+                            <button type="button" class="btn btn-success rounded-pill searchButton" id="newEventsSection" data-category="newEvent">New</button>
                         </div>
                         <div class="col-md-2 d-inline">
-                            <button type="button" class="btn btn-success rounded-pill searchButton" id="seasonalSection">Seasonal</button>
+                            <button type="button" class="btn btn-success rounded-pill searchButton" id="seasonalSection" data-category="seasonal">Seasonal</button>
                         </div>
                         <div class="col-md-2 d-inline">
-                            <button type="button" class="btn btn-success rounded-pill searchButton" id="upcomingSection">Upcoming</button>
+                            <button type="button" class="btn btn-success rounded-pill searchButton" id="upcomingSection" data-category="upcoming">Upcoming</button>
                         </div>
                     </div>
 
                 </div>
             
 
-                <!-- EVENT CARDS BOX -->
+                <!-- EVENT CARDS BOX -->    
                 <!-- The cards from the events will be insie a column and will have a button -->
 
-                <div class="col-md-10 col-lg-12 eventsBox p-4 bg-dark">
+                <div class="col-md-10 col-lg-12 eventsBox p-4 bg-dark" data-aos="zoom-in" data-aos-duration="2000">
                     <div class="row justify-content-center">
-                        <div class="col-md-10 col-lg-12 d-block mb-4 ">
-                            <div class="card seasonal new">
+                        <div class="col-md-10 col-lg-12  mb-4 event">
+                            <div class="card seasonal newEvent">
                                 <img src="../Images/eventColor.jpg" alt="" class="card-img imgColor">
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">
@@ -192,8 +192,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4 ">
-                            <div class="card seasonal new">
+                        <div class="col-md-10 col-lg-12  mb-4 event ">
+                            <div class="card seasonal newEvent">
                                 <img src="../Images/heroImage2.jpg" alt="" class="card-img imgSunday">
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">
@@ -204,7 +204,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4  ">
+                        <div class="col-md-10 col-lg-12  mb-4 event  ">
                             <div class="card seasonal">
                                 <img src="../Images/eventPaty.jpg" alt="" class="card-img imgPaty">
                                 <div class="card-img-overlay">
@@ -216,7 +216,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4 ">
+                        <div class="col-md-10 col-lg-12  mb-4 event ">
                             <div class="card seasonal ">
                                 <img src="../Images/kids.jpg" alt="" class="card-img imgKids">
                                 <div class="card-img-overlay">
@@ -228,7 +228,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4">
+                        <div class="col-md-10 col-lg-12  mb-4 event">
                             <div class="card  upcoming">
                                 <img src="../Images/event.jpg" alt="" class="card-img imgFire">
                                 <div class="card-img-overlay">
@@ -240,7 +240,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4">
+                        <div class="col-md-10 col-lg-12  mb-4 event">
                             <div class="card upcoming">
                                 <img src="../Images/eventFest.jpg" alt="" class="card-img imgFest">
                                 <div class="card-img-overlay">
@@ -252,8 +252,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4 ">
-                            <div class="card seasonal ">
+                        <div class="col-md-10 col-lg-12  mb-4 event ">
+                            <div class="card newEvent ">
                                 <img src="../Images/eventWed.jpg" alt="" class="card-img imgWed">
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">
@@ -264,8 +264,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4 ">
-                            <div class="card new">
+                        <div class="col-md-10 col-lg-12  mb-4 event ">
+                            <div class="card newEvent">
                                 <img src="../Images/eventTech.jpg" alt="" class="card-img imgTech">
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">
@@ -276,7 +276,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4">
+                        <div class="col-md-10 col-lg-12  mb-4 event">
                             <div class="card seasonal upcoming">
                                 <img src="../Images/mother.jpg" alt="" class="card-img imgMom">
                                 <div class="card-img-overlay">
@@ -288,7 +288,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4 ">
+                        <div class="col-md-10 col-lg-12  mb-4 event ">
                             <div class="card upcoming">
                                 <img src="../Images/eventTaste.jpg" alt="" class="card-img imgTaste">
                                 <div class="card-img-overlay">
@@ -300,8 +300,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4 ">
-                            <div class="card new">
+                        <div class="col-md-10 col-lg-12  mb-4 event ">
+                            <div class="card newEvent">
                                 <img src="../Images/eventRena.jpg" alt="" class="card-img imgRena">
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">
@@ -312,8 +312,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4 new">
-                            <div class="card new">
+                        <div class="col-md-10 col-lg-12  mb-4 event">
+                            <div class="card seasonal newEvent">
                                 <img src="../Images/father.jpg" alt="" class="card-img imgFather">
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">
@@ -324,8 +324,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4>
-                            <div class="card seasonal upcoming"">
+                        <div class="col-md-10 col-lg-12  mb-4 event">
+                            <div class="card seasonal upcoming">
                                 <img src="../Images/eventYear.jpg" alt="" class="card-img imgYear">
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">
@@ -336,7 +336,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4">
+                        <div class="col-md-10 col-lg-12  mb-4 event">
                             <div class="card upcoming">
                                 <img src="../Images/eventBuss.jpg" alt="" class="card-img imgBuss">
                                 <div class="card-img-overlay">
@@ -348,7 +348,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4">
+                        <div class="col-md-10 col-lg-12  mb-4 event">
                             <div class="card  seasonal upcoming">
                                 <img src="../Images/halloween.jpg" alt="" class="card-img imgHall">
                                 <div class="card-img-overlay">
@@ -360,8 +360,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4 ">
-                            <div class="card new">
+                        <div class="col-md-10 col-lg-12  mb-4 event ">
+                            <div class="card newEvent">
                                 <img src="../Images/eventWine.jpg" alt="" class="card-img imgWine">
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">
@@ -372,7 +372,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4 ">
+                        <div class="col-md-10 col-lg-12  mb-4 event ">
                             <div class="card seasonal">
                                 <img src="../Images/valentines.jpg" alt="" class="card-img imgVal">
                                 <div class="card-img-overlay">
@@ -384,7 +384,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4 ">
+                        <div class="col-md-10 col-lg-12  mb-4 event ">
                             <div class="card seasonal">
                                 <img src="../Images/worker.jpg" alt="" class="card-img imgWork">
                                 <div class="card-img-overlay">
@@ -396,7 +396,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 col-lg-12 d-block mb-4 >
+                        <div class="col-md-10 col-lg-12  mb-4 event">
                             <div class="card seasonal upcoming">
                                 <img src="../Images/clean.jpg" alt="" class="card-img imgClean">
                                 <div class="card-img-overlay">
