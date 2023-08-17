@@ -1,0 +1,257 @@
+
+/* OUR MENU PAGE CSS STYLESHEET */
+
+/* Here is where the body and the html tag are styled (it doesn't fully change the styling from the navbar) its font-family and size, line-height, box-sizing, margin, overflow, top ,left and backgound-color  */
+html, body{
+    font-family: "Roboto Slab";
+    font-size: 15px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    /* The overflow-x is a property that controls the content on horizontal axis, when is set to hidden it will hide the scroll bar for the horizontal axis. */
+};
+
+body{
+    background-color: #43c867 ;
+}
+
+
+/* BACKGROUND IMAGE HEADER */
+/* The height of the header will be set to 100 so the bg-img will acomodate its size */
+
+
+/* For a better look on mobile the image height will be set to cover the 100% of the view port height. The width will be set to 100vw so it covers and respects the window scale so that the image fits to it */
+.bg-img{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    object-position: top; /* This will help center the image a bit to the top so the persons heads are not cut off from the screen*/
+    top: 0;
+    left: 0; /* This will help make future elements be visible and not be hidden behind or below the image */
+    z-index: -1;
+    filter: brightness(0.6);
+}
+
+/* It will make the bg-img responsive and center both persons on the screen for the  */
+@media (max-width: 500px){
+    .bg-img{
+        object-position: 59.5%;
+    }
+}
+/* NAVBAR STYLING */
+/* This is where the navbar styling starts and it will start by setting its background transparent and editing the navbar-brand and make it responsive
+Thanks to */
+
+@media (max-width: 500px){
+    .navbar{
+        background-color:transparent;
+    }
+
+    .navbar ul:first-child {
+      background-color: black;
+      margin-top: 10px;
+      border-radius: 12px;
+      border: solid 4px ;  
+    } 
+}
+
+@media (min-width: 900px){
+    .navbar{
+        background-color: transparent;
+    }
+}
+
+/* The navbar-brand will be static and it wont change its form  */
+.navbar-brand{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 900;
+    font-family: "Eagle Lake";
+}
+
+
+.navbar-brand:hover{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.navbar-brand .navbar-brand a{
+    text-decoration: none;
+    display: block;
+    color: whitesmoke;
+}
+
+/* When the nav-links are in there initial state as the way its shown to the user, the text decoration is set to none so the anchor tag is not underlined, but when the user hovers the .nav-links the text go through some subtle changes the, font-size increases, the font-weight too and its color*/
+
+.nav-link{ /* Link part */
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: lighter;
+    font-family: "Eagle Lake";
+    font-size: 14px;
+    margin-top: 10px;
+}
+.nav-link:hover{ /* Hover Part */
+    text-decoration: none;
+    color: green;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "Eagle Lake";
+}
+/* This next line will enable the dropdown menu to appear and set its minimum viewport width, the background color of the the dropdown is changed and so its items*/
+@media (min-width: 200px){
+    .dropdown:hover > .dropdown-menu{
+        display: block;
+        margin-top: 0;
+        background-color: black;
+        border-radius: 10px;
+    }
+     .dropdown-item{
+        color:whitesmoke;
+     }
+
+    .dropdown-item:hover{
+        background-color: limegreen ;
+        color:whitesmoke;
+        padding: 0 10px
+    }
+
+}
+
+/* NAVBAR TOGGLER STYLING */
+.navbar-toggler{
+    background-color: rgb(197, 188, 188);
+    border: none;
+    padding: 7px 11px;
+    outline: none;
+}
+
+
+/* This next lines are ment to style the cart button that representas the cart page */
+/* Here I am targeting the last nav-link child so the cart button can be properly aligned with the rest of the nav links */
+.navbar-nav .btn .nav-link:last-child{
+    position: relative;
+    top: -10px;
+}
+
+/* For smaller scrrens (phones and tablets) the cart page logo will have a black background color and border radius */
+@media(max-width: 900px){
+    .navbar-nav .btn .nav-link:last-child{
+        background-color: black;
+        border-radius: 12px;
+    }
+}
+
+/* The cart page icon must have a white colour and make its width fit in to the button element and give it a height that will make it look like it has the same size as the rest of the navbar links */
+.bi-shop{
+    color: white; 
+    width: fit-content;
+    height: 22px;
+}
+
+/* When the icon is hovered the height will slighty increase making it fit within the button element div and it will change its color from white to a more vivid colour  */
+.bi-shop:hover{
+    color: limegreen; 
+    width: fit-content;
+    height: 23px;
+    
+} 
+
+/* These next lines will be focusing on the styling of the navbar so that it changes its background from transparent to a solid color as soon as the user scrolls, with the use of the trasition CSS property that will enable a smoother transformation effect */
+/* All of this was made thanks to a online video that I found on Youtube here is the link https://www.youtube.com/watch?v=gbmV2Lh9dBM&pp=ygUuaG93IHRvIG1ha2UgdHJhbnNwYXJlbnQgbmF2YmFyIGluIGJvb3RzdHJhcCA1IA%3D%3D */
+
+/* First we must create a class that will hold the changes that we want to made to the navbar, this class will have the name of "navbar-scrolled" */
+
+.navbar-scrolled {
+    background-color:rgb(0, 0, 1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* The following step is on the aboutPage.js file */
+
+/* After it for the navbar to have a smooth transition between the change of the transparent navbar to the solid navbar background */
+
+.navbar{
+transition: all 0.7s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER SECTION STARTS HERE */
+footer{
+    background-color: black;
+    padding: 4rem 0 2rem 0;
+    font-family: "Eagle Lake";
+}
+/* Styling for the left column of the footer */
+footer .row .col-md-12 p{
+    margin-right: -9rem;
+    text-align: justify;
+}
+/* Styling for every heading of the footer */
+footer .footer-heading{
+    color: whitesmoke;
+}
+/* Make the headings of the right side of the footer smaller */
+footer .row .border-left .footer-heading{
+    font-size:20px;
+}
+/* Changing the border-color and centering the ul */
+footer .row .border-left{
+    border-left: solid limegreen;
+}
+
+footer .row .link-list{
+    margin-left: -12px;
+}
+/* Set text-decoration to none to every list item, even when visited */
+footer .row .link-item a{
+    color: white;
+    text-decoration: none;  
+    font-size: 12px;
+}
+footer .row .social h3{
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+footer .row .social-icons i{
+    margin-right: 2rem;
+    font-size: 15px;
+    color:white;
+}
+footer .row .copyright{
+    font-size: 12px
+}
+.bi-suit-heart-fill{
+    color: red;
+}
+
+/* FOOTER ENDS HERE */
+
+
