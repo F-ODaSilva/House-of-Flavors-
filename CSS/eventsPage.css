@@ -245,7 +245,7 @@ main{
     margin-bottom: 4rem;
 }
 /* Thuis will enhance the colors of every column that has a card in it */
-.eventsBox .d-block{
+.eventsBox .event{
     filter: saturate(1.5);
     font-family: "Eagle Lake";
 }
@@ -310,14 +310,6 @@ main{
 .eventsBox .imgVal{
     object-position: 0 62%;
 }
-
-
-/* EVENT NAVBAR */
-/* Here will be the functionlity for the buttons on the search/navbar  */
-.searchBar .searchButton{
-    display: contents;
-}
-
 
 
 /* FOOTER SECTION STARTS HERE */
