@@ -179,7 +179,46 @@ Thanks to */
 transition: all 0.7s;
 }
 
+/* NAVBAR STYLING STOPS HERE */
 
+/* CAROUSE AND HERO STYLING  */
+.carousel-1{
+    background-color:black;
+    background-image: url(../Images/pattern-10.png);
+    background-size: 30%;
+}
+.hero-1{
+    background-image: url(../Images/meat.jpg);
+    background-size: 100%;
+    border-radius: 25px;
+    background-color: white;
+    height: 80vh;
+    margin-top:5rem!important;
+    margin-bottom: 5rem!important;
+}
+.hero-1 .row img{
+    width: 15%;
+}
+
+.hero-1 .row .hero-body{
+    text-align: center;
+    font-family: "Eagle Lake";
+    font-weight: 600;
+    color: white;
+}
+
+.hero-1 .row .hero-body h1{
+    font-size: 60px;
+}
+.hero-1 .row .hero-body button{
+    font-size: small;
+    color: black;
+    background-color: limegreen;
+    border: limegreen solid 4px;
+    color:black;
+    padding-top: 2px!important;
+    padding-bottom: 2px!important;
+}
 
 
 
