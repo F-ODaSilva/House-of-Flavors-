@@ -221,6 +221,110 @@ transition: all 0.7s;
 }
 
 
+.hero-2{
+	 background-image: url(../Images/pattern-10.png); 
+    
+}
+.col-4{
+	background-color: transparent!important;
+    height: 100%;
+}
+.col-4 img{
+	height: 100%;
+	width: 125%;
+	margin-left: -12px;
+    z-index: 2;
+    position: relative;
+}
+.hero-2 {
+    background-color: transparent!important;
+    height: 100vh;
+}
+.hero-body-2{
+	font-family: "Eagle Lake";
+	background-color: transparent!important;
+	color: whitesmoke;
+    padding-top: 5rem; 
+}
+.hero-body-2 h1{
+	font-size: 85px;
+	text-align: start;
+	position: relative;
+	left: -2rem;
+	top: 4rem;
+    z-index: 2;
+}
+.hero-body-2 p{
+	margin-left: 0rem;
+	margin-right: 6rem;
+	text-align: justify;
+	position: relative;
+	left: 23rem;
+	top: -22rem;
+    color: black;
+    font-weight: 600
+}
+.hero-body-2 h3{
+    position: relative;
+    left: 23rem;
+    bottom: 23rem;
+    font-size: 75px;
+    font-style: italic;
+    color: green;
+}	
+.hero-body-2 h4{
+    position: relative;
+    left: 30rem;
+    bottom: 26rem;
+    font-size: 25px;
+    font-style: italic;
+    color: green;
+}	
+.hero-body-2 button{
+	position: relative;
+	left: 23rem;
+	bottom: 26rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: black;
+    background-color: lime;
+    border-color: lime;
+    font-size: 14px;
+}
+.background-pattern-1{
+    background-color: black;
+    height: 90%;
+    width: 57%;
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    border-radius: 28px;
+    z-index: 1;
+    filter: drop-shadow(2px 4px 6px black);
+
+}
+.background-pattern-3{
+    color: cyan;
+    height: 100%;
+    width: 37%;
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    border-radius: 28px;
+    z-index: 1;
+
+}
+
+.background-pattern-2{
+    background-color: #a0174682;
+    height: 80%;
+    width: 57%;
+    position: absolute;
+    top: 6rem;
+    left: 36rem;
+    border-radius: 28px;
+
+}
 
 
 
