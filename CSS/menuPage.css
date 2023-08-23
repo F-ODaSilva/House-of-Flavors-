@@ -221,7 +221,7 @@ transition: all 0.7s;
 }
 
 
-.hero-2{
+.carousel-2{
 	 background-image: url(../Images/pattern-10.png); 
     
 }
@@ -237,7 +237,7 @@ transition: all 0.7s;
     position: relative;
 }
 .hero-2 {
-    background-color: transparent!important;
+    background-color: black;
     height: 100vh;
 }
 .hero-body-2{
@@ -314,7 +314,6 @@ transition: all 0.7s;
     z-index: 1;
 
 }
-
 .background-pattern-2{
     background-color: #a0174682;
     height: 80%;
@@ -327,7 +326,13 @@ transition: all 0.7s;
 }
 
 
-
+.hero-3{
+    background-image: url(../Images/pattern-10.png);
+}
+.hero-body-3{
+    font-family: "Eagle Lake";
+    
+}
 
 
 
