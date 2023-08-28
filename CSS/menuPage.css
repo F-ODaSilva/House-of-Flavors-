@@ -181,7 +181,16 @@ transition: all 0.7s;
 
 /* NAVBAR STYLING STOPS HERE */
 
+
+
+
+
+
+
+
+
 /* CAROUSE AND HERO STYLING  */
+/* FIRST HERO */
 .carousel-1{
     background-color:black;
     background-image: url(../Images/pattern-10.png);
@@ -220,26 +229,27 @@ transition: all 0.7s;
     padding-bottom: 2px!important;
 }
 
-
-.carousel-2{
-	 background-image: url(../Images/pattern-10.png); 
-    
-}
-.col-4{
+/* SECOND HERO  */
+/* Left side of the hero */
+.carousel-2 .col-4{
 	background-color: transparent!important;
     height: 100%;
 }
-.col-4 img{
+/* Image */
+.carousel-2 .col-4 img{
 	height: 100%;
 	width: 125%;
 	margin-left: -12px;
     z-index: 2;
     position: relative;
 }
+/* Container styling */
 .hero-2 {
-    background-color: black;
+    background-image: url(../Images/pattern-10.png);
     height: 100vh;
 }
+/* RIGHT SIDE OF THE HERO */
+/* Hero body  */
 .hero-body-2{
 	font-family: "Eagle Lake";
 	background-color: transparent!important;
@@ -250,7 +260,7 @@ transition: all 0.7s;
 	font-size: 85px;
 	text-align: start;
 	position: relative;
-	left: -2rem;
+	left: -4rem;
 	top: 4rem;
     z-index: 2;
 }
@@ -260,79 +270,153 @@ transition: all 0.7s;
 	text-align: justify;
 	position: relative;
 	left: 23rem;
-	top: -22rem;
+	top: -24rem;
     color: black;
     font-weight: 600
-}
-.hero-body-2 h3{
-    position: relative;
-    left: 23rem;
-    bottom: 23rem;
-    font-size: 75px;
-    font-style: italic;
-    color: green;
-}	
-.hero-body-2 h4{
-    position: relative;
-    left: 30rem;
-    bottom: 26rem;
-    font-size: 25px;
-    font-style: italic;
-    color: green;
 }	
 .hero-body-2 button{
 	position: relative;
-	left: 23rem;
-	bottom: 26rem;
-    padding-top: 0;
-    padding-bottom: 0;
+	left: 44rem;
+	bottom: 20rem;
+    padding-top: 2px!important;
+    padding-bottom: 2px!important;
     color: black;
-    background-color: lime;
-    border-color: lime;
-    font-size: 14px;
+    background-color: limegreen;
+    border-color: limegreen;
+    font-size: small;
 }
+
+/* PATTERNS AND BACKGROUND BOXES  FOR SECOND HERO*/
 .background-pattern-1{
     background-color: black;
-    height: 90%;
+    height: 85%;
     width: 57%;
     position: absolute;
     top: 4rem;
-    left: 1rem;
-    border-radius: 28px;
+    left: 0;
+    border-radius: 35px;
     z-index: 1;
-    filter: drop-shadow(2px 4px 6px black);
-
+    filter: drop-shadow( -30px 5px 70px #c118d58c);
+    border: solid 4px #c118d58c;
+}
+.background-pattern-2{
+    background-color: #c117d58c;
+    height: 80%;
+    width: 60%;
+    position: absolute;
+    top: 1rem;
+    left: 37rem;
+    border-radius: 28px;
 }
 .background-pattern-3{
     color: cyan;
-    height: 100%;
-    width: 37%;
-    position: absolute;
-    top: 2rem;
-    left: 1rem;
-    border-radius: 28px;
-    z-index: 1;
-
-}
-.background-pattern-2{
-    background-color: #a0174682;
-    height: 80%;
+    height: 89%;
     width: 57%;
     position: absolute;
-    top: 6rem;
-    left: 36rem;
+    top: 2rem;
+    left: 0;
     border-radius: 28px;
-
+    z-index: 1;
 }
 
+
+/* THIRD HERO */
 
 .hero-3{
     background-image: url(../Images/pattern-10.png);
+
 }
+/* Left side of the hero */
 .hero-body-3{
     font-family: "Eagle Lake";
-    
+    margin-top: 12rem;
+    z-index: 1;
 }
+.hero-body-3 h1{
+    position: relative;
+    left: 45px;
+    margin-left: 32rem;
+    font-size: 80px;
+    color: whitesmoke;
+}
+.hero-body-3 p{
+    margin-right: 19rem;
+    margin-top: -22rem;
+    margin-bottom: 3rem;
+    text-align: justify;
+    color: black;
+    font-weight: 600;;
+}
+.hero-body-3 button{
+    margin-left: 24rem;
+    margin-top: 5rem;
+    bottom: 20rem;
+    padding-top: 2px!important;
+    padding-bottom: 2px!important;
+    color: black;
+    background-color: limegreen;
+    border-color: limegreen;
+    font-size: small;
+}
+/* Right side of the hero */
+.hero-3 .col-5 img{
+    height: 100%;
+    width: 86%;
+    position: relative;
+    top: -10rem;
+    right: -12px;
+    object-fit: cover; 
+}
+
+
+/* BACKGROUND BOXES AND PATTERN */
+.hero-3 .background-pattern-4{
+    position: absolute;
+    height: 50%;
+    width: 38%;
+    top: 11rem;
+    background-color: yellow;
+}
+.hero-3 .background-pattern-5{
+    position: absolute;
+    height: 82%;
+    width: 70%;
+    top: 1rem;
+    left: 38%;
+    background-color: #6708f63d;
+    border-radius: 30px;
+    filter: drop-shadow(6px 15px 36px blue)
+
+}
+
+
+.hero-3 .background-pattern-6{
+    color: green;
+    height: 91%;
+    width: 61%;
+    position: absolute;
+    top: 1rem;
+    left: 38%;
+    z-index: 1;
+} 
+
+.hero-3 .background-pattern-7{
+    color: #fa57e8c2;
+    height: 81%;
+    width: 61%;
+    position: absolute;
+    top: 3rem;
+    left: 39%;
+    z-index: 0;
+} 
+
+/* HERO SECTION ENDS HERE */
+
+
+
+
+
+
 
 
 
