@@ -191,9 +191,7 @@ transition: all 0.7s;
 
 /* CAROUSEL AND HERO STYLING  */
 /* CAROUSEL BUTTONS  */
-.carousel-indicators button{
-    
-}
+
 /* FIRST HERO */
 .carousel-1{
     background-color:black;
@@ -455,7 +453,6 @@ transition: all 0.7s;
     border-color: limegreen;
     font-size: small;
 }
-
 
 
 
