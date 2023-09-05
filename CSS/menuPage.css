@@ -189,7 +189,11 @@ transition: all 0.7s;
 
 
 
-/* CAROUSE AND HERO STYLING  */
+/* CAROUSEL AND HERO STYLING  */
+/* CAROUSEL BUTTONS  */
+.carousel-indicators button{
+    
+}
 /* FIRST HERO */
 .carousel-1{
     background-color:black;
@@ -367,6 +371,7 @@ transition: all 0.7s;
     top: -10rem;
     right: -12px;
     object-fit: cover; 
+    z-index: 1;
 }
 
 
@@ -414,7 +419,8 @@ transition: all 0.7s;
 /* HERO SECTION ENDS HERE */
 
 
-
+/* TODAY'S SPECIAL SECTION STARTS HERE */
+/* Styling cards */
 
 
 
