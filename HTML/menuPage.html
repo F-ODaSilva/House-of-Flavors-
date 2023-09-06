@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content=" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Font Awesome Kit's Code Link -->
     <script src="https://kit.fontawesome.com/f7ccd0c567.js" crossorigin="anonymous"></script>
@@ -36,7 +36,7 @@
     <title>Our Menu</title>
 </head>
 <body>
-           <!-- NAVIGATION BAR STARTS HERE  -->
+        <!-- NAVIGATION BAR STARTS HERE  -->
         <!-- The navigation bar will be the same as the one in the "homePage.html", It will have the navbar brand  on the left of the and its remaining items on th right of the page (Home, Our Menu, About Us, Events, Cart ) 
         
         The Our Menu tab will have a dropdown link menu with all the categories that the restaurant serves. 
@@ -179,8 +179,6 @@
                                 <h1>Texas Double Decker BBQ!!!</h1>                            
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia iusto quaerat incidunt eaque placeat soluta, mollitia consequatur odit recusandae! Sequi vitae distinctio amet eius corporis.</p>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non sequi, perspiciatis odio temporibus reiciendis fugit doloribus neque quos magni! Neque ratione sit, numquam laboriosam nulla placeat repellat nobis quaerat optio?</p>
-                                <h3>68</h3>  
-                                <h4>R</h4>
                                 <button class="btn btn-primary btn-lg px-4">
                                     Eat Now!
                                 </button>
@@ -233,7 +231,7 @@
           <!-- TODAY'S SPECIAL SECTION -->
           <!-- Here there will be a container with a set of cards each one with a button and text.Each one will be displayed on a specific day of the week  -->
           <!-- All of the functionlaity inside the this will be inside the menuPage.js file -->
-          <section class="todaySpecial" id="todaySpecial">
+         <section class="todaySpecial" id="todaySpecial">
               <div class="container px-0 py-5">
                 <div class="row justify-content-center">
                     <div class="col-8 col-md-8 col-lg-9">
@@ -311,9 +309,63 @@
                     </div>
                 </div>
             </div>
-          </section>
+        </section>
         
-        
+        <!-- MENU SECTION -->
+        <section class="menuSection" id="menuSection">
+            <div class="container-fluid">
+                <div class="row">
+                    <h1>Our Meu</h1>
+                </div>
+                <div class="row">
+                    <!-- Sidebar -->
+                    <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                        <!-- Sidebar Content Here -->
+                        <div class="position-sticky">
+                            <ul class="nav flex-column">
+                                <!-- Sidebar Item -->
+                                <li class="nav-item">
+                                    <a href="./menuPage.html#topChoices" class="nav-link active" aria-current="page">
+                                        Top Choices
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./menuPage.html#topChoices" class="nav-link active" aria-current="page">
+                                        New Arrivals
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#category-collapse">
+                                     Category   
+                                    </button> 
+                                    <div class="collpase show" id="category-collapse">
+                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                            <li><a href="./menuPage.html#hamburguers" class="link-dark rounded">Hamburguers</a></li>
+                                            <li><a href="./menuPage.html#hotdogs" class="link-dark rounded">Hotdogs</a></li>
+                                            <li><a href="./menuPage.html#pizza" class="link-dark rounded">Pizza</a></li>
+                                            <li><a href="./menuPage.html#steak" class="link-dark rounded">Steak</a></li>
+                                            <li><a href="./menuPage.html#seafood" class="link-dark rounded">Seafood</a></li>
+                                            <li><a href="./menuPage.html#sushi" class="link-dark rounded">Sushi</a></li>
+                                            <button class="class btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#drinks-collapse">Drinks</button>
+                                            <div class="collapse show" id="drinks">
+                                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                                    <li><a href="./menuPage.html#softDrinks" class="link-dark rounded">Soft Drinks</a></li>
+                                                    <li><a href="./menuPage.html#juices" class="link-dark rounded">Juices</a></li>
+                                                    <li><a href="./menuPage.html#wines" class="link-dark rounded">Wine</a></li>
+                                                    <li><a href="./menuPage.html#beers" class="link-dark rounded">Beer</a></li>
+                                                    <li><a href="./menuPage.html#sodas" class="link-dark rounded">Sodas</a></li>
+                                                    <li><a href="./menuPage.html#cocktails" class="link-dark rounded">Cocktails</a></li>
+                                                </ul>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
         
         
         
