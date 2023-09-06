@@ -419,21 +419,24 @@ transition: all 0.7s;
 
 /* TODAY'S SPECIAL SECTION STARTS HERE */
 /* Styling cards */
-
 #todaySpecial{
     background-image: url(../Images/firebackground.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: black; 
 }
+
 #todaySpecial .card{
     font-family: "Eagle Lake";
     text-align: center;
-    border: solid  whitesmoke 4px;
+    border-radius: 30px;
 }
+
 #todaySpecial img{
     filter: brightness(0.7);
+    border-radius: 30px;
 }
+
 #todaySpecial .card h3{
     color: limegreen;
     font-size: 45px;
