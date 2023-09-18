@@ -62,7 +62,7 @@
                 </button>
 
                 <!-- Collapsible Wrapper -->
-                <div class="collapse navbar-collapse" class="justify-content-between" id="navbarSupportedContent">
+                <div class=" top-navbar collapse navbar-collapse" class="justify-content-between" id="navbarSupportedContent">
                 <!-- Right links -->
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-between">
                         <li class="nav-item mx-3 whitesmoke" class="nav-menu">
@@ -315,11 +315,14 @@
         <section class="menuSection" id="menuSection">
             <div class="container-fluid">
                 <div class="row">
-                    <h1>Our Meu</h1>
+                    <div class="menuHeading">
+                        <h1> Our Menu </h1>
+                    </div>
+
                 </div>
                 <div class="row">
                     <!-- Sidebar -->
-                    <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                    <nav class="col-sm-3 col-md-3 col-lg-2 d-md-block bg-light sidebar">
                         <!-- Sidebar Content Here -->
                         <div class="position-sticky">
                             <ul class="nav flex-column">
@@ -330,25 +333,26 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./menuPage.html#topChoices" class="nav-link active" aria-current="page">
+                                    <a href="./menuPage.html#Ns" class="nav-link active" aria-current="page">
                                         New Arrivals
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#category-collapse">
+                                    <button class=" btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#category-collapse">
                                      Category   
                                     </button> 
-                                    <div class="collpase show" id="category-collapse">
-                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <div class="collapse" id="category-collapse">
+                                        <ul class="btn-toggle-nav list list-unstyled fw-normal pb-1 small">
                                             <li><a href="./menuPage.html#hamburguers" class="link-dark rounded">Hamburguers</a></li>
                                             <li><a href="./menuPage.html#hotdogs" class="link-dark rounded">Hotdogs</a></li>
                                             <li><a href="./menuPage.html#pizza" class="link-dark rounded">Pizza</a></li>
                                             <li><a href="./menuPage.html#steak" class="link-dark rounded">Steak</a></li>
                                             <li><a href="./menuPage.html#seafood" class="link-dark rounded">Seafood</a></li>
                                             <li><a href="./menuPage.html#sushi" class="link-dark rounded">Sushi</a></li>
-                                            <button class="class btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#drinks-collapse">Drinks</button>
-                                            <div class="collapse show" id="drinks">
-                                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                            <button class="class btn-toggle align-items-center rounded collapsed" data-bs-toggle="drinks" data-bs-target="#drinks-collapse">Drinks</button>
+
+                                            <div class="collapse" id="drinks">
+                                                <ul class="btn-toggle-nav list list-unstyled fw-normal pb-1 small">
                                                     <li><a href="./menuPage.html#softDrinks" class="link-dark rounded">Soft Drinks</a></li>
                                                     <li><a href="./menuPage.html#juices" class="link-dark rounded">Juices</a></li>
                                                     <li><a href="./menuPage.html#wines" class="link-dark rounded">Wine</a></li>
@@ -363,6 +367,527 @@
                             </ul>
                         </div>
                     </nav>
+
+                    <!-- FOOD GRID DISPLAY -->
+                    <div class="col-md-9 ms-sm-auto col-lg-10 mt-3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6 col-md-4 col-lg-4">
+                                    <!-- Product Column -->
+                                        <div class="card">
+                                            <div class="img-wrapper">
+                                                <img src="../Images/burger5.jpg" class="card-img-top" alt="Burguer">
+                                              </div>
+                                              <div class="card-body">
+                                                <h3 class="card-title">Crispy Chicken Burguer</h3>
+                                                <h5 class="cardPrice">35R</h5>
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                                                  necessitatibus.</p>
+                                                <span class="starsRating">
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <p>100%</p>
+                                                </span>
+                                
+                                                <div class="rateButton">
+                                                  <span class="likeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                      <i class="fa-regular fa-thumbs-up"></i>
+                                                    </button>
+                                                  </span>
+                                                  <span class="dislikeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Disike">
+                                                      <i class="fa-regular fa-thumbs-down"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <span class="cart-buttons">
+                                              <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                                                <i class="fa-solid fa-cart-plus"></i>
+                                              </button>
+                                              <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save To Cart">
+                                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                              </button>
+                                            </span>
+                                
+                                                <div class="card-footer">
+                                                  <div class="details">
+                                                        <p>Details:</p>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spicy">
+                                                            <i class="fa-solid fa-pepper-hot"></i>
+                                                        </button>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Chicken">
+                                                            <i class="fa-solid fa-drumstick-bite"></i>
+                                                        </button>
+                                                  </div>
+                                
+                                                </div>
+                                              </div>
+                                        </div>
+                                        
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4">
+                                    <!-- Product Column -->
+                                        <div class="card">
+                                            <div class="img-wrapper">
+                                                <img src="../Images/burger5.jpg" class="card-img-top" alt="Burguer">
+                                              </div>
+                                              <div class="card-body">
+                                                <h3 class="card-title">Crispy Chicken Burguer</h3>
+                                                <h5 class="cardPrice">35R</h5>
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                                                  necessitatibus.</p>
+                                                <span class="starsRating">
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <p>100%</p>
+                                                </span>
+                                
+                                                <div class="rateButton">
+                                                  <span class="likeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                      <i class="fa-regular fa-thumbs-up"></i>
+                                                    </button>
+                                                  </span>
+                                                  <span class="dislikeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Disike">
+                                                      <i class="fa-regular fa-thumbs-down"></i>
+                                                    </button>
+                                                  </span>
+                                                </div>
+                                                <span class="cart-buttons">
+                                                  <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                                                    <i class="fa-solid fa-cart-plus"></i>
+                                                  </button>
+                                                  <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save To Cart">
+                                                    <i class="fa-solid fa-cart-arrow-down"></i>
+                                                  </button>
+                                                </span>
+                                
+                                                <div class="card-footer">
+                                                  <div class="details">
+                                                        <p>Details:</p>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spicy">
+                                                            <i class="fa-solid fa-pepper-hot"></i>
+                                                        </button>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Chicken">
+                                                            <i class="fa-solid fa-drumstick-bite"></i>
+                                                        </button>
+                                                  </div>
+                                
+                                                </div>
+                                              </div>
+                                        </div>
+
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4">
+                                    <!-- Product Column -->
+                                        <div class="card">
+                                            <div class="img-wrapper">
+                                                <img src="../Images/burger5.jpg" class="card-img-top" alt="Burguer">
+                                              </div>
+                                              <div class="card-body">
+                                                <h3 class="card-title">Crispy Chicken Burguer</h3>
+                                                <h5 class="cardPrice">35R</h5>
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                                                  necessitatibus.</p>
+                                                <span class="starsRating">
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <p>100%</p>
+                                                </span>
+                                
+                                                <div class="rateButton">
+                                                  <span class="likeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                      <i class="fa-regular fa-thumbs-up"></i>
+                                                    </button>
+                                                  </span>
+                                                  <span class="dislikeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Disike">
+                                                      <i class="fa-regular fa-thumbs-down"></i>
+                                                    </button>
+                                                  </span>
+                                                </div>
+                                                  <span class="cart-buttons">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                                                      <i class="fa-solid fa-cart-plus"></i>
+                                                    </button>
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save To Cart">
+                                                      <i class="fa-solid fa-cart-arrow-down"></i>
+                                                    </button>
+                                                  </span>
+                                
+                                                <div class="card-footer">
+                                                  <div class="details">
+                                                        <p>Details:</p>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spicy">
+                                                            <i class="fa-solid fa-pepper-hot"></i>
+                                                        </button>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Chicken">
+                                                            <i class="fa-solid fa-drumstick-bite"></i>
+                                                        </button>
+                                                  </div>
+                                
+                                                </div>
+                                              </div>
+                                        </div>
+
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4">
+                                    <!-- Product Column -->
+                                        <div class="card">
+                                            <div class="img-wrapper">
+                                                <img src="../Images/burger5.jpg" class="card-img-top" alt="Burguer">
+                                              </div>
+                                              <div class="card-body">
+                                                <h3 class="card-title">Crispy Chicken Burguer</h3>
+                                                <h5 class="cardPrice">35R</h5>
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                                                  necessitatibus.</p>
+                                                <span class="starsRating">
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <p>100%</p>
+                                                </span>
+                                
+                                                <div class="rateButton">
+                                                  <span class="likeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                      <i class="fa-regular fa-thumbs-up"></i>
+                                                    </button>
+                                                  </span>
+                                                  <span class="dislikeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Disike">
+                                                      <i class="fa-regular fa-thumbs-down"></i>
+                                                    </button>
+                                                  </span>
+                                                </div>
+                                                  <span class="cart-buttons">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                                                      <i class="fa-solid fa-cart-plus"></i>
+                                                    </button>
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save To Cart">
+                                                      <i class="fa-solid fa-cart-arrow-down"></i>
+                                                    </button>
+                                                  </span>
+                                
+                                                <div class="card-footer">
+                                                  <div class="details">
+                                                        <p>Details:</p>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spicy">
+                                                            <i class="fa-solid fa-pepper-hot"></i>
+                                                        </button>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Chicken">
+                                                            <i class="fa-solid fa-drumstick-bite"></i>
+                                                        </button>
+                                                  </div>
+                                
+                                                </div>
+                                              </div>
+                                        </div>
+
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4">
+                                    <!-- Product Column -->
+                                        <div class="card">
+                                            <div class="img-wrapper">
+                                                <img src="../Images/burger5.jpg" class="card-img-top" alt="Burguer">
+                                              </div>
+                                              <div class="card-body">
+                                                <h3 class="card-title">Crispy Chicken Burguer</h3>
+                                                <h5 class="cardPrice">35R</h5>
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                                                  necessitatibus.</p>
+                                                <span class="starsRating">
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <p>100%</p>
+                                                </span>
+                                
+                                                <div class="rateButton">
+                                                  <span class="likeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                      <i class="fa-regular fa-thumbs-up"></i>
+                                                    </button>
+                                                  </span>
+                                                  <span class="dislikeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Disike">
+                                                      <i class="fa-regular fa-thumbs-down"></i>
+                                                    </button>
+                                                  </span>
+                                                </div>
+                                                  <span class="cart-buttons">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                                                      <i class="fa-solid fa-cart-plus"></i>
+                                                    </button>
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save To Cart">
+                                                      <i class="fa-solid fa-cart-arrow-down"></i>
+                                                    </button>
+                                                  </span>
+                                
+                                                <div class="card-footer">
+                                                  <div class="details">
+                                                        <p>Details:</p>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spicy">
+                                                            <i class="fa-solid fa-pepper-hot"></i>
+                                                        </button>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Chicken">
+                                                            <i class="fa-solid fa-drumstick-bite"></i>
+                                                        </button>
+                                                  </div>
+                                
+                                                </div>
+                                              </div>
+                                        </div>
+
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4">
+                                    <!-- Product Column -->
+                                        <div class="card">
+                                            <div class="img-wrapper">
+                                                <img src="../Images/burger5.jpg" class="card-img-top" alt="Burguer">
+                                              </div>
+                                              <div class="card-body">
+                                                <h3 class="card-title">Crispy Chicken Burguer</h3>
+                                                <h5 class="cardPrice">35R</h5>
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                                                  necessitatibus.</p>
+                                                <span class="starsRating">
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <p>100%</p>
+                                                </span>
+                                
+                                                <div class="rateButton">
+                                                  <span class="likeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                      <i class="fa-regular fa-thumbs-up"></i>
+                                                    </button>
+                                                  </span>
+                                                  <span class="dislikeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Disike">
+                                                      <i class="fa-regular fa-thumbs-down"></i>
+                                                    </button>
+                                                  </span>
+                                                </div>
+                                                  <span class="cart-buttons">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                                                      <i class="fa-solid fa-cart-plus"></i>
+                                                    </button>
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save To Cart">
+                                                      <i class="fa-solid fa-cart-arrow-down"></i>
+                                                    </button>
+                                                  </span>
+                                
+                                                <div class="card-footer">
+                                                  <div class="details">
+                                                        <p>Details:</p>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spicy">
+                                                            <i class="fa-solid fa-pepper-hot"></i>
+                                                        </button>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Chicken">
+                                                            <i class="fa-solid fa-drumstick-bite"></i>
+                                                        </button>
+                                                  </div>
+                                
+                                                </div>
+                                              </div>
+                                        </div>
+
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4">
+                                    <!-- Product Column -->
+                                        <div class="card">
+                                            <div class="img-wrapper">
+                                                <img src="../Images/burger5.jpg" class="card-img-top" alt="Burguer">
+                                              </div>
+                                              <div class="card-body">
+                                                <h3 class="card-title">Crispy Chicken Burguer</h3>
+                                                <h5 class="cardPrice">35R</h5>
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                                                  necessitatibus.</p>
+                                                <span class="starsRating">
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <p>100%</p>
+                                                </span>
+                                
+                                                <div class="rateButton">
+                                                  <span class="likeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                      <i class="fa-regular fa-thumbs-up"></i>
+                                                    </button>
+                                                  </span>
+                                                  <span class="dislikeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Disike">
+                                                      <i class="fa-regular fa-thumbs-down"></i>
+                                                    </button>
+                                                  </span>
+                                                </div>
+                                                  <span class="cart-buttons">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                                                      <i class="fa-solid fa-cart-plus"></i>
+                                                    </button>
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save To Cart">
+                                                      <i class="fa-solid fa-cart-arrow-down"></i>
+                                                    </button>
+                                                  </span>
+                                
+                                                <div class="card-footer">
+                                                  <div class="details">
+                                                        <p>Details:</p>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spicy">
+                                                            <i class="fa-solid fa-pepper-hot"></i>
+                                                        </button>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Chicken">
+                                                            <i class="fa-solid fa-drumstick-bite"></i>
+                                                        </button>
+                                                  </div>
+                                
+                                                </div>
+                                              </div>
+                                        </div>
+
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4">
+                                    <!-- Product Column -->
+                                        <div class="card">
+                                            <div class="img-wrapper">
+                                                <img src="../Images/burger5.jpg" class="card-img-top" alt="Burguer">
+                                              </div>
+                                              <div class="card-body">
+                                                <h3 class="card-title">Crispy Chicken Burguer</h3>
+                                                <h5 class="cardPrice">35R</h5>
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                                                  necessitatibus.</p>
+                                                <span class="starsRating">
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <p>100%</p>
+                                                </span>
+                                
+                                                <div class="rateButton">
+                                                  <span class="likeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                      <i class="fa-regular fa-thumbs-up"></i>
+                                                    </button>
+                                                  </span>
+                                                  <span class="dislikeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Disike">
+                                                      <i class="fa-regular fa-thumbs-down"></i>
+                                                    </button>
+                                                  </span>
+                                                </div>
+                                                  <span class="cart-buttons">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                                                      <i class="fa-solid fa-cart-plus"></i>
+                                                    </button>
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save To Cart">
+                                                      <i class="fa-solid fa-cart-arrow-down"></i>
+                                                    </button>
+                                                  </span>
+                                
+                                                <div class="card-footer">
+                                                  <div class="details">
+                                                        <p>Details:</p>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spicy">
+                                                            <i class="fa-solid fa-pepper-hot"></i>
+                                                        </button>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Chicken">
+                                                            <i class="fa-solid fa-drumstick-bite"></i>
+                                                        </button>
+                                                  </div>
+                                
+                                                </div>
+                                              </div>
+                                        </div>
+
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4">
+                                    <!-- Product Column -->
+                                        <div class="card">
+                                            <div class="img-wrapper">
+                                                <img src="../Images/burger5.jpg" class="card-img-top" alt="Burguer">
+                                              </div>
+                                              <div class="card-body">
+                                                <h3 class="card-title">Crispy Chicken Burguer</h3>
+                                                <h5 class="cardPrice">35R</h5>
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quis nam
+                                                  necessitatibus.</p>
+                                                <span class="starsRating">
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <i class="fa-solid fa-star"></i>
+                                                  <p>100%</p>
+                                                </span>
+                                
+                                                <div class="rateButton">
+                                                  <span class="likeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                      <i class="fa-regular fa-thumbs-up"></i>
+                                                    </button>
+                                                  </span>
+                                                  <span class="dislikeButton">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Disike">
+                                                      <i class="fa-regular fa-thumbs-down"></i>
+                                                    </button>
+                                                  </span>
+                                                </div>
+                                                  <span class="cart-buttons">
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                                                      <i class="fa-solid fa-cart-plus"></i>
+                                                    </button>
+                                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Save To Cart">
+                                                      <i class="fa-solid fa-cart-arrow-down"></i>
+                                                    </button>
+                                                  </span>
+                                
+                                                <div class="card-footer">
+                                                  <div class="details">
+                                                        <p>Details:</p>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spicy">
+                                                            <i class="fa-solid fa-pepper-hot"></i>
+                                                        </button>
+                                                        <button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Chicken">
+                                                            <i class="fa-solid fa-drumstick-bite"></i>
+                                                        </button>
+                                                  </div>
+                                
+                                                </div>
+                                              </div>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

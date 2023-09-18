@@ -92,15 +92,19 @@ Thanks to */
     color: whitesmoke;
     font-weight: lighter;
     font-family: "Eagle Lake";
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 10px;
 }
 .nav-link:hover{ /* Hover Part */
     text-decoration: none;
     color: green;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     font-family: "Eagle Lake";
+}
+
+.top-navbar .dropdown-menu a{
+    font-size: 12px;
 }
 /* This next line will enable the dropdown menu to appear and set its minimum viewport width, the background color of the the dropdown is changed and so its items*/
 @media (min-width: 200px){
@@ -150,14 +154,14 @@ Thanks to */
 .bi-shop{
     color: white; 
     width: fit-content;
-    height: 22px;
+    height: 19px;
 }
 
 /* When the icon is hovered the height will slighty increase making it fit within the button element div and it will change its color from white to a more vivid colour  */
 .bi-shop:hover{
     color: limegreen; 
     width: fit-content;
-    height: 23px;
+    height: 21px;
     
 } 
 
@@ -256,45 +260,48 @@ transition: all 0.7s;
 	font-family: "Eagle Lake";
 	background-color: transparent!important;
 	color: whitesmoke;
-    padding-top: 5rem; 
+    padding-top: 0; 
 }
 .hero-body-2 h1{
-	font-size: 85px;
+	font-size: 70px;
 	text-align: start;
 	position: relative;
 	left: -4rem;
-	top: 4rem;
-    z-index: 2;
+	top: 7rem;
+    z-index: 1;
 }
 .hero-body-2 p{
 	margin-left: 0rem;
 	margin-right: 6rem;
 	text-align: justify;
 	position: relative;
-	left: 23rem;
-	top: -24rem;
+	left: 18rem;
+	top: -16rem;
     color: black;
-    font-weight: 600
+    font-weight: 600;
+    font-size: 13px;
 }	
 .hero-body-2 button{
 	position: relative;
-	left: 44rem;
-	bottom: 20rem;
+	left: 34rem;
+	bottom: 13rem;
     padding-top: 2px!important;
     padding-bottom: 2px!important;
+    padding-right: 12px!important;
+    padding-left: 12px!important;
     color: black;
     background-color: limegreen;
     border-color: limegreen;
-    font-size: small;
+    font-size: 11px;
 }
 
 /* PATTERNS AND BACKGROUND BOXES  FOR SECOND HERO*/
 .background-pattern-1{
     background-color: black;
-    height: 85%;
+    height: 83%;
     width: 57%;
     position: absolute;
-    top: 4rem;
+    top: 3rem;
     left: 0;
     border-radius: 35px;
     z-index: 1;
@@ -303,7 +310,7 @@ transition: all 0.7s;
 }
 .background-pattern-2{
     background-color: #c117d58c;
-    height: 80%;
+    height: 75%;
     width: 60%;
     position: absolute;
     top: 1rem;
@@ -337,33 +344,43 @@ transition: all 0.7s;
 }
 .hero-body-3 h1{
     position: relative;
-    left: 45px;
+    bottom: 7rem;
+    left: -4rem;
     margin-left: 32rem;
     font-size: 80px;
     color: whitesmoke;
 }
 .hero-body-3 p{
-    margin-right: 19rem;
-    margin-top: -22rem;
+    margin-right: 17rem;
+    margin-top: -25rem;
     margin-bottom: 3rem;
     text-align: justify;
     color: black;
-    font-weight: 600;;
+    font-weight: 600;
+    font-size: 13px;
+
 }
 .hero-body-3 button{
-    margin-left: 24rem;
-    margin-top: 5rem;
-    bottom: 20rem;
+    margin-left: 17rem;
+    margin-top: 2rem;
+    bottom: 30rem;
     padding-top: 2px!important;
     padding-bottom: 2px!important;
+    padding-left:  12px!important;
+    padding-right: 12px!important;
     color: black;
     background-color: limegreen;
     border-color: limegreen;
     font-size: small;
 }
+.hero-body-3 button:hover{
+    border: limegreen solid 4px;
+    background-color: black;
+    color: whitesmoke; 
+}
 /* Right side of the hero */
 .hero-3 .col-5 img{
-    height: 100%;
+    height: 112%;
     width: 86%;
     position: relative;
     top: -10rem;
@@ -389,14 +406,14 @@ transition: all 0.7s;
     left: 38%;
     background-color: #6708f63d;
     border-radius: 30px;
-    filter: drop-shadow(6px 15px 36px blue)
+    filter: drop-shadow(15px 20px 12px blue);
 
 }
 
 
 .hero-3 .background-pattern-6{
     color: green;
-    height: 91%;
+    height: 89%;
     width: 61%;
     position: absolute;
     top: 1rem;
@@ -459,18 +476,177 @@ transition: all 0.7s;
 
 
 
+/* OUR MENU  SECTION STARTS HERE */
+.menuSection .container-fluid .row:first-child{
+    background-color: black;
+    color: whitesmoke;
+}
+.menuSection .menuHeading{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.menuSection .container-fluid .row{
+    background-color: lightgreen;
+}
+.menuSection .menuHeading h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Eagle Lake";
+}
+.menuSection .container-fluid .row:nth-child(2){
+    border-top: 5px solid black;
+}
+.menuSection nav{
+    background-color: black!important;
+}
+
+.menuSection nav .nav-item{
+    border-bottom: solid limegreen 2px;
+}
+
+.menuSection nav .nav-item:last-child :hover{
+    font-weight: 600;
+}
+
+.menuSection nav .nav-item a{
+    padding-bottom: 0;
+    color: whitesmoke;
+    font-size: 13px;
+    line-height:  20px;
+}
+
+.menuSection nav .nav-item:nth-child(2) a{
+    padding-top: 0;
+}
+
+.menuSection nav .nav-item button{
+    margin-left: 3px;
+    font-family: "Eagle Lake";
+    font-size: 13px;
+}
+
+.menuSection nav .nav-item #category-collapse{
+    display:none;
+} 
+
+.menuSection nav .nba
+
+.menuSection nav .nav-item  ul{
+    margin-left: 4rem;
+}
+
+.menuSection nav .nav-item ul li a{
+    font-size: 10px;
+    text-decoration: none;    
+} 
 
 
 
+/* FOOD GRID DISPLAY  STARTS HERE */
+
+.menuSection .row .col-md-9 .row{
+    background-color: transparent;
+}
+.menuSection .row .container .col-6{
+    padding: 0 8px;
+}
+.menuSection .row .card{
+    margin: 10px 0;
+    border: solid black 5px;
+    border-radius: 10px;
+}
+.menuSection .row .card img{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.menuSection .row .container .card .card-body{
+    text-align: center;
+    background-color: black;
+    font-family: "Eagle Lake";
+}
+
+.menuSection .row .container .card-body .card-title{
+    font-size: 16px;
+    color: limegreen;
+    margin-bottom: 0;
+}
+
+.menuSection .row .container .card-body .cardPrice{
+    font-size: 14px;
+}
+.menuSection .row .container .card-body .card-text{
+    font-size: 10px;
+}
+
+.menuSection .row .container .card-body .starsRating{
+    margin-left: -11rem;
+    font-size: 11px;
+    color: yellow;
+}
+.menuSection .row .container .card-body .starsRating p{
+    color: white;
+    font-size: 9px;
+    position: relative;
+    bottom: 16px;
+    right: 28px;
+}
 
 
+.menuSection .row .container .card-body .rateButton{
+    font-size: 10px;
+    margin-top: -48px;
+    margin-left: 20px;
+}
+.menuSection .row .container .card-body .rateButton button{
+    background-color: transparent;
+    border: 0;
+    padding: 0 4px;
+    margin: 4px 0 0 0;
+}
+/* When button is hovered */
+.menuSection .row .container .card-body .rateButton button:hover{
+    background-color: transparent;
+    border: 0;
+    color: limegreen;
+}
 
+.menuSection .row .container .card-body .cart-buttons{
+    position: relative;
+    bottom: 22px;
+    left: 90px;
+}
+.menuSection .row .container .card-body .cart-buttons button{
+    background-color: transparent;
+    border: 0;
+    font-size: 12px;
 
-
-
-
-
-
+}
+.menuSection .row .container .card-footer{
+    border-top: solid white 3px;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: -22px;
+    margin-bottom: -46px;
+}
+.menuSection .row .container .card-footer p{
+    margin-left: -13rem;
+    font-size: 10px;
+}
+.menuSection .row .container .card-footer button{
+    background-color: transparent;
+    border: 0;
+    font-size: 10px;
+    position: relative;
+    top: -37px;
+    left: -58px;
+    padding: 0 0 0 4px;
+}
+.fa-pepper-hot{
+    color:red;
+}
+.fa-drumstick-bite{
+    color: yellow;
+}
 
 
 
