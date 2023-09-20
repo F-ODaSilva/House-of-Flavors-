@@ -404,16 +404,16 @@ transition: all 0.7s;
     width: 70%;
     top: 1rem;
     left: 38%;
-    background-color: #6708f63d;
+    background-color: #6f18f24b;
     border-radius: 30px;
-    filter: drop-shadow(15px 20px 12px blue);
+    filter: drop-shadow(15px 20px 12px rgb(0, 4, 255));
 
 }
 
 
 .hero-3 .background-pattern-6{
     color: green;
-    height: 89%;
+    height: 84%;
     width: 61%;
     position: absolute;
     top: 1rem;
@@ -423,12 +423,12 @@ transition: all 0.7s;
 
 .hero-3 .background-pattern-7{
     color: #fa57e8c2;
-    height: 81%;
+    height: 78%;
     width: 61%;
     position: absolute;
     top: 3rem;
     left: 39%;
-    z-index: 0;
+    z-index: 1;
 } 
 
 /* HERO SECTION ENDS HERE */
@@ -483,7 +483,7 @@ transition: all 0.7s;
 }
 .menuSection .menuHeading{
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 .menuSection .container-fluid .row{
     background-color: lightgreen;
@@ -555,9 +555,15 @@ transition: all 0.7s;
     border: solid black 5px;
     border-radius: 10px;
 }
+.menuSection .row .card .img-wrapper{
+    height: 195px;
+}
 .menuSection .row .card img{
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
 }
 .menuSection .row .container .card .card-body{
     text-align: center;
@@ -566,16 +572,19 @@ transition: all 0.7s;
 }
 
 .menuSection .row .container .card-body .card-title{
-    font-size: 16px;
+    font-size: 15px;
     color: limegreen;
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    margin-top: -10px;
 }
 
 .menuSection .row .container .card-body .cardPrice{
     font-size: 14px;
+    color: whitesmoke;
 }
 .menuSection .row .container .card-body .card-text{
     font-size: 10px;
+    color: whitesmoke;
 }
 
 .menuSection .row .container .card-body .starsRating{
@@ -593,14 +602,14 @@ transition: all 0.7s;
 
 
 .menuSection .row .container .card-body .rateButton{
-    font-size: 10px;
-    margin-top: -48px;
+    font-size: 12px;
+    margin-top: -50px;
     margin-left: 20px;
 }
 .menuSection .row .container .card-body .rateButton button{
     background-color: transparent;
     border: 0;
-    padding: 0 4px;
+    padding: 0 3px;
     margin: 4px 0 0 0;
 }
 /* When button is hovered */
@@ -619,6 +628,7 @@ transition: all 0.7s;
     background-color: transparent;
     border: 0;
     font-size: 12px;
+    padding: 3px;
 
 }
 .menuSection .row .container .card-footer{
@@ -626,7 +636,7 @@ transition: all 0.7s;
     margin-left: -5px;
     margin-right: -5px;
     margin-top: -22px;
-    margin-bottom: -46px;
+    margin-bottom: -60px;
 }
 .menuSection .row .container .card-footer p{
     margin-left: -13rem;
@@ -649,6 +659,33 @@ transition: all 0.7s;
 }
 
 
+
+/* SECOND GRID TOP CHOICES */
+.menuSection .container #top2{
+    display: none;
+}
+
+/* THIRD GRID TOP CHOICES */
+.menuSection .container #top3{
+    display: none;
+}
+
+
+
+
+
+.menuSection .pagination{
+    padding: 0 24rem;
+}
+.menuSection .pagination .page-item{
+    padding: 0px 7px;
+    background-color: lightgray;
+    border: solid black 2px;
+    margin-right: 7px;
+    border-radius: 15px;
+    height: 22px;
+    font-size: 12px;
+}
 
 
 /* FOOTER SECTION STARTS HERE */
