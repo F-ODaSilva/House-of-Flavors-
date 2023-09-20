@@ -1,4 +1,5 @@
 // NAVBAR TRANSFORMATION COLOR ON SCROLL 
+
 /*
 ----------------Step 1--------------------
 First its important to understand that for the navbar change color we must select the navbar and give it a variable  
@@ -41,7 +42,7 @@ console.log(number);
 
 
 
-        number.forEach((number) => {
+        number.forEach((number\) => {
             let startValue = 0;
             let endValue = parseInt(number.getAttribute("data-val"));
             let duration = Math.floor(interval / endValue);
