@@ -506,23 +506,22 @@ Thanks to */
   color: whitesmoke;
 }
 
-.menuSection nav .nav-item button:focus{
+.menuSection nav .nav-item button:focus {
   border: none;
   outline: none;
 }
-
 
 .menuSection nav .nav-item ul {
   margin-left: 1.2rem;
 }
 
-.menuSection nav .nav-item button{
+.menuSection nav .nav-item button {
   background-color: transparent;
-  border: 0;  
+  border: 0;
 }
-.menuSection nav .nav-item .collapse button{
+.menuSection nav .nav-item .collapse button {
   font-size: 13px;
-  margin-left: -6px
+  margin-left: -6px;
 }
 
 .menuSection nav .nav-item ul li a {
@@ -530,8 +529,6 @@ Thanks to */
   font-family: "Eagle Lake";
   text-decoration: none;
 }
-
-
 
 /* FOOD GRID DISPLAY  STARTS HERE */
 
@@ -648,34 +645,34 @@ Thanks to */
 }
 
 /* FIRST GRID TOP CHOICES */
-.menuSection .container .top-first-group{
+.menuSection .container .top-first-group {
   display: flex;
 }
 
 /* SECOND GRID TOP CHOICES */
-.menuSection .container .top-second-group{
+.menuSection .container .top-second-group {
   display: none;
 }
 
 /* THIRD GRID TOP CHOICES */
-.menuSection .container .top-third-group{
+.menuSection .container .top-third-group {
   display: none;
 }
 
 .menuSection .pagination {
-  padding: 0 24rem;
+  padding: 1rem 33rem 0;
 }
 .menuSection .pagination .page-item {
-  padding: 0px 7px;
+  padding: 0 7px 22px;
   background-color: lightgray;
   border: solid black 2px;
   margin-right: 7px;
   border-radius: 15px;
-  height: 22px;
-  font-size: 12px;
+  height: 20px;
+  font-size: 14px;
 }
 
-.menuSection .pagination li:hover{
+.menuSection .pagination li:hover {
   background-color: limegreen;
   cursor: pointer;
 }
