@@ -1,169 +1,165 @@
-
 /* OUR MENU PAGE CSS STYLESHEET */
 
 /* Here is where the body and the html tag are styled (it doesn't fully change the styling from the navbar) its font-family and size, line-height, box-sizing, margin, overflow, top ,left and backgound-color  */
-html, body{
-    font-family: "Roboto Slab";
-    font-size: 15px;
-    line-height: 1.5;
-    box-sizing: border-box;
-    margin: 0;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    /* The overflow-x is a property that controls the content on horizontal axis, when is set to hidden it will hide the scroll bar for the horizontal axis. */
-};
-
-body{
-    background-color: #43c867 ;
+html,
+body {
+  font-family: "Roboto Slab";
+  font-size: 15px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  /* The overflow-x is a property that controls the content on horizontal axis, when is set to hidden it will hide the scroll bar for the horizontal axis. */
 }
 
+body {
+  background-color: #43c867;
+}
 
 /* BACKGROUND IMAGE HEADER */
 /* The height of the header will be set to 100 so the bg-img will acomodate its size */
 
-
 /* For a better look on mobile the image height will be set to cover the 100% of the view port height. The width will be set to 100vw so it covers and respects the window scale so that the image fits to it */
-.bg-img{
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    position: absolute;
-    object-position: top; /* This will help center the image a bit to the top so the persons heads are not cut off from the screen*/
-    top: 0;
-    left: 0; /* This will help make future elements be visible and not be hidden behind or below the image */
-    z-index: -1;
-    filter: brightness(0.6);
+.bg-img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+  object-position: top; /* This will help center the image a bit to the top so the persons heads are not cut off from the screen*/
+  top: 0;
+  left: 0; /* This will help make future elements be visible and not be hidden behind or below the image */
+  z-index: -1;
+  filter: brightness(0.6);
 }
 
 /* It will make the bg-img responsive and center both persons on the screen for the  */
-@media (max-width: 500px){
-    .bg-img{
-        object-position: 59.5%;
-    }
+@media (max-width: 500px) {
+  .bg-img {
+    object-position: 59.5%;
+  }
 }
 /* NAVBAR STYLING */
 /* This is where the navbar styling starts and it will start by setting its background transparent and editing the navbar-brand and make it responsive
 Thanks to */
 
-@media (max-width: 500px){
-    .navbar{
-        background-color:transparent;
-    }
+@media (max-width: 500px) {
+  .navbar {
+    background-color: transparent;
+  }
 
-    .navbar ul:first-child {
-      background-color: black;
-      margin-top: 10px;
-      border-radius: 12px;
-      border: solid 4px ;  
-    } 
+  .navbar ul:first-child {
+    background-color: black;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: solid 4px;
+  }
 }
 
-@media (min-width: 900px){
-    .navbar{
-        background-color: transparent;
-    }
+@media (min-width: 900px) {
+  .navbar {
+    background-color: transparent;
+  }
 }
 
 /* The navbar-brand will be static and it wont change its form  */
-.navbar-brand{
-    text-decoration: none;
-    color: whitesmoke;
-    font-weight: 900;
-    font-family: "Eagle Lake";
+.navbar-brand {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 900;
+  font-family: "Eagle Lake";
 }
 
-
-.navbar-brand:hover{
-    text-decoration: none;
-    color: whitesmoke;
+.navbar-brand:hover {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
-.navbar-brand .navbar-brand a{
-    text-decoration: none;
-    display: block;
-    color: whitesmoke;
+.navbar-brand .navbar-brand a {
+  text-decoration: none;
+  display: block;
+  color: whitesmoke;
 }
 
 /* When the nav-links are in there initial state as the way its shown to the user, the text decoration is set to none so the anchor tag is not underlined, but when the user hovers the .nav-links the text go through some subtle changes the, font-size increases, the font-weight too and its color*/
 
-.nav-link{ /* Link part */
-    text-decoration: none;
-    color: whitesmoke;
-    font-weight: lighter;
-    font-family: "Eagle Lake";
-    font-size: 12px;
-    margin-top: 10px;
+.nav-link {
+  /* Link part */
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: lighter;
+  font-family: "Eagle Lake";
+  font-size: 15px;
+  margin-top: 10px;
 }
-.nav-link:hover{ /* Hover Part */
-    text-decoration: none;
-    color: green;
-    font-weight: 700;
-    font-size: 14px;
-    font-family: "Eagle Lake";
+.nav-link:hover {
+  /* Hover Part */
+  text-decoration: none;
+  color: green;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Eagle Lake";
 }
 
-.top-navbar .dropdown-menu a{
-    font-size: 12px;
+.top-navbar .dropdown-menu a {
+  font-size: 14px;
 }
 /* This next line will enable the dropdown menu to appear and set its minimum viewport width, the background color of the the dropdown is changed and so its items*/
-@media (min-width: 200px){
-    .dropdown:hover > .dropdown-menu{
-        display: block;
-        margin-top: 0;
-        background-color: black;
-        border-radius: 10px;
-    }
-     .dropdown-item{
-        color:whitesmoke;
-     }
+@media (min-width: 200px) {
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    background-color: black;
+    border-radius: 10px;
+  }
+  .dropdown-item {
+    color: whitesmoke;
+  }
 
-    .dropdown-item:hover{
-        background-color: limegreen ;
-        color:whitesmoke;
-        padding: 0 10px
-    }
-
+  .dropdown-item:hover {
+    background-color: limegreen;
+    color: whitesmoke;
+    padding: 0 10px;
+  }
 }
 
 /* NAVBAR TOGGLER STYLING */
-.navbar-toggler{
-    background-color: rgb(197, 188, 188);
-    border: none;
-    padding: 7px 11px;
-    outline: none;
+.navbar-toggler {
+  background-color: rgb(197, 188, 188);
+  border: none;
+  padding: 7px 11px;
+  outline: none;
 }
-
 
 /* This next lines are ment to style the cart button that representas the cart page */
 /* Here I am targeting the last nav-link child so the cart button can be properly aligned with the rest of the nav links */
-.navbar-nav .btn .nav-link:last-child{
-    position: relative;
-    top: -10px;
+.navbar-nav .btn .nav-link:last-child {
+  position: relative;
+  top: -10px;
 }
 
 /* For smaller scrrens (phones and tablets) the cart page logo will have a black background color and border radius */
-@media(max-width: 900px){
-    .navbar-nav .btn .nav-link:last-child{
-        background-color: black;
-        border-radius: 12px;
-    }
+@media (max-width: 900px) {
+  .navbar-nav .btn .nav-link:last-child {
+    background-color: black;
+    border-radius: 12px;
+  }
 }
 
 /* The cart page icon must have a white colour and make its width fit in to the button element and give it a height that will make it look like it has the same size as the rest of the navbar links */
-.bi-shop{
-    color: white; 
-    width: fit-content;
-    height: 19px;
+.bi-shop {
+  color: white;
+  width: fit-content;
+  height: 19px;
 }
 
 /* When the icon is hovered the height will slighty increase making it fit within the button element div and it will change its color from white to a more vivid colour  */
-.bi-shop:hover{
-    color: limegreen; 
-    width: fit-content;
-    height: 21px;
-    
-} 
+.bi-shop:hover {
+  color: limegreen;
+  width: fit-content;
+  height: 21px;
+}
 
 /* These next lines will be focusing on the styling of the navbar so that it changes its background from transparent to a solid color as soon as the user scrolls, with the use of the trasition CSS property that will enable a smoother transformation effect */
 /* All of this was made thanks to a online video that I found on Youtube here is the link https://www.youtube.com/watch?v=gbmV2Lh9dBM&pp=ygUuaG93IHRvIG1ha2UgdHJhbnNwYXJlbnQgbmF2YmFyIGluIGJvb3RzdHJhcCA1IA%3D%3D */
@@ -171,573 +167,570 @@ Thanks to */
 /* First we must create a class that will hold the changes that we want to made to the navbar, this class will have the name of "navbar-scrolled" */
 
 .navbar-scrolled {
-    background-color:rgb(0, 0, 1);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  background-color: rgb(0, 0, 1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* The following step is on the aboutPage.js file */
 
 /* After it for the navbar to have a smooth transition between the change of the transparent navbar to the solid navbar background */
 
-.navbar{
-transition: all 0.7s;
+.navbar {
+  transition: all 0.7s;
 }
 
 /* NAVBAR STYLING STOPS HERE */
-
-
-
-
-
-
-
-
 
 /* CAROUSEL AND HERO STYLING  */
 /* CAROUSEL BUTTONS  */
 
 /* FIRST HERO */
-.carousel-1{
-    background-color:black;
-    background-image: url(../Images/pattern-10.png);
-    background-size: 30%;
+.carousel-1 {
+  background-color: black;
+  background-image: url(../Images/pattern-10.png);
+  background-size: 30%;
 }
-.hero-1{
-    background-image: url(../Images/meat.jpg);
-    background-size: 100%;
-    border-radius: 25px;
-    background-color: white;
-    height: 80vh;
-    margin-top:5rem!important;
-    margin-bottom: 5rem!important;
+.hero-1 {
+  background-image: url(../Images/meat.jpg);
+  background-size: 100%;
+  border-radius: 25px;
+  background-color: white;
+  height: 80vh;
+  margin-top: 6rem !important;
+  margin-bottom: 3rem !important;
 }
-.hero-1 .row img{
-    width: 15%;
-}
-
-.hero-1 .row .hero-body{
-    text-align: center;
-    font-family: "Eagle Lake";
-    font-weight: 600;
-    color: white;
+.hero-1 .row img {
+  width: 15%;
 }
 
-.hero-1 .row .hero-body h1{
-    font-size: 60px;
+.hero-1 .row .hero-body {
+  text-align: center;
+  font-family: "Eagle Lake";
+  font-weight: 600;
+  color: white;
 }
-.hero-1 .row .hero-body button{
-    font-size: small;
-    color: black;
-    background-color: limegreen;
-    border: limegreen solid 4px;
-    color:black;
-    padding-top: 2px!important;
-    padding-bottom: 2px!important;
+
+.hero-1 .row .hero-body h1 {
+  font-size: 60px;
+}
+.hero-1 .row .hero-body button {
+  font-size: small;
+  color: black;
+  background-color: limegreen;
+  border: limegreen solid 4px;
+  color: black;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
 }
 
 /* SECOND HERO  */
 /* Left side of the hero */
-.carousel-2 .col-4{
-	background-color: transparent!important;
-    height: 100%;
+.carousel-2 .col-4 {
+  background-color: transparent !important;
+  height: 100%;
 }
 /* Image */
-.carousel-2 .col-4 img{
-	height: 100%;
-	width: 125%;
-	margin-left: -12px;
-    z-index: 2;
-    position: relative;
+.carousel-2 .col-4 img {
+  height: 100%;
+  width: 125%;
+  margin-left: -12px;
+  z-index: 2;
+  position: relative;
 }
 /* Container styling */
 .hero-2 {
-    background-image: url(../Images/pattern-10.png);
-    height: 100vh;
+  background-image: url(../Images/pattern-10.png);
+  height: 100vh;
 }
 /* RIGHT SIDE OF THE HERO */
 /* Hero body  */
-.hero-body-2{
-	font-family: "Eagle Lake";
-	background-color: transparent!important;
-	color: whitesmoke;
-    padding-top: 0; 
+.hero-body-2 {
+  font-family: "Eagle Lake";
+  background-color: transparent !important;
+  color: whitesmoke;
+  padding-top: 0;
 }
-.hero-body-2 h1{
-	font-size: 70px;
-	text-align: start;
-	position: relative;
-	left: -4rem;
-	top: 7rem;
-    z-index: 1;
+.hero-body-2 h1 {
+  font-size: 85px;
+  text-align: start;
+  position: relative;
+  left: -4rem;
+  top: 7rem;
+  z-index: 1;
 }
-.hero-body-2 p{
-	margin-left: 0rem;
-	margin-right: 6rem;
-	text-align: justify;
-	position: relative;
-	left: 18rem;
-	top: -16rem;
-    color: black;
-    font-weight: 600;
-    font-size: 13px;
-}	
-.hero-body-2 button{
-	position: relative;
-	left: 34rem;
-	bottom: 13rem;
-    padding-top: 2px!important;
-    padding-bottom: 2px!important;
-    padding-right: 12px!important;
-    padding-left: 12px!important;
-    color: black;
-    background-color: limegreen;
-    border-color: limegreen;
-    font-size: 11px;
+.hero-body-2 p {
+  margin-left: 0rem;
+  margin-right: 6rem;
+  text-align: justify;
+  position: relative;
+  left: 22rem;
+  top: -18rem;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+}
+.hero-body-2 button {
+  position: relative;
+  left: 45rem;
+  bottom: 15rem;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  color: black;
+  background-color: limegreen;
+  border-color: limegreen;
+  font-size: 13px;
 }
 
 /* PATTERNS AND BACKGROUND BOXES  FOR SECOND HERO*/
-.background-pattern-1{
-    background-color: black;
-    height: 83%;
-    width: 57%;
-    position: absolute;
-    top: 3rem;
-    left: 0;
-    border-radius: 35px;
-    z-index: 1;
-    filter: drop-shadow( -30px 5px 70px #c118d58c);
-    border: solid 4px #c118d58c;
+.background-pattern-1 {
+  background-color: black;
+  height: 83%;
+  width: 57%;
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  border-radius: 35px;
+  z-index: 1;
+  filter: drop-shadow(-30px 5px 70px #c118d58c);
+  border: solid 4px #c118d58c;
 }
-.background-pattern-2{
-    background-color: #c117d58c;
-    height: 75%;
-    width: 60%;
-    position: absolute;
-    top: 1rem;
-    left: 37rem;
-    border-radius: 28px;
+.background-pattern-2 {
+  background-color: #c117d58c;
+  height: 65%;
+  width: 60%;
+  position: absolute;
+  top: 3.5rem;
+  left: 37rem;
+  border-radius: 28px;
 }
-.background-pattern-3{
-    color: cyan;
-    height: 89%;
-    width: 57%;
-    position: absolute;
-    top: 2rem;
-    left: 0;
-    border-radius: 28px;
-    z-index: 1;
+.background-pattern-3 {
+  color: cyan;
+  height: 89%;
+  width: 57%;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  border-radius: 28px;
+  z-index: 1;
 }
-
 
 /* THIRD HERO */
 
-.hero-3{
-    background-image: url(../Images/pattern-10.png);
-
+.hero-3 {
+  background-image: url(../Images/pattern-10.png);
 }
 /* Left side of the hero */
 /* Hero body */
-.hero-body-3{
-    font-family: "Eagle Lake";
-    margin-top: 12rem;
-    z-index: 1;
+.hero-body-3 {
+  font-family: "Eagle Lake";
+  margin-top: 12rem;
+  z-index: 1;
 }
-.hero-body-3 h1{
-    position: relative;
-    bottom: 7rem;
-    left: -4rem;
-    margin-left: 32rem;
-    font-size: 80px;
-    color: whitesmoke;
+.hero-body-3 h1 {
+  position: relative;
+  bottom: 7rem;
+  left: 4rem;
+  margin-left: 32rem;
+  font-size: 90px;
+  color: whitesmoke;
 }
-.hero-body-3 p{
-    margin-right: 17rem;
-    margin-top: -25rem;
-    margin-bottom: 3rem;
-    text-align: justify;
-    color: black;
-    font-weight: 600;
-    font-size: 13px;
-
+.hero-body-3 p {
+  margin-right: 19rem;
+  margin-top: -27rem;
+  margin-bottom: 3rem;
+  text-align: justify;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
 }
-.hero-body-3 button{
-    margin-left: 17rem;
-    margin-top: 2rem;
-    bottom: 30rem;
-    padding-top: 2px!important;
-    padding-bottom: 2px!important;
-    padding-left:  12px!important;
-    padding-right: 12px!important;
-    color: black;
-    background-color: limegreen;
-    border-color: limegreen;
-    font-size: small;
+.hero-body-3 button {
+  margin-left: 24rem;
+  margin-top: 1rem;
+  bottom: 30rem;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  color: black;
+  background-color: limegreen;
+  border-color: limegreen;
+  font-size: small;
 }
-.hero-body-3 button:hover{
-    border: limegreen solid 4px;
-    background-color: black;
-    color: whitesmoke; 
+.hero-body-3 button:hover {
+  border: limegreen solid 4px;
+  background-color: black;
+  color: whitesmoke;
 }
 /* Right side of the hero */
-.hero-3 .col-5 img{
-    height: 112%;
-    width: 86%;
-    position: relative;
-    top: -10rem;
-    right: -12px;
-    object-fit: cover; 
-    z-index: 1;
+.hero-3 .col-5 img {
+  height: 120%;
+  width: 85%;
+  position: relative;
+  top: -10rem;
+  right: -7rem;
+  object-fit: cover;
+  z-index: 1;
 }
-
 
 /* BACKGROUND BOXES AND PATTERN */
-.hero-3 .background-pattern-4{
-    position: absolute;
-    height: 50%;
-    width: 38%;
-    top: 11rem;
-    background-color: yellow;
+.hero-3 .background-pattern-4 {
+  position: absolute;
+  height: 43%;
+  width: 38%;
+  top: 11rem;
+  background-color: yellow;
 }
-.hero-3 .background-pattern-5{
-    position: absolute;
-    height: 82%;
-    width: 70%;
-    top: 1rem;
-    left: 38%;
-    background-color: #6f18f24b;
-    border-radius: 30px;
-    filter: drop-shadow(15px 20px 12px rgb(0, 4, 255));
-
+.hero-3 .background-pattern-5 {
+  position: absolute;
+  height: 82%;
+  width: 70%;
+  top: 3rem;
+  left: 38%;
+  background-color: #6f18f24b;
+  border-radius: 30px;
+  filter: drop-shadow(15px 20px 12px rgb(0, 4, 255));
 }
 
+.hero-3 .background-pattern-6 {
+  color: green;
+  height: 84%;
+  width: 61%;
+  position: absolute;
+  top: 3rem;
+  left: 38%;
+  z-index: 1;
+}
 
-.hero-3 .background-pattern-6{
-    color: green;
-    height: 84%;
-    width: 61%;
-    position: absolute;
-    top: 1rem;
-    left: 38%;
-    z-index: 1;
-} 
-
-.hero-3 .background-pattern-7{
-    color: #fa57e8c2;
-    height: 78%;
-    width: 61%;
-    position: absolute;
-    top: 3rem;
-    left: 39%;
-    z-index: 1;
-} 
+.hero-3 .background-pattern-7 {
+  color: #fa57e8c2;
+  height: 82%;
+  width: 61%;
+  position: absolute;
+  top: 3rem;
+  left: 39%;
+  z-index: 1;
+}
 
 /* HERO SECTION ENDS HERE */
 
-
 /* TODAY'S SPECIAL SECTION STARTS HERE */
 /* Styling cards */
-#todaySpecial{
-    background-image: url(../Images/firebackground.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color: black; 
+#todaySpecial {
+  background-image: url(../Images/firebackground.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: black;
 }
 
-#todaySpecial .card{
-    font-family: "Eagle Lake";
-    text-align: center;
-    border-radius: 30px;
+#todaySpecial .card {
+  font-family: "Eagle Lake";
+  text-align: center;
+  border-radius: 30px;
 }
 
-#todaySpecial img{
-    filter: brightness(0.7);
-    border-radius: 30px;
+#todaySpecial img {
+  filter: brightness(0.7);
+  border-radius: 30px;
 }
 
-#todaySpecial .card h3{
-    color: limegreen;
-    font-size: 45px;
-    font-weight: 600;
+#todaySpecial .card h3 {
+  color: limegreen;
+  font-size: 45px;
+  font-weight: 600;
 }
-#todaySpecial .card h5{
-    margin-top: 6rem;
-    font-weight: 600;
-    font-size: 30px;
-}
-
-#todaySpecial .card button{
-    padding-top: 2px!important;
-    padding-bottom: 2px!important;
-    color: black;
-    background-color: limegreen;
-    border-color: limegreen;
-    font-size: small;
+#todaySpecial .card h5 {
+  margin-top: 6rem;
+  font-weight: 600;
+  font-size: 30px;
 }
 
-
+#todaySpecial .card button {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  color: black;
+  background-color: limegreen;
+  border-color: limegreen;
+  font-size: small;
+}
 
 /* OUR MENU  SECTION STARTS HERE */
-.menuSection .container-fluid .row:first-child{
-    background-color: black;
-    color: whitesmoke;
+.menuSection .container-fluid .row:first-child {
+  background-color: black;
+  color: whitesmoke;
 }
-.menuSection .menuHeading{
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+.menuSection .menuHeading {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
-.menuSection .container-fluid .row{
-    background-color: lightgreen;
+.menuSection .container-fluid .row {
+  background-color: lightgreen;
 }
-.menuSection .menuHeading h1{
-    text-align: center;
-    font-size: 50px;
-    font-family: "Eagle Lake";
+.menuSection .menuHeading h1 {
+  text-align: center;
+  font-size: 60px;
+  font-family: "Eagle Lake";
 }
-.menuSection .container-fluid .row:nth-child(2){
-    border-top: 5px solid black;
+.menuSection .container-fluid .row:nth-child(2) {
+  border-top: 5px solid black;
 }
-.menuSection nav{
-    background-color: black!important;
-}
-
-.menuSection nav .nav-item{
-    border-bottom: solid limegreen 2px;
+.menuSection nav {
+  background-color: black !important;
 }
 
-.menuSection nav .nav-item:last-child :hover{
-    font-weight: 600;
+.menuSection nav .nav-item {
+  border-bottom: solid limegreen 2px;
 }
 
-.menuSection nav .nav-item a{
-    padding-bottom: 0;
-    color: whitesmoke;
-    font-size: 13px;
-    line-height:  20px;
+.menuSection nav .nav-item:last-child :hover {
+  font-weight: 600;
 }
 
-.menuSection nav .nav-item:nth-child(2) a{
-    padding-top: 0;
+.menuSection nav .nav-item a {
+  padding-bottom: 0;
+  color: whitesmoke;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.menuSection nav .nav-item:nth-child(2) a {
+  padding-top: 0;
+}
+
+.menuSection nav .nav-item button {
+  margin-left: 3px;
+  font-family: "Eagle Lake";
+  font-size: 18px;
+  background-color: transparent;
+  color: whitesmoke;
+}
+
+.menuSection nav .nav-item button:focus{
+  border: none;
+  outline: none;
+}
+
+
+.menuSection nav .nav-item ul {
+  margin-left: 1.2rem;
 }
 
 .menuSection nav .nav-item button{
-    margin-left: 3px;
-    font-family: "Eagle Lake";
-    font-size: 13px;
+  background-color: transparent;
+  border: 0;  
+}
+.menuSection nav .nav-item .collapse button{
+  font-size: 13px;
+  margin-left: -6px
 }
 
-.menuSection nav .nav-item #category-collapse{
-    display:none;
-} 
-
-.menuSection nav .nba
-
-.menuSection nav .nav-item  ul{
-    margin-left: 4rem;
+.menuSection nav .nav-item ul li a {
+  font-size: 12px;
+  font-family: "Eagle Lake";
+  text-decoration: none;
 }
-
-.menuSection nav .nav-item ul li a{
-    font-size: 10px;
-    text-decoration: none;    
-} 
 
 
 
 /* FOOD GRID DISPLAY  STARTS HERE */
 
-.menuSection .row .col-md-9 .row{
-    background-color: transparent;
+.menuSection .row .col-md-9 .row {
+  background-color: transparent;
 }
-.menuSection .row .container .col-6{
-    padding: 0 8px;
+.menuSection .row .container .col-6 {
+  padding: 0 10px;
 }
-.menuSection .row .card{
-    margin: 10px 0;
-    border: solid black 5px;
-    border-radius: 10px;
+.menuSection .row .card {
+  margin: 8px 5px;
+  border: solid black 5px;
+  border-radius: 10px;
 }
-.menuSection .row .card .img-wrapper{
-    height: 195px;
+.menuSection .row .card .img-wrapper {
+  height: 250px;
 }
-.menuSection .row .card img{
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.8);
+.menuSection .row .card img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
 }
-.menuSection .row .container .card .card-body{
-    text-align: center;
-    background-color: black;
-    font-family: "Eagle Lake";
-}
-
-.menuSection .row .container .card-body .card-title{
-    font-size: 15px;
-    color: limegreen;
-    margin-bottom: 5px;
-    margin-top: -10px;
+.menuSection .row .container .card .card-body {
+  text-align: center;
+  background-color: black;
+  font-family: "Eagle Lake";
 }
 
-.menuSection .row .container .card-body .cardPrice{
-    font-size: 14px;
-    color: whitesmoke;
-}
-.menuSection .row .container .card-body .card-text{
-    font-size: 10px;
-    color: whitesmoke;
+.menuSection .row .container .card-body .card-title {
+  font-size: 15px;
+  color: limegreen;
+  margin-bottom: 5px;
+  margin-top: -10px;
 }
 
-.menuSection .row .container .card-body .starsRating{
-    margin-left: -11rem;
-    font-size: 11px;
-    color: yellow;
+.menuSection .row .container .card-body .cardPrice {
+  font-size: 14px;
+  color: whitesmoke;
 }
-.menuSection .row .container .card-body .starsRating p{
-    color: white;
-    font-size: 9px;
-    position: relative;
-    bottom: 16px;
-    right: 28px;
+.menuSection .row .container .card-body .card-text {
+  font-size: 10px;
+  color: whitesmoke;
 }
 
-
-.menuSection .row .container .card-body .rateButton{
-    font-size: 12px;
-    margin-top: -50px;
-    margin-left: 20px;
+.menuSection .row .container .card-body .starsRating {
+  margin-left: -15rem;
+  font-size: 11px;
+  color: yellow;
 }
-.menuSection .row .container .card-body .rateButton button{
-    background-color: transparent;
-    border: 0;
-    padding: 0 3px;
-    margin: 4px 0 0 0;
+.menuSection .row .container .card-body .starsRating p {
+  color: white;
+  font-size: 10px;
+  position: relative;
+  bottom: 16px;
+  right: 55px;
+}
+
+.menuSection .row .container .card-body .rateButton {
+  font-size: 14px;
+  margin-top: -53px;
+  margin-left: -20px;
+}
+.menuSection .row .container .card-body .rateButton button {
+  background-color: transparent;
+  border: 0;
+  padding: 0 3px;
+  margin: 4px 0 0 0;
 }
 /* When button is hovered */
-.menuSection .row .container .card-body .rateButton button:hover{
-    background-color: transparent;
-    border: 0;
-    color: limegreen;
+.menuSection .row .container .card-body .rateButton button:hover {
+  background-color: transparent;
+  border: 0;
+  color: limegreen;
 }
 
-.menuSection .row .container .card-body .cart-buttons{
-    position: relative;
-    bottom: 22px;
-    left: 90px;
+.menuSection .row .container .card-body .cart-buttons {
+  position: relative;
+  bottom: 22px;
+  left: 120px;
 }
-.menuSection .row .container .card-body .cart-buttons button{
-    background-color: transparent;
-    border: 0;
-    font-size: 12px;
-    padding: 3px;
+.menuSection .row .container .card-body .cart-buttons button {
+  background-color: transparent;
+  border: 0;
+  font-size: 14px;
+  padding: 3px;
+}
+.menuSection .row .container .card-footer {
+  border-top: solid white 3px;
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-top: -22px;
+  margin-bottom: -60px;
+}
+.menuSection .row .container .card-footer p {
+  margin-left: -17rem;
+  font-size: 10px;
+}
+.menuSection .row .container .card-footer button {
+  background-color: transparent;
+  border: 0;
+  font-size: 10px;
+  position: relative;
+  top: -37px;
+  left: -90px;
+  padding: 0 0 0 4px;
+}
+.fa-pepper-hot {
+  color: red;
+}
+.fa-drumstick-bite {
+  color: yellow;
+}
 
+/* FIRST GRID TOP CHOICES */
+.menuSection .container .top-first-group{
+  display: flex;
 }
-.menuSection .row .container .card-footer{
-    border-top: solid white 3px;
-    margin-left: -5px;
-    margin-right: -5px;
-    margin-top: -22px;
-    margin-bottom: -60px;
-}
-.menuSection .row .container .card-footer p{
-    margin-left: -13rem;
-    font-size: 10px;
-}
-.menuSection .row .container .card-footer button{
-    background-color: transparent;
-    border: 0;
-    font-size: 10px;
-    position: relative;
-    top: -37px;
-    left: -58px;
-    padding: 0 0 0 4px;
-}
-.fa-pepper-hot{
-    color:red;
-}
-.fa-drumstick-bite{
-    color: yellow;
-}
-
-
 
 /* SECOND GRID TOP CHOICES */
-.menuSection .container #top2{
-    display: none;
+.menuSection .container .top-second-group{
+  display: none;
 }
 
 /* THIRD GRID TOP CHOICES */
-.menuSection .container #top3{
-    display: none;
+.menuSection .container .top-third-group{
+  display: none;
 }
 
-
-
-
-
-.menuSection .pagination{
-    padding: 0 24rem;
+.menuSection .pagination {
+  padding: 0 24rem;
 }
-.menuSection .pagination .page-item{
-    padding: 0px 7px;
-    background-color: lightgray;
-    border: solid black 2px;
-    margin-right: 7px;
-    border-radius: 15px;
-    height: 22px;
-    font-size: 12px;
+.menuSection .pagination .page-item {
+  padding: 0px 7px;
+  background-color: lightgray;
+  border: solid black 2px;
+  margin-right: 7px;
+  border-radius: 15px;
+  height: 22px;
+  font-size: 12px;
 }
 
+.menuSection .pagination li:hover{
+  background-color: limegreen;
+  cursor: pointer;
+}
 
 /* FOOTER SECTION STARTS HERE */
-footer{
-    background-color: black;
-    padding: 4rem 0 2rem 0;
-    font-family: "Eagle Lake";
+footer {
+  background-color: black;
+  padding: 4rem 0 2rem 0;
+  font-family: "Eagle Lake";
 }
 /* Styling for the left column of the footer */
-footer .row .col-md-12 p{
-    margin-right: -9rem;
-    text-align: justify;
+footer .row .col-md-12 p {
+  font-size: 12px;
+  margin-right: -7rem;
+  text-align: justify;
 }
 /* Styling for every heading of the footer */
-footer .footer-heading{
-    color: whitesmoke;
+footer .col-md-12 .footer-heading {
+  font-size: 16px;
+  color: whitesmoke;
 }
 /* Make the headings of the right side of the footer smaller */
-footer .row .border-left .footer-heading{
-    font-size:20px;
+footer .row .border-left .footer-heading {
+  font-size: 14px;
+  color: whitesmoke;
 }
 /* Changing the border-color and centering the ul */
-footer .row .border-left{
-    border-left: solid limegreen;
+footer .row .border-left {
+  border-left: solid limegreen;
 }
 
-footer .row .link-list{
-    margin-left: -12px;
+footer .row .link-list {
+  margin-left: -12px;
 }
 /* Set text-decoration to none to every list item, even when visited */
-footer .row .link-item a{
-    color: white;
-    text-decoration: none;  
-    font-size: 12px;
+footer .row .link-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
 }
-footer .row .social h3{
-    font-size: 20px;
-    color: whitesmoke;
+footer .row .social h3 {
+  font-size: 17px;
+  color: whitesmoke;
 }
 
-footer .row .social-icons i{
-    margin-right: 2rem;
-    font-size: 15px;
-    color:white;
+footer .row .social-icons i {
+  margin-right: 2rem;
+  font-size: 15px;
+  color: white;
 }
-footer .row .copyright{
-    font-size: 12px
+footer .row .copyright {
+  font-size: 10px;
 }
-.bi-suit-heart-fill{
-    color: red;
+.bi-suit-heart-fill {
+  color: red;
 }
 
 /* FOOTER ENDS HERE */
-
-
