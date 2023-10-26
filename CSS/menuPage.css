@@ -456,7 +456,7 @@ Thanks to */
 }
 
 /* OUR MENU  SECTION STARTS HERE */
-.menuSection .container-fluid .row:first-child {
+.menuSection .container-fluid .row .menuHeading {
   background-color: black;
   color: whitesmoke;
 }
@@ -472,9 +472,7 @@ Thanks to */
   font-size: 60px;
   font-family: "Eagle Lake";
 }
-.menuSection .container-fluid .row:nth-child(2) {
-  border-top: 5px solid black;
-}
+
 .menuSection nav {
   background-color: black !important;
 }
@@ -506,23 +504,22 @@ Thanks to */
   color: whitesmoke;
 }
 
-.menuSection nav .nav-item button:focus{
+.menuSection nav .nav-item button:focus {
   border: none;
   outline: none;
 }
-
 
 .menuSection nav .nav-item ul {
   margin-left: 1.2rem;
 }
 
-.menuSection nav .nav-item button{
+.menuSection nav .nav-item button {
   background-color: transparent;
-  border: 0;  
+  border: 0;
 }
-.menuSection nav .nav-item .collapse button{
+.menuSection nav .nav-item .collapse button {
   font-size: 13px;
-  margin-left: -6px
+  margin-left: -6px;
 }
 
 .menuSection nav .nav-item ul li a {
@@ -531,12 +528,11 @@ Thanks to */
   text-decoration: none;
 }
 
-
-
 /* FOOD GRID DISPLAY  STARTS HERE */
 
-.menuSection .row .col-md-9 .row {
-  background-color: transparent;
+.menuSection .row .col-md-9 {
+  background-image: url(../Images/pattern-1.png);
+  backdrop-filter: brightness(0.5);
 }
 .menuSection .row .container .col-6 {
   padding: 0 10px;
@@ -647,35 +643,42 @@ Thanks to */
   color: yellow;
 }
 
+
 /* FIRST GRID TOP CHOICES */
-.menuSection .container .top-first-group{
+.menuSection .container .top-first-group {
   display: flex;
+  background-image: url(../Images/pattern-1.png);
+  backdrop-filter: brightness(0.5);
 }
 
 /* SECOND GRID TOP CHOICES */
-.menuSection .container .top-second-group{
+.menuSection .container .top-second-group {
   display: none;
+  background-image: url(../Images/pattern-1.png);
+  backdrop-filter: brightness(0.5);
 }
 
 /* THIRD GRID TOP CHOICES */
-.menuSection .container .top-third-group{
+.menuSection .container .top-third-group {
   display: none;
+  background-image: url(../Images/pattern-1.png);
+  backdrop-filter: brightness(0.5);
 }
 
 .menuSection .pagination {
-  padding: 0 24rem;
+  padding: 1rem 33rem 0;
 }
 .menuSection .pagination .page-item {
-  padding: 0px 7px;
+  padding: 0 7px 22px;
   background-color: lightgray;
   border: solid black 2px;
   margin-right: 7px;
   border-radius: 15px;
-  height: 22px;
-  font-size: 12px;
+  height: 20px;
+  font-size: 14px;
 }
 
-.menuSection .pagination li:hover{
+.menuSection .pagination li:hover {
   background-color: limegreen;
   cursor: pointer;
 }
