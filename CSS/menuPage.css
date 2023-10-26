@@ -456,7 +456,7 @@ Thanks to */
 }
 
 /* OUR MENU  SECTION STARTS HERE */
-.menuSection .container-fluid .row:first-child {
+.menuSection .container-fluid .row .menuHeading {
   background-color: black;
   color: whitesmoke;
 }
@@ -472,9 +472,7 @@ Thanks to */
   font-size: 60px;
   font-family: "Eagle Lake";
 }
-.menuSection .container-fluid .row:nth-child(2) {
-  border-top: 5px solid black;
-}
+
 .menuSection nav {
   background-color: black !important;
 }
@@ -532,8 +530,9 @@ Thanks to */
 
 /* FOOD GRID DISPLAY  STARTS HERE */
 
-.menuSection .row .col-md-9 .row {
-  background-color: transparent;
+.menuSection .row .col-md-9 {
+  background-image: url(../Images/pattern-1.png);
+  backdrop-filter: brightness(0.5);
 }
 .menuSection .row .container .col-6 {
   padding: 0 10px;
@@ -644,19 +643,32 @@ Thanks to */
   color: yellow;
 }
 
+
 /* FIRST GRID TOP CHOICES */
 .menuSection .container .top-first-group {
-  display: flex;
+  background-image: url(../Images/pattern-1.png);
+  backdrop-filter: brightness(0.5);
 }
 
 /* SECOND GRID TOP CHOICES */
 .menuSection .container .top-second-group {
-  display: none;
+  background-image: url(../Images/pattern-1.png);
+  backdrop-filter: brightness(0.5);
 }
 
 /* THIRD GRID TOP CHOICES */
 .menuSection .container .top-third-group {
   display: none;
+  background-image: url(../Images/pattern-1.png);
+  backdrop-filter: brightness(0.5);
+}
+
+.menuSection .container .cards-group{
+  display: none;
+}
+
+.menuSection .container .cards-group.active{
+  display: flex;
 }
 
 .menuSection .pagination {
