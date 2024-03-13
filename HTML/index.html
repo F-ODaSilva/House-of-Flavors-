@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gerador de Caracteres Aleatórios</title>
+  <style>
+section {
+        
+  border: 1px solid black;
+  display: flex;
+  width: 120%;
+  height: 550px;
+  box-sizing: border-box;
+  background-color: black;
+  margin: 0 -2rem ;
+}
+.diagonalHover {
+  position: absolute;
+  width: 66%;
+  height: 550px;
+  transition: all 0.35s ease-out;
+}
+.diagonalHover.first,
+.diagonalHover.second {
+  background-image: url(../Images/about1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.diagonalHover.second {
+  background-image: url(../Images/comunity.jpg);
+}
+.diagonalHover.first:hover {
+  width: 75%;
+  z-index: 1;
+}
+.diagonalHover.second:hover {
+  width: 75%;
+  z-index: 1;
+}
+
+.diagonalHover.first {
+  left: 0;
+  top: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+}
+
+.diagonalHover.second {
+  right: 0;
+  top: 0;
+  -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+  </style>
+  <script>
+    function gerarCaracteres() {
+      var tipo = document.getElementById("tipo").value;
+      var quantidade = document.getElementById("quantidade").value;
+      var tamanho = document.getElementById("tamanho").value;
+
+      var caracteresPermitidos = "";
+      if (tipo === "maiusculas") {
+        caracteresPermitidos = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      } else if (tipo === "minusculas") {
+        caracteresPermitidos = "abcdefghijklmnopqrstuvwxyz";
+      } else if (tipo === "numeros") {
+        caracteresPermitidos = "0123456789";
+      } else if (tipo === "todos") {
+        caracteresPermitidos = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      }
+
+      var codigosGerados = [];
+      for (var i = 0; i < quantidade; i++) {
+        var codigo = "";
+        for (var j = 0; j < tamanho; j++) {
+          var indice = Math.floor(Math.random() * caracteresPermitidos.length);
+          codigo += caracteresPermitidos.charAt(indice);
+        }
+        codigosGerados.push(codigo);
+      }
+
+      document.getElementById("resultado").innerHTML = codigosGerados.join(", ");
+    }
+  </script>
+</head>
+<body>
+  <!-- <h1>Gerador de Caracteres Aleatórios</h1>
+  <form>
+    <label for="tipo">Tipo de caracteres:</label>
+    <select id="tipo">
+      <option value="maiusculas">Somente maiúsculas</option>
+      <option value="minusculas">Somente minúsculas</option>
+      <option value="numeros">Somente números</option>
+      <option value="todos">Todos os tipos</option>
+    </select><br>
+    <label for="quantidade">Quantidade de códigos:</label>
+    <input type="number" id="quantidade" min="1" value="1"><br>
+    <label for="tamanho">Tamanho dos códigos:</label>
+    <input type="number" id="tamanho" min="1" value="10"><br>
+    <button type="button" onclick="gerarCaracteres()">Gerar</button>
+  </form>
+  <div id="resultado"></div> -->
+  
+
+  <section>
+    <div class="diagonalHover first">
+      
+    </div>
+    <div class="diagonalHover second">
+      
+    </div>
+  </section>
+
+</body>
+</html>

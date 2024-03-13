@@ -534,6 +534,9 @@ Thanks to */
   background-image: url(../Images/pattern-1.png);
   backdrop-filter: brightness(0.5);
 }
+.menuSection .row .col-md-9 .container{
+  padding-top: 0px;
+}
 .menuSection .row .container .col-6 {
   padding: 0 10px;
 }
@@ -645,21 +648,42 @@ Thanks to */
 
 
 /* FIRST GRID TOP CHOICES */
-.menuSection .container .top-first-group {
+.menuSection #topChoices .container .top-first-group {
   display: flex;
   background-image: url(../Images/pattern-1.png);
   backdrop-filter: brightness(0.5);
 }
 
 /* SECOND GRID TOP CHOICES */
-.menuSection .container .top-second-group {
+.menuSection #topChoices .container .top-second-group {
   display: none;
   background-image: url(../Images/pattern-1.png);
   backdrop-filter: brightness(0.5);
 }
 
 /* THIRD GRID TOP CHOICES */
-.menuSection .container .top-third-group {
+.menuSection #topChoices .container .top-third-group {
+  display: none;
+  background-image: url(../Images/pattern-1.png);
+  backdrop-filter: brightness(0.5);
+}
+
+/* FIRST GRID NEW ARRIVALS*/
+.menuSection #newArrivals .container .top-first-group {
+  display: flex;
+  background-image: url(../Images/pattern-1.png);
+  backdrop-filter: brightness(0.5);
+}
+
+/* SECOND GRID NEW ARRIVALS */
+.menuSection #newArrivals .container .top-second-group {
+  display: none;
+  background-image: url(../Images/pattern-1.png);
+  backdrop-filter: brightness(0.5);
+}
+
+/* THIRD GRID NEW ARRIVALS */
+.menuSection #newArrivals .container .top-third-group {
   display: none;
   background-image: url(../Images/pattern-1.png);
   backdrop-filter: brightness(0.5);

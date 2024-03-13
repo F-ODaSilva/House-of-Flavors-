@@ -96,3 +96,69 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+// SIDEBAR CLICK EVENT DISPLAY
+/*
+This next block of code will encapsulate aa function that will listen to a click event on the sideba, depending on the nav-item that the user clicks it will display all the content related to that category*/  
+
+
+//Create event listener function
+document.addEventListener('DOMContentLoaded' , function () {
+
+// Create variables that will  represent each nav-item  contentfrom sidebar
+  const topChoices = document.getelementByID('#topChoices');
+  const newArrivals = document.getelementByID('#newArrivals');
+  const burguer = document.getelementByID('#burguer');
+  const pizza = document.getelementByID('#pizza');
+  const steak = document.getelementByID('#steak');
+  const sushi = document.getelementByID('#sushi');
+  const seafood = document.getelementByID('#seafood');
+  const softDrinks = document.getelementByID('#softDrinks');
+  const juices = document.getelementByID('#juices');
+  const wine = document.getelementByID('#wine');
+  const beer = document.getelementByID('#beer');
+  const sodas = document.getelementByID('#sodas');
+  const cocktails = document.getelementByID('#cocktais');
+
+// Create a for each loop that for each time a sidebar anchor tag from a nav-item is clickeed 
+  document.querySelectorAll('.sideLink').forEach( function (item){
+    // Here all the elements with the class of "sideLink" are made as an array and willl be passed each one as an item everytime the user click in one anytime.
+    
+    // Grab the value called item and add an eventListener for each time one is clicked
+    item.addEventListener("click", function () {
+      // Hide all groups
+      topChoices.style.display = "none";
+      newArrivals.style.display = "none";
+      burguer.style.display = "none";
+      pizza.style.display = "none";
+      steak.style.display = "none";
+      sushi.style.display = "none";
+      seafood.style.display = "none";
+      softDrinks.style.display = "none";
+      juices.style.display = "none";
+      wine.style.display = "none";
+      beer.style.display = "none";
+      sodas.style.display = "none";
+      cocktails.style.display = "none";
+
+
+       // Create if and else if statements that will display the group based on click item's class
+       if (item.classList.contains("top")) {
+        topChoices.style.display = "flex";
+      } else if (item.classList.contains("new")) {
+        newArrivals.style.display = "flex";
+      } else if (item.classList.contains("burguer")) {
+        burguer.style.display = "flex";
+      }  else if (item.classList.contains("pizza")) {
+        burguer.style.display = "flex";
+      } else if (item.classList.contains("steak")) {
+        steak.style.display = "flex";
+      } else if (item.classList.contains("sushi")) {
+        sushi.style.display = "flex";
+      } else if (item.classList.contains("seafood")) {
+        seafood.style.display = "flex"
+      } else if(item.classList.contains("juices"));
+    });
+  })
+});

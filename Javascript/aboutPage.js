@@ -42,7 +42,7 @@ console.log(number);
 
 
 
-        number.forEach((number\) => {
+        number.forEach((number) => {
             let startValue = 0;
             let endValue = parseInt(number.getAttribute("data-val"));
             let duration = Math.floor(interval / endValue);
