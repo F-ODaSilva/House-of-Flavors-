@@ -15,7 +15,7 @@ body {
 }
 
 body {
-  background-color: #43c867;
+  background-color: black;
 }
 
 /* BACKGROUND IMAGE HEADER */
@@ -456,202 +456,206 @@ Thanks to */
 }
 
 /* OUR MENU  SECTION STARTS HERE */
-.menuSection .container-fluid .row .menuHeading {
-  background-color: black;
+.menuHeading{
+  text-align:center;
   color: whitesmoke;
-}
-.menuSection .menuHeading {
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-}
-.menuSection .container-fluid .row {
-  background-color: lightgreen;
-}
-.menuSection .menuHeading h1 {
-  text-align: center;
-  font-size: 60px;
-  font-family: "Eagle Lake";
+  padding: 1.5rem 0;
+  font-family: "Eagle Lake"
 }
 
-.menuSection nav {
-  background-color: black !important;
-}
-
-.menuSection nav .nav-item {
-  border-bottom: solid limegreen 2px;
-}
-
-.menuSection nav .nav-item:last-child :hover {
+#menuSection .nav-link.active{
+  color: black!important;
+  background-color: limegreen;
   font-weight: 600;
-}
-
-.menuSection nav .nav-item a {
-  padding-bottom: 0;
-  color: whitesmoke;
-  font-size: 17px;
-  line-height: 25px;
-}
-
-.menuSection nav .nav-item:nth-child(2) a {
-  padding-top: 0;
-}
-
-.menuSection nav .nav-item button {
-  margin-left: 3px;
   font-family: "Eagle Lake";
-  font-size: 18px;
-  background-color: transparent;
+}
+
+#menuSection .nav-link{
   color: whitesmoke;
+  font-family: "Eagle Lake";
 }
 
-.menuSection nav .nav-item button:focus {
-  border: none;
-  outline: none;
+#menuSection .nav button{
+  color: whitesmoke;
+  font-family: "Eagle Lake"!important;
 }
 
-.menuSection nav .nav-item ul {
-  margin-left: 1.2rem;
+#menuSection .nav button:focus{
+  box-shadow: none;
 }
 
-.menuSection nav .nav-item button {
-  background-color: transparent;
-  border: 0;
-}
-.menuSection nav .nav-item .collapse button {
-  font-size: 13px;
-  margin-left: -6px;
-}
-
-.menuSection nav .nav-item ul li a {
+#menuSection .collapse .nav-link{
+  margin: 0 auto;
   font-size: 12px;
   font-family: "Eagle Lake";
-  text-decoration: none;
+}
+
+/* SIDEBAR RESPONSIVENESS */
+@media screen and (680px <= width <= 769px) {
+  #menuSection .nav ul.d-flex{
+      margin: 5px 5rem 16px
+  }
 }
 
 /* FOOD GRID DISPLAY  STARTS HERE */
 
-.menuSection .row .col-md-9 {
-  background-image: url(../Images/pattern-1.png);
-  backdrop-filter: brightness(0.5);
+#menuSection .col-md-9.col-lg-10{
+  background-image: url(../Images/pattern-2.png);
+  padding: 0;
 }
-.menuSection .row .col-md-9 .container{
-  padding-top: 0px;
+
+#menuSection .container .card .img-wrapper{
+  height: 252px;
 }
-.menuSection .row .container .col-6 {
-  padding: 0 10px;
-}
-.menuSection .row .card {
-  margin: 8px 5px;
-  border: solid black 5px;
-  border-radius: 10px;
-}
-.menuSection .row .card .img-wrapper {
-  height: 250px;
-}
-.menuSection .row .card img {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+
+#menuSection .container .card img.card-img-top{
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.8);
 }
-.menuSection .row .container .card .card-body {
-  text-align: center;
-  background-color: black;
+
+#menuSection .container .row .card{
+  border: solid black 5px;
+  border-radius: 15px;
+}
+
+#menuSection .container .row .card-body{
+  background-color: black!important;
+  color: whitesmoke;
   font-family: "Eagle Lake";
+  text-align: center;
+  padding: 8px;
+  padding-bottom: 0;
+  margin-bottom: -1rem;
 }
 
-.menuSection .row .container .card-body .card-title {
+#menuSection .container .row .card-body .card-title{
+  color: limegreen!important;
   font-size: 15px;
-  color: limegreen;
-  margin-bottom: 5px;
-  margin-top: -10px;
+} 
+
+#menuSection .container .row .card-body .card-price{
+  color: whitesmoke;
+  font-size: 17px;
 }
 
-.menuSection .row .container .card-body .cardPrice {
-  font-size: 14px;
-  color: whitesmoke;
-}
-.menuSection .row .container .card-body .card-text {
+#menuSection .container .row .card-body .card-text{
   font-size: 10px;
-  color: whitesmoke;
+  /* margin: 8px 30px; */
+  color: #bcbcbcc6;
+  text-align: justify;
+} 
+
+#menuSection .container .row .starsRating{
+  color: yellow!important;
+  margin-left: -10.5rem;
 }
 
-.menuSection .row .container .card-body .starsRating {
-  margin-left: -15rem;
-  font-size: 11px;
-  color: yellow;
+#menuSection .container .row .starsRating p{
+  color: yellow!important;
+  font-size: 10px;
+  margin-top: -18px;
+  margin-left: -3rem;
+  margin-bottom: -0.5rem
 }
-.menuSection .row .container .card-body .starsRating p {
+
+#menuSection .container .row .starsRating .fa-solid.fa-star{
+  color: yellow!important;
+  font-size: 10px;
+}
+
+#menuSection .container .row .cart-buttons{
+  margin-left: 11.5rem;
+  position: relative;
+  bottom: 1rem;
+}
+
+#menuSection .container .row .cart-buttons button{
+  background-color: transparent!important;
+  border: none;
+  padding-left: 5px;
+  padding-right: 0;
+}
+
+#menuSection .container .row .cart-buttons .fa-solid{
+  background-color: transparent!important;
+  color: limegreen;
+  font-size: 14px;
+}
+
+#menuSection .container .row  .card-footer{
+  background-color: black;
+  border-top: solid 1px whitesmoke;
+  font-size: 12px;
+}
+
+#menuSection .container .row  .card-footer .details p{
   color: white;
-  font-size: 10px;
-  position: relative;
-  bottom: 16px;
-  right: 55px;
+  margin-left: -8px;
+  margin-bottom: -1.3rem;
 }
 
-.menuSection .row .container .card-body .rateButton {
-  font-size: 14px;
-  margin-top: -53px;
-  margin-left: -20px;
-}
-.menuSection .row .container .card-body .rateButton button {
+#menuSection .container .row .card-footer .details button{
+  border: none;
   background-color: transparent;
-  border: 0;
-  padding: 0 3px;
-  margin: 4px 0 0 0;
-}
-/* When button is hovered */
-.menuSection .row .container .card-body .rateButton button:hover {
-  background-color: transparent;
-  border: 0;
-  color: limegreen;
-}
-
-.menuSection .row .container .card-body .cart-buttons {
   position: relative;
-  bottom: 22px;
-  left: 120px;
-}
-.menuSection .row .container .card-body .cart-buttons button {
-  background-color: transparent;
-  border: 0;
-  font-size: 14px;
+  left: 45px;
   padding: 3px;
+  margin-bottom: -1rem
+  
 }
-.menuSection .row .container .card-footer {
-  border-top: solid white 3px;
-  margin-left: -5px;
-  margin-right: -5px;
-  margin-top: -22px;
-  margin-bottom: -60px;
-}
-.menuSection .row .container .card-footer p {
-  margin-left: -17rem;
-  font-size: 10px;
-}
-.menuSection .row .container .card-footer button {
-  background-color: transparent;
-  border: 0;
-  font-size: 10px;
-  position: relative;
-  top: -37px;
-  left: -90px;
-  padding: 0 0 0 4px;
-}
-.fa-pepper-hot {
+#menuSection .container .row .card-footer .details .fa-solid{
   color: red;
+  font-size: 11px;
 }
-.fa-drumstick-bite {
-  color: yellow;
+#menuSection .container .row .card-footer .details .fa-solid.fa-drumstick-bite{
+  color: goldenrod;
+  font-size: 11px;
 }
-
-
-/* FIRST GRID TOP CHOICES */
-.menuSection #topChoices .container .top-first-group {
-  display: flex;
-  background-image: url(../Images/pattern-1.png);
-  backdrop-filter: brightness(0.5);
+#menuSection .container .row .card-footer .details .fa-solid.fa-bacon{
+  color: salmon;
+  font-size: 11px;
+}
+#menuSection .container .row .card-footer .details .fa-solid.fa-burger{
+  color: brown;
+  font-size: 11px;
+}
+#menuSection .container .row .card-footer .details .fa-solid.fa-bowl-food{
+  color: lightslategray;
+  font-size: 11px;
+}
+#menuSection .container .row .card-footer .details .fa-solid.fa-fish{
+  color: lightseagreen;
+  font-size: 11px;
+}
+#menuSection .container .row .card-footer .details .fa-solid.fa-pizza-slice{
+  color:indianred;
+  font-size: 11px;
+}
+#menuSection .container .row .card-footer .details .fa-solid.fa-shrimp{
+  color: pink;
+  font-size: 11px;
+}
+#menuSection .container .row .card-footer .details .fa-solid.fa-igloo{
+  color: coral;
+  font-size: 11px;
+}
+#menuSection .container .row .card-footer .details .fa-solid.fa-seedling{
+  color: green;
+  font-size: 11px;
+}
+#menuSection .container .row .card-footer .details .fa-solid.fa-cubes-stacked{
+  color: deeppink;
+  font-size: 11px;
+}
+#menuSection .container .row .card-footer .details .fa-solid.fa-cheese{
+  color: rgb(180, 119, 15);
+  font-size: 11px;
+}
+#menuSection .container .row .card-footer .details .fa-solid.fa-carrot{
+  color: rgb(255, 98, 0);
+  font-size: 11px;
 }
 
 /* SECOND GRID TOP CHOICES */
