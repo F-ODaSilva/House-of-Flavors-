@@ -107,19 +107,19 @@ This next block of code will encapsulate aa function that will listen to a click
 document.addEventListener('DOMContentLoaded' , function () {
 
 // Create variables that will  represent each nav-item  contentfrom sidebar
-  const topChoices = document.getelementByID('#topChoices');
-  const newArrivals = document.getelementByID('#newArrivals');
-  const burguer = document.getelementByID('#burguer');
-  const pizza = document.getelementByID('#pizza');
-  const steak = document.getelementByID('#steak');
-  const sushi = document.getelementByID('#sushi');
-  const seafood = document.getelementByID('#seafood');
-  const softDrinks = document.getelementByID('#softDrinks');
-  const juices = document.getelementByID('#juices');
-  const wine = document.getelementByID('#wine');
-  const beer = document.getelementByID('#beer');
-  const sodas = document.getelementByID('#sodas');
-  const cocktails = document.getelementByID('#cocktais');
+  const topChoices = document.getElementByID('#topChoices');
+  const newArrivals = document.getElementByID('#newArrivals');
+  const burguer = document.getElementByID('#burguer');
+  const pizza = document.getElementByID('#pizza');
+  const steak = document.getElementByID('#steak');
+  const sushi = document.getElementByID('#sushi');
+  const seafood = document.getElementByID('#seafood');
+  const softDrinks = document.getElementByID('#softDrinks');
+  const juices = document.getElementByID('#juices');
+  const wine = document.getElementByID('#wine');
+  const beer = document.getElementByID('#beer');
+  const sodas = document.getElementByID('#sodas');
+  const cocktails = document.getElementByID('#cocktais');
 
 // Create a for each loop that for each time a sidebar anchor tag from a nav-item is clickeed 
   document.querySelectorAll('.sideLink').forEach( function (item){
@@ -157,8 +157,12 @@ document.addEventListener('DOMContentLoaded' , function () {
       } else if (item.classList.contains("sushi")) {
         sushi.style.display = "flex";
       } else if (item.classList.contains("seafood")) {
-        seafood.style.display = "flex"
-      } else if(item.classList.contains("juices"));
+        seafood.style.display = "flex";
+      } else if(item.classList.contains("juices")) {
+        juices.style.display = "flex";
+      } else (item.classList.contains("top")); {
+        topChoices.style.display = "flex";
+      }
     });
   })
 });
