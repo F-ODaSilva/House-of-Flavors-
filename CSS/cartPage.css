@@ -193,6 +193,8 @@ transition: all 0.7s;
     border-right: solid 2px white;
 }
 
+
+
 #booking .container-fluid #booking-list .col-lg-6 .col-4.action{
     font-family: "Eagle Lake";
     border-end-end-radius: 22px;
@@ -229,13 +231,17 @@ transition: all 0.7s;
     font-size: 14px;
 }
 
-#booking .container-fluid #booking-list .col-md-6.ticket .col-lg-6 .col-lg-4.action{
+#booking .container-fluid #booking-list #ticket .col-lg-6 .col-4.action{
     border-top-left-radius: 22px;
     border-bottom-left-radius: 22px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-
 }
+
+#booking .container-fluid #booking-list #table .col-lg-6 .col-4.action .mb-3:nth-child(3){
+    margin-bottom: 0!important;
+}
+
 
 #booking .container-fluid #booking-list .col-md-6.ticket .col-lg-6 img.col-8 {
     border-top-left-radius: 0px;
@@ -247,7 +253,7 @@ transition: all 0.7s;
 }
 
 #booking .container-fluid #booking-list .col-md-6.ticket  .col-lg-6{
-    margin-left: 0;
+    margin-left: 1rem;
     background-color: white;
 }
 
