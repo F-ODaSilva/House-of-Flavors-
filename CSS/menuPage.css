@@ -18,8 +18,13 @@ body {
   background-color: black;
 }
 
+::-webkit-scrollbar-thumb {
+    background: red;
+
+}
+
 /* BACKGROUND IMAGE HEADER */
-/* The height of the header will be set to 100 so the bg-img will acomodate its size */
+/* Tborder-radius: he height of the header will be set to 100 so the bg-img will acomodate its size */
 
 /* For a better look on mobile the image height will be set to cover the 100% of the view port height. The width will be set to 100vw so it covers and respects the window scale so that the image fits to it */
 .bg-img {

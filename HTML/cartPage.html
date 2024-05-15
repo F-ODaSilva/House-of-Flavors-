@@ -116,7 +116,7 @@
             <div class="container-fluid">
                 <div id="booking-list" class="booking-list">
                     <div class="row ">
-                        <div class="col-md-6 table">
+                        <div class="col-md-6 table" id="table">
                             <div class="col-lg-6">
                                 <div class="row">   
                                     <img src="../Images/eventWed.jpg" class="ps-x-0 col-8" alt="...">
@@ -166,18 +166,18 @@
                                                 </select>      
                                               <div id="tableText" class="form-text">I want a table for...</div>
                                             </div>
-                                            <div class="px-0 mb-3 form-check">
+                                            <div class="px-0 mb-2 form-check">
                                                 <div id="tableText" class="form-text">Additional requests</div>
                                                 <label for="exampleFormControlTextarea1" class="form-label d-none">...</label>
                                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            <button type="submit" class="btn btn-primary" onclick="bookTable()">Submit</button>
                                          </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 ticket">
+                        <div class="col-md-6 ticket" id="ticket">
                            <div class="col-lg-6">
                             <div class="row">   
                                 <div class="col-4 action">
@@ -387,8 +387,8 @@
     </script>
 
     <!-- JAVASCRIPT SCRIPT LINK -->
-    <script src="../Javascript/menuPage.js "></script>
-    <script src="../Javascript/javascript.js "></script>
+    <script src="../Javascript/cartPage.js "></script>
+    <!-- <script src="../Javascript/javascript.js "></script> -->
 
     <!-- GOOGLE FONT API  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
