@@ -117,46 +117,54 @@
                 <div id="booking-list" class="booking-list">
                     <div class="row ">
                         <div class="col-md-6 table" id="table">
-                            <div class="col-lg-6">
+                            <!-- <div class="col-lg-6">
+                                
+
                                 <div class="row">   
                                     <img src="../Images/eventWed.jpg" class="ps-x-0 col-8" alt="...">
                                     <div class="col-4 action">
                                         <h4 class="heading">Book a table</h4>
-                                        <form>
+                                        <form id="tableForm">
                                             <div class="mb-2">
-                                                <input class="form-control" type="text" placeholder="Name" aria-label="default input example">
+                                                <input id="nameTable" class="form-control" type="text" placeholder="Name" aria-label="default input example">
                                             </div>
-                                            <div class="mb-3">
+                                            <div class="mb-0">
                                                 <div class="input-group">
-                                                    <span class="input-group-text">Date</span>
-                                                    <input type="text" aria-label="day" class="form-control">
-                                                    <input type="text" aria-label="month" class="form-control">
-                                                    <input type="text" aria-label="year" class="form-control">
+                                                    <span class="input-group-text">Hours</span>
+                                                    <input type="text" id="hourTable" aria-label="hour" class="form-control" placeholder="hour">
+                                                    <input type="text" id="minTable" aria-label="min" class="form-control" placeholder="min">
                                                 </div>
                                             </div>
-                                            <div class="mb-3">
+                                            <div class="mb-2">
+                                                <div class="input-group">
+                                                    <span class="input-group-text">Date</span>
+                                                    <input type="text" id="dayTable" aria-label="day" class="form-control" placeholder="day">
+                                                    <input type="text" id="monthTable" aria-label="month" class="form-control" placeholder="month">
+                                                    <input type="text" id="yearTable" aria-label="year" class="form-control" placeholder="year">
+                                                </div>
+                                            </div>
+                                            <div class="mb-2">
                                               <h5 class="form-text">Whats the occasion?</h5>
                                               <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Romantic">
-                                                <label class="form-check-label" for="inlineCheckbox1">Romantic</label>
+                                                <input class="form-check-input" type="checkbox" id="romTable" value="Romantic">
+                                                <label class="form-check-label" for="romTable">Romantic</label>
                                               </div>
                                               <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Birthday">
-                                                <label class="form-check-label" for="inlineCheckbox2">Birthday</label>
+                                                <input class="form-check-input" type="checkbox" id="birthTable" value="Birthday">
+                                                <label class="form-check-label" for="birthTable">Birthday</label>
                                               </div>
                                               <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Gathering" >
-                                                <label class="form-check-label" for="inlineCheckbox3">Meeting</label>
+                                                <input class="form-check-input" type="checkbox" id="meetTable" value="Meeting" >
+                                                <label class="form-check-label" for="meetTable">Meeting</label>
                                               </div>
                                               <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Gathering" >
-                                                <label class="form-check-label" for="inlineCheckbox3">Gathering</label>
+                                                <input class="form-check-input" type="checkbox" id="gatTable" value="Gathering" >
+                                                <label class="form-check-label" for="gatTable">Gathering</label>
                                               </div>
                                             </div>
-                                            <div class="mb-3">
-                                                <select class="form-select" aria-label="Default select example" aria-describedby="tableText">
-                                                    <option selected="">I want a table for...</option>
-                                                    <option value="2"></option>
+                                            <div class="mb-2">
+                                                <select class="form-select" aria-label="Default select example" aria-describedby="tableText" id="numTable">
+                                                    <option selected="2">2</option>
                                                     <option value="4">4</option>
                                                     <option value="6">6</option>
                                                     <option value="10">10</option>
@@ -164,17 +172,33 @@
                                                     <option value="25">25</option>
                                                     <option value="32">32</option>
                                                 </select>      
-                                              <div id="tableText" class="form-text">I want a table for...</div>
+                                              <div class="form-text">I want a table for...</div>
                                             </div>
                                             <div class="px-0 mb-2 form-check">
-                                                <div id="tableText" class="form-text">Additional requests</div>
-                                                <label for="exampleFormControlTextarea1" class="form-label d-none">...</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                <div class="form-text">Additional requests</div>
+                                                <label for="moreInfoTable" class="form-label d-none">...</label>
+                                                <textarea class="form-control" id="moreInfoTable" rows="2"></textarea>
                                             </div>
-                                            <button type="submit" class="btn btn-primary" onclick="bookTable()">Submit</button>
+                                            <button type="button" class="btn btn-primary" onclick="bookTable(); changeViewTable()">Submit</button>
                                          </form>
                                     </div>
                                 </div>
+                            </div> 
+                        -->
+                            <div class="col-lg-6">
+                                    <div class="headingBookedTable">
+                                        <h1>Booked Table</h1>
+                                    </div>
+                                    <div class="infoBookedTable">
+                                        <p class="numberSits">You have booked a table for 4</p>
+                                        <div class="row time">
+                                            <p class="bokedHour"> Hours: 20h : 35min</p>
+                                            <p class="bookedDate"> Date: 16.July.2024</p>
+                                        </div>
+                                        <p class="bookedOcassion">Ocassion: Romantic</p>
+                                        <p class="bookedKey">K5sTP9z</p>
+                                        <small>Copy or save this code</small>
+                                    </div>
                             </div>
                         </div>
                         <div class="col-md-6 ticket" id="ticket">

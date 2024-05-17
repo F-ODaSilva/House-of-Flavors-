@@ -284,6 +284,19 @@ transition: all 0.7s;
     margin-right: 4rem!important;
 }
 
+#booking .container-fluid #booking-list .col-md-6.table .col-lg-6{
+    background-color: lightgrey;
+}
+
+#booking .container-fluid #booking-list .col-md-6.table .col-lg-6 .headingBookedTable h1{
+    text-align: center;
+    font-family: "Eagle Lake";
+    font-size: 30px;
+    color: limegreen;
+    background-color: transparent;
+}
+
+
 
 
 /* FOOTER SECTION STARTS HERE */ 
