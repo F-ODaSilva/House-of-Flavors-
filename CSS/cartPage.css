@@ -288,6 +288,13 @@ transition: all 0.7s;
     background-color: lightgrey;
 }
 
+#booking .container-fluid #booking-list .col-md-6.table .col-lg-6 .pattern-vertical-stripes-lg{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    color: blue;
+}
+
 #booking .container-fluid #booking-list .col-md-6.table .col-lg-6 .headingBookedTable h1{
     text-align: center;
     font-family: "Eagle Lake";
@@ -295,6 +302,95 @@ transition: all 0.7s;
     color: limegreen;
     background-color: transparent;
 }
+
+#booking .container-fluid #booking-list .col-md-6.table .col-lg-6 .infoBookedTable .numberSits{
+    background-color: transparent;
+    text-align: center;
+    font-family: "Eagle Lake";
+    font-size: 18px;
+    margin-top: 1rem;
+}
+
+
+#booking .container-fluid #booking-list .col-md-6.table .col-lg-6 .infoBookedTable
+p{
+    background-color: transparent;
+    font-family: "Eagle Lake";
+    text-align: center;
+}
+
+#booking .container-fluid #booking-list .col-md-6.table .col-lg-6 .infoBookedTable
+span{
+    color: limegreen;
+}
+
+#booking .container-fluid #booking-list .col-md-6.table .col-lg-6 .infoBookedTable
+small{
+    background-color: transparent;
+    font-family: "Eagle Lake";
+    text-align: center;
+    margin: 0 15rem;
+}
+
+#booking .container-fluid #booking-list .col-md-6.table .col-lg-6 .infoBookedTable
+.row {
+    background-color: transparent;
+    margin-top: 3rem;
+}
+
+#booking .container-fluid #booking-list .col-md-6.table .col-lg-6 .infoBookedTable
+.row .col-6{
+    text-align: center;
+    background-color: transparent;
+    font-family: "Eagle Lake";
+}
+
+#booking .container-fluid #booking-list .col-md-6.table .col-lg-6 .infoBookedTable
+.bookedKey{
+    font-size: 35px;
+}
+
+
+#booking .container-fluid #booking-list .col-md-6.table .col-lg-6 .row.justify-content-around{
+    height: auto;
+    margin-top: 2rem;
+}
+
+#booking .container-fluid #booking-list .col-md-6.table .col-lg-6 .row.justify-content-around .col-2{
+    background-color: #0d6efd;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
