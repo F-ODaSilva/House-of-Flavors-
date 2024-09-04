@@ -8,7 +8,22 @@ html, body{
     left: 0;
     overflow-x: hidden;
     background-color: white!important;
+    
+    ::-webkit-scrollbar{
+        width: 10px;
+        height: 40px;
+    }
+    
+    ::-webkit-scrollbar-track{
+        background: lightgrey;
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        background: limegreen;
+    }
 };
+
+
 
 /* NAVBAR STYLING */
 /* This is where the navbar styling starts and it will start by setting its background transparent and editing the navbar-brand and make it responsive
@@ -397,7 +412,7 @@ small{
                 background-color: transparent;
                 max-height: 70vh;
                 overflow-y: scroll;
-                
+
                 .card.mb-3{
                     padding: 0 ;
                     border: 0;
@@ -485,7 +500,7 @@ small{
 
                 .row{
                     /* Accordion Number 1: Ordered */
-                    .accordion#ordered{
+                    .accordion#accordionOrders{
                         padding:0;
 
                         .accordion-item{
@@ -498,7 +513,7 @@ small{
                                     color: black;
                                 }
                                 button.accordion-button.saved{
-                                    background-color: lightblue!important;
+                                    background-color: lightgreen!important;
                                 }
                             }
                             .accordion-collapse.collapse{
