@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Events · House of Flavors</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="Concerts, festivals, tastings and holidays at House of Flavors. Buy tickets or save a free spot.">
+  <meta name="theme-color" content="#030c0e">
+  <link rel="icon" href="assets/img/logo-hof.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto+Slab:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/system.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="events" data-nav-over>
+
+<main>
+  <section class="intro grain">
+    <div class="bg"><img src="assets/img/eventfest.webp" alt="" width="1600" height="1067"></div>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Events</span></nav>
+      <h1>Events</h1>
+      <p class="lede">Concerts, festivals, tastings and every holiday worth a long lunch. Tickets include food unless the listing says otherwise.</p>
+    </div>
+  </section>
+
+  <section class="band tight events-band">
+    <div class="wrap">
+      <article class="feature-event" id="featured"></article>
+      <div class="events-bar">
+        <div class="chips" role="group" aria-label="Filter events" id="evChips">
+          <button class="chip" aria-pressed="true" data-f="all">All</button>
+          <button class="chip" aria-pressed="false" data-f="upcoming">Upcoming</button>
+          <button class="chip" aria-pressed="false" data-f="new">New</button>
+          <button class="chip" aria-pressed="false" data-f="seasonal">Seasonal</button>
+          <button class="chip" aria-pressed="false" data-f="past">Past</button>
+        </div>
+        <p class="muted" id="evCount" aria-live="polite"></p>
+      </div>
+      <div class="event-grid" id="evGrid"></div>
+    </div>
+  </section>
+</main>
+
+<dialog class="modal paper" id="evModal" aria-labelledby="mTitle">
+  <button class="icon-btn m-close" data-close aria-label="Close"><svg aria-hidden="true"><use href="assets/icons.svg#x"/></svg></button>
+  <img class="m-img" id="mImg" alt="" width="1600" height="900">
+  <div class="m-body">
+    <div class="stack" style="gap:8px">
+      <p class="kicker" id="mWhen"></p>
+      <h2 id="mTitle"></h2>
+      <p class="muted" id="mDesc"></p>
+    </div>
+    <div id="mBuy"></div>
+  </div>
+</dialog>
+
+<footer data-shell></footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/events.js"></script>
+</body>
+</html>

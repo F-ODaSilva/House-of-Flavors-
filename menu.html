@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Menu · House of Flavors</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="The full House of Flavors menu: burgers, chicken, pizza, coal-grill, seafood, sushi and the bar. Order for delivery or collection.">
+  <meta name="theme-color" content="#030c0e">
+  <link rel="icon" href="assets/img/logo-hof.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto+Slab:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/system.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="menu">
+
+<main>
+  <section class="menu-hero grain" data-scene="pass">
+    <div class="wrap">
+      <div class="stack">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Menu</span></nav>
+        <h1>Today’s menu</h1>
+        <p class="lede">Seventy dishes from seven stations. Everything can be delivered, collected or eaten here. Prices exclude 15% VAT.</p>
+        <div class="row">
+          <a class="btn" href="#signature">Start with the signatures</a>
+          <button class="btn ghost" data-open-cart>View your order</button>
+        </div>
+      </div>
+      <div class="plate-stage" aria-live="polite">
+        <div class="ring" aria-hidden="true"></div>
+        <div class="disc" aria-hidden="true" style="transform: rotate(calc(var(--p, 0) * 140deg))"></div>
+        <img id="plateImg" src="assets/img/burguernobg-1.webp" alt="Texas Double Decker BBQ burger" width="408" height="612">
+        <a class="plate-label" id="plateLabel" href="dish.html#texas-double-decker">Texas Double Decker · R105</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="menu-bar paper">
+    <div class="wrap">
+      <div class="chips" id="catChips" role="navigation" aria-label="Menu sections"></div>
+      <label class="menu-search">
+        <span class="sr-only">Search the menu</span>
+        <svg aria-hidden="true"><use href="assets/icons.svg#search"/></svg>
+        <input class="input" id="menuSearch" type="search" placeholder="Search dishes or ingredients" autocomplete="off">
+      </label>
+    </div>
+  </div>
+
+  <section class="paper band tight" aria-label="Menu">
+    <div class="wrap">
+      <div class="menu-filters">
+        <div class="row" role="group" aria-label="Filters">
+          <label class="toggle"><input type="checkbox" id="fSpicy" value="spicy"> Spicy</label>
+          <label class="toggle"><input type="checkbox" id="fVeg" value="veg"> Vegetarian</label>
+          <label class="toggle"><input type="checkbox" id="fShare" value="share"> To share</label>
+          <label class="toggle"><input type="checkbox" id="fCheap"> Under R80</label>
+        </div>
+        <label class="row" for="sortSel"><span class="muted" style="font-size:.9rem">Sort</span>
+          <select class="select" id="sortSel" style="min-height:42px;width:auto;border-radius:999px;padding:0 14px">
+            <option value="menu">Menu order</option>
+            <option value="price-asc">Price, low to high</option>
+            <option value="price-desc">Price, high to low</option>
+            <option value="rate">Most liked</option>
+          </select>
+        </label>
+      </div>
+      <div id="menuSections"></div>
+      <div class="no-results" id="noResults" hidden>
+        <h2>No dishes match that.</h2>
+        <p class="muted">Try another word, or clear the filters to see the whole menu.</p>
+        <button class="btn dark" id="clearFilters">Clear search and filters</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer data-shell></footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/menu.js"></script>
+</body>
+</html>

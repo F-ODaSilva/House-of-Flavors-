@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>House of Flavors</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="House of Flavors: coal-grill, burgers, sushi and seafood cooked by a kitchen from twelve countries. Order online or book a table.">
+  <meta name="theme-color" content="#030c0e">
+  <link rel="icon" href="assets/img/logo-hof.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto+Slab:wght@400;500;600;700&display=swap">
+  <link rel="preload" as="image" href="assets/video/big-steak-poster.webp">
+  <link rel="stylesheet" href="assets/css/system.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="home" data-nav-over>
+
+<main>
+  <!-- HERO -->
+  <section class="hero grain">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/big-steak-poster.webp" aria-hidden="true">
+      <source src="assets/video/big-steak.webm" type="video/webm">
+      <source src="assets/video/big-steak.mp4" type="video/mp4">
+    </video>
+    <div class="wrap hero-inner">
+      <p class="hero-open"><span class="dot" aria-hidden="true"></span>Open tonight until 23:00 · Coals lit since 10:00</p>
+      <h1 class="hero-title"><span>House</span><span>of Flavors</span></h1>
+      <div class="hero-foot">
+        <p class="lede">Fire, hands and a long table. A kitchen of forty cooks from twelve countries, cooking burgers, coal-grill, sushi and the sea since 2013.</p>
+        <div class="row">
+          <a class="btn" href="menu.html">See the menu</a>
+          <a class="btn ghost" href="cart.html#book">Book a table</a>
+        </div>
+      </div>
+    </div>
+    <button class="icon-btn video-toggle" aria-label="Pause background video">
+      <svg aria-hidden="true"><use href="assets/icons.svg#pause"/></svg>
+    </button>
+  </section>
+
+  <!-- TODAY'S SPECIALS TICKER -->
+  <div class="marquee" aria-label="Today's specials">
+    <div class="track">
+      <span>Thai Beef Kadai</span><span>Smoked Ribs, 9 hours</span><span>Zambeziana Chicken</span><span>Paella Shrimp</span><span>Purple Sundown</span><span>36 Flavors of Kyoto</span>
+      <span aria-hidden="true">Thai Beef Kadai</span><span aria-hidden="true">Smoked Ribs, 9 hours</span><span aria-hidden="true">Zambeziana Chicken</span><span aria-hidden="true">Paella Shrimp</span><span aria-hidden="true">Purple Sundown</span><span aria-hidden="true">36 Flavors of Kyoto</span>
+    </div>
+  </div>
+
+  <!-- STORY: FIRE → HANDS → PLATE → TABLE -->
+  <section class="story" data-scene="pin" data-steps="4" data-step="0" aria-labelledby="story-title">
+    <div class="story-stage">
+      <div class="story-word" aria-hidden="true"><span>Fire</span><span>Hands</span><span>Plate</span><span>Table</span></div>
+      <div class="wrap story-grid">
+        <div class="story-copy">
+          <h2 id="story-title" class="kicker">How a plate reaches your table</h2>
+          <ol class="story-steps">
+            <li class="is-on"><span class="n">1</span>Fire</li><li><span class="n">2</span>Hands</li><li><span class="n">3</span>Plate</li><li><span class="n">4</span>Table</li>
+          </ol>
+          <div class="story-chapters">
+            <article class="chapter">
+              <p class="stat"><b>10:00</b> coals lit</p>
+              <h3>It starts with real fire.</h3>
+              <p>Every house cooks over coal. The grill master lights it at ten and it is ready by lunch. Nothing on the grill menu touches gas.</p>
+            </article>
+            <article class="chapter">
+              <p class="stat"><b>12</b> countries in the kitchen</p>
+              <h3>Then forty pairs of hands.</h3>
+              <p>Recipes travel between our houses. The Zambeziana chicken started in Maputo, the ramen broth in Kyoto, the paella with Joao in Spain.</p>
+            </article>
+            <article class="chapter">
+              <p class="stat"><b>4 min</b> from pass to table</p>
+              <h3>Checked twice at the pass.</h3>
+              <p>Head chef Michelle Duvier tastes every sauce before service and every plate before it leaves. If it waits, it goes back.</p>
+            </article>
+            <article class="chapter">
+              <p class="stat"><b>180</b> seats in Maputo</p>
+              <h3>And then it is yours.</h3>
+              <p>Share it, argue over the last piece, stay for another round. Long tables are the point of this place.</p>
+              <a class="link" href="cart.html#book">Book a table <svg aria-hidden="true"><use href="assets/icons.svg#arrow-right"/></svg></a>
+            </article>
+          </div>
+        </div>
+        <div class="story-frame">
+          <figure><img src="assets/img/cuisine3.webp" alt="Flames rising from a pan on the grill" width="1067" height="1600"></figure>
+          <figure><img src="assets/img/serving1.webp" alt="A cook with tattooed arms plating a dish" loading="lazy" width="1600" height="1067"></figure>
+          <figure><img src="assets/img/steak3.webp" alt="A plated steak topped with crisp onion" loading="lazy" width="1600" height="1067"></figure>
+          <figure><img src="assets/img/people2.webp" alt="Friends talking around a long restaurant table" loading="lazy" width="1600" height="1067"></figure>
+          <div class="frame-bar" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE SERVE (horizontal) -->
+  <section class="serve" data-scene="pin" aria-labelledby="serve-title">
+    <div class="serve-stage">
+      <div class="wrap serve-head">
+        <h2 id="serve-title">Seven kitchens<br>under one roof</h2>
+        <p class="lede">Each has its own station and its own cooks. Pick one, or order across all of them in one go.</p>
+      </div>
+      <div class="serve-track" id="serveTrack"></div>
+    </div>
+  </section>
+
+  <!-- SIGNATURES -->
+  <section class="band paper signatures" aria-labelledby="sig-title">
+    <div class="wrap">
+      <div class="section-head split">
+        <div class="stack">
+          <p class="kicker">From the head chef</p>
+          <h2 id="sig-title">Six plates we are known for</h2>
+        </div>
+        <a class="btn ghost" href="menu.html" id="dishCount">See all 70 dishes</a>
+      </div>
+      <ul class="sig-list" id="sigList"></ul>
+    </div>
+    <div class="sig-float" aria-hidden="true"><img alt=""></div>
+  </section>
+
+  <!-- FIRST ORDER COUPON -->
+  <section class="band tight coupon" aria-labelledby="coupon-title">
+    <div class="wrap coupon-grid">
+      <figure class="coupon-img"><img src="assets/img/exploreimage2-sm.webp" alt="Neon sign reading Savour Every Moment on a brick wall" loading="lazy" width="720" height="480"></figure>
+      <div class="stack">
+        <p class="kicker">First order online</p>
+        <h2 id="coupon-title">Half off your first delivery.</h2>
+        <p class="muted">Use the code at checkout. One per customer, on orders from R150.</p>
+        <div class="code-chip">
+          <span class="num" id="couponCode">YLJF37S05</span>
+          <button class="btn small" id="copyCode">Copy code</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPACES -->
+  <section class="band spaces" aria-labelledby="spaces-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="spaces-title">Four rooms, one house</h2>
+        <p class="lede">Come for dinner and end up in the bar. It happens most nights.</p>
+      </div>
+      <div class="rooms">
+        <a class="room" href="menu.html" style="background-image:url(assets/img/guyeating-sm.webp)">
+          <span class="room-n">Restaurant</span>
+          <span class="room-d">180 seats, an open kitchen and the grill in the middle of the room.</span>
+        </a>
+        <a class="room" href="menu.html#drinks" style="background-image:url(assets/img/heroimage-5-sm.webp)">
+          <span class="room-n">Bar</span>
+          <span class="room-d">Fourteen house cocktails and a bartender who will make you a fifteenth.</span>
+        </a>
+        <a class="room" href="events.html" style="background-image:url(assets/img/eventwine-sm.webp)">
+          <span class="room-n">Winery</span>
+          <span class="room-d">A cellar of 320 labels and a tasting table for twelve.</span>
+        </a>
+        <a class="room" href="events.html" style="background-image:url(assets/img/syed-ahmad-kgjq1agdwe0-unsplash-sm.webp)">
+          <span class="room-n">Events</span>
+          <span class="room-d">Concerts, festivals and private parties for up to 400 people.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="band paper reviews" aria-labelledby="rev-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">4.8 average from 2,140 reviews</p>
+        <h2 id="rev-title">What people say after dinner</h2>
+      </div>
+      <div class="quotes" id="quotes"></div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="visit" aria-labelledby="visit-title">
+    <img class="visit-bg" src="assets/img/exploreimage4.webp" alt="" loading="lazy" width="1600" height="1067">
+    <div class="wrap"><div class="visit-card">
+      <h2 id="visit-title">Find us on the Marginal</h2>
+      <dl class="hours">
+        <div><dt>Mon – Thu</dt><dd class="num">11:00 – 23:00</dd></div>
+        <div><dt>Fri – Sat</dt><dd class="num">11:00 – 01:00</dd></div>
+        <div><dt>Sunday</dt><dd class="num">09:30 – 22:00</dd></div>
+      </dl>
+      <p class="muted">Av. Marginal 4120, Maputo<br>+258 84 300 4120</p>
+      <div class="row"><a class="btn" href="cart.html#book">Book a table</a><a class="btn ghost" href="about.html#houses">Other houses</a></div>
+    </div></div>
+  </section>
+</main>
+
+<footer data-shell></footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>
