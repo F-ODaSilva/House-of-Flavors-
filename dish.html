@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Dish · House of Flavors</title>
   <meta name="claude:viewport-fit-sides" content="cover">
   <meta name="theme-color" content="#030c0e">
-  <link rel="icon" href="assets/img/logo-hof.webp">
+  <link rel="icon" href="assets/img/logo-hof.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto+Slab:wght@400;500;600;700&display=swap">
@@ -20,7 +20,7 @@
     <div class="wrap dish-grid" id="dishRoot">
       <figure class="dish-photo"><img id="dPhoto" alt="" width="1600" height="2000"></figure>
       <div class="dish-info">
-        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="menu.html">Menu</a><span aria-hidden="true">/</span><a id="dCatLink" href="menu.html"></a></nav>
+        <nav class="crumbs" aria-label="Navegação estrutural" data-en-aria-label="Breadcrumb"><a href="index.html" data-en="Home">Início</a><span aria-hidden="true">/</span><a href="menu.html">Menu</a><span aria-hidden="true">/</span><a id="dCatLink" href="menu.html"></a></nav>
         <div class="stack" style="gap:12px">
           <h1 id="dName"></h1>
           <div class="row" id="dTags"></div>
@@ -31,24 +31,24 @@
         </div>
         <p class="lede" id="dDesc" style="max-width:46ch"></p>
         <div class="dish-buy">
-          <div class="qty" role="group" aria-label="Quantity">
-            <button id="qMinus" aria-label="One less"><svg aria-hidden="true"><use href="assets/icons.svg#minus"/></svg></button>
+          <div class="qty" role="group" aria-label="Quantidade" data-en-aria-label="Quantity">
+            <button id="qMinus" aria-label="Menos um" data-en-aria-label="One less"><svg aria-hidden="true"><use href="assets/icons.svg#minus"/></svg></button>
             <output id="qOut" aria-live="polite">1</output>
-            <button id="qPlus" aria-label="One more"><svg aria-hidden="true"><use href="assets/icons.svg#plus"/></svg></button>
+            <button id="qPlus" aria-label="Mais um" data-en-aria-label="One more"><svg aria-hidden="true"><use href="assets/icons.svg#plus"/></svg></button>
           </div>
-          <button class="btn" id="addBtn" style="flex:1">Add to order</button>
+          <button class="btn" id="addBtn" style="flex:1" data-en="Add to order">Adicionar ao pedido</button>
         </div>
         <dl class="facts">
-          <div><dt>Station</dt><dd id="fStation"></dd></div>
-          <div><dt>Ready in</dt><dd id="fReady"></dd></div>
-          <div><dt>Serves</dt><dd id="fServes"></dd></div>
+          <div><dt data-en="Station">Estação</dt><dd id="fStation"></dd></div>
+          <div><dt data-en="Ready in">Pronto em</dt><dd id="fReady"></dd></div>
+          <div><dt data-en="Serves">Serve</dt><dd id="fServes"></dd></div>
         </dl>
         <div class="stack">
-          <h2 style="font-size:1.6rem">Goes well with</h2>
+          <h2 style="font-size:1.6rem" data-en="Goes well with">Combina com</h2>
           <div class="pairings" id="dPairs"></div>
         </div>
         <div class="stack">
-          <h2 style="font-size:1.6rem">From the table</h2>
+          <h2 style="font-size:1.6rem" data-en="From the table">Da mesa</h2>
           <div class="review-list" id="dReviews"></div>
         </div>
       </div>
@@ -58,8 +58,8 @@
   <section class="paper band tight" aria-labelledby="moreTitle">
     <div class="wrap">
       <div class="section-head split">
-        <h2 id="moreTitle">More from the station</h2>
-        <a class="btn ghost" id="moreLink" href="menu.html">See the section</a>
+        <h2 id="moreTitle" data-en="More from the station">Mais desta estação</h2>
+        <a class="btn ghost" id="moreLink" href="menu.html" data-en="See the section">Ver a secção</a>
       </div>
       <div class="dishes" id="dMore"></div>
     </div>

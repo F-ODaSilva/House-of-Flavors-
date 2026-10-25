@@ -134,7 +134,7 @@
 .room-n { font-family: var(--display); font-size: clamp(1.6rem, 2.6vw, 2.4rem); line-height: 1; white-space: nowrap; }
 .room-d { max-width: 30ch; color: var(--bone-mute); font-size: .95rem; opacity: 0; transform: translateY(10px); transition: .5s var(--ease); }
 .room:hover, .room:focus-visible { flex-grow: 2.6; }
-.room:hover::before, .room:focus-visible::before { background: linear-gradient(180deg, rgba(236, 60, 255, .18), transparent 40%, rgba(3, 12, 14, .92)); }
+.room:hover::before, .room:focus-visible::before { background: linear-gradient(180deg, rgba(46, 232, 92, .16), transparent 40%, rgba(3, 12, 14, .92)); }
 .room:hover .room-d, .room:focus-visible .room-d { opacity: 1; transform: none; transition-delay: .15s; }
 @media (max-width: 760px) {
   .rooms { flex-direction: column; height: auto; }
@@ -376,10 +376,10 @@ dialog.modal[open] { animation: pop .45s var(--ease); }
 .dish-info .rating svg { width: 16px; height: 16px; color: var(--accent); vertical-align: -2px; }
 .save-later { background: none; border: 0; padding: 4px 0 0; cursor: pointer; font-size: .82rem; font-weight: 600; color: #0e7a31; text-decoration: underline; text-underline-offset: 3px; }
 
-/* original site's green→magenta glow, kept as ambience on the events listing */
+/* soft green glow on the events listing */
 .ev-glow { background:
   radial-gradient(60% 40% at 0% 0%, rgba(29, 208, 91, .16), transparent 70%),
-  radial-gradient(60% 50% at 100% 30%, rgba(239, 36, 255, .14), transparent 70%), var(--ground); }
+  radial-gradient(60% 50% at 100% 30%, rgba(46, 232, 92, .08), transparent 70%), var(--ground); }
 .story-steps li.is-on .n { background: var(--accent); }
 .tl-rail span.on { background: var(--grad); }
 

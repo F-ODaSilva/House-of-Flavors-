@@ -1,11 +1,11 @@
 /* =========================================================
    House of Flavors — design system
    Layout: night-teal rooms lit with the original neon green and
-   green→magenta gradient, interrupted by light "menu sheets"; left-aligned editorial type,
+   green, interrupted by light "menu sheets"; left-aligned editorial type,
    prices set with dotted menu leaders.
    ========================================================= */
 :root {
-  /* colour — the original HOF palette: night-teal rooms, neon green, green→magenta */
+  /* colour — two-colour system: neon green on night teal (white text, dark ink on paper) */
   --ground: #061517;        /* night teal (was #031217) */
   --ground-deep: #030c0e;   /* the back of the room */
   --raised: #0e2a28;        /* deep bottle green (was #0f412c) */
@@ -15,10 +15,10 @@
   --ink-mute: #4a625c;      /* secondary text on paper */
   --accent: #2ee85c;        /* neon green (was #18ed3b): action, price */
   --accent-hi: #66f48a;
-  --magenta: #ec3cff;       /* party magenta (was #ef24ff) */
-  --violet: #9b2de6;        /* purple (was #921de5) */
-  --grad: linear-gradient(135deg, #1dd05b 0%, #8f3cf0 62%, #ef24ff 100%);
-  --chilli: #ff7a3d;        /* spicy tag (was rgb(255, 98, 0)) */
+  --green-deep: #0b7a35;    /* green that reads on white paper (6.2:1) */
+  --violet: #0b7a35;        /* legacy token name, now deep green */
+  --grad: linear-gradient(135deg, #5cf28a 0%, #2ee85c 45%, #13b84d 100%);  /* green only */
+  --chilli: #ff6b5b;        /* form errors only (functional, not brand) */
   --basil: #7ff0a0;         /* vegetarian tag */
   --line: rgba(242, 245, 240, .14);
   --line-ink: rgba(4, 22, 26, .14);
@@ -67,7 +67,7 @@ img { height: auto; }
 a { color: inherit; }
 button, input, select, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-::selection { background: var(--magenta); color: #fff; }
+::selection { background: var(--accent); color: var(--ink); }
 [hidden] { display: none !important; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
@@ -145,11 +145,11 @@ p { margin: 0; text-wrap: pretty; }
 .chip .count { font-size: .78rem; opacity: .6; }
 .tag { display: inline-flex; align-items: center; gap: 4px; font-size: var(--fs-tiny); font-weight: 600; padding: 3px 8px 3px 6px; border-radius: 6px; background: rgba(242, 245, 240, .1); }
 .tag svg { width: 14px; height: 14px; }
-.tag.spicy { color: var(--chilli); background: rgba(255, 122, 61, .12); }
+.tag.spicy { color: var(--bone); background: rgba(242, 245, 240, .1); }
 .tag.veg { color: var(--basil); background: rgba(127, 240, 160, .12); }
 .tag.share { color: var(--bone); }
 .paper .tag { background: rgba(4, 22, 26, .07); }
-.paper .tag.spicy { color: #c0310c; background: rgba(193, 61, 20, .1); }
+.paper .tag.spicy { color: var(--ink); background: rgba(4, 22, 26, .08); }
 .paper .tag.veg { color: #13702f; background: rgba(63, 110, 44, .1); }
 .paper .tag.share { color: var(--ink); }
 
@@ -169,7 +169,7 @@ p { margin: 0; text-wrap: pretty; }
 .nav.solid, .nav:not(.over) { background: rgba(3, 12, 14, .88); backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2); box-shadow: 0 1px 0 var(--line); }
 .nav .wrap { height: 100%; display: flex; align-items: center; gap: 20px; max-width: 1400px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; }
-.brand-mark { width: 40px; height: 35px; background: var(--accent); -webkit-mask: url(../img/logo-hof.webp) center/contain no-repeat; mask: url(../img/logo-hof.webp) center/contain no-repeat; }
+.brand-mark { width: 40px; height: 35px; background: var(--accent); -webkit-mask: url(../img/logo-hof.svg) center/contain no-repeat; mask: url(../img/logo-hof.svg) center/contain no-repeat; }
 .brand-name { font-family: var(--display); font-size: 1.32rem; line-height: 1; }
 .nav-links { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
 .nav-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 999px; text-decoration: none; font-weight: 500; color: var(--bone-mute); transition: color .2s, background .2s; }
@@ -179,7 +179,7 @@ p { margin: 0; text-wrap: pretty; }
 .cart-btn { position: relative; }
 .cart-count {
   position: absolute; top: 2px; right: 0; min-width: 19px; height: 19px; padding: 0 5px; border-radius: 10px;
-  background: var(--magenta); color: #fff !important; color: var(--ink); font-size: .72rem; font-weight: 700; display: grid; place-items: center;
+  background: var(--accent); color: var(--ink) !important; font-size: .72rem; font-weight: 700; display: grid; place-items: center;
   transform: scale(0); transition: transform .35s var(--ease);
 }
 .cart-count.has { transform: scale(1); }
@@ -285,7 +285,7 @@ p { margin: 0; text-wrap: pretty; }
 .dish:hover .ph img { transform: scale(1.06); }
 .dish .ph .tags { position: absolute; left: 10px; top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
 .dish .ph .tags .tag { background: rgba(3, 12, 14, .72); backdrop-filter: blur(6px); color: var(--bone); }
-.dish .ph .tags .tag.spicy { color: #ffb08a; }
+.dish .ph .tags .tag.spicy { color: var(--bone); }
 .dish .ph .tags .tag.veg { color: #b9f5c9; }
 .dish .add {
   position: absolute; right: 10px; bottom: 10px; width: 48px; height: 48px; border-radius: 50%; border: 0;
@@ -293,7 +293,7 @@ p { margin: 0; text-wrap: pretty; }
   box-shadow: 0 8px 22px rgba(0, 0, 0, .45); transition: transform .3s var(--ease), background .2s;
 }
 .dish .add:hover { transform: scale(1.08) rotate(90deg); background: var(--accent-hi); }
-.dish .add.done { background: var(--magenta); color: #fff; }
+.dish .add.done { background: #fff; color: var(--ink); }
 .dish .add svg { width: 22px; height: 22px; }
 .dish .d-desc { font-size: .93rem; color: var(--bone-mute); line-height: 1.5; }
 .paper .dish .d-desc { color: var(--ink-mute); }
@@ -323,7 +323,7 @@ p { margin: 0; text-wrap: pretty; }
 .marquee { overflow: hidden; white-space: nowrap; border-block: 1px solid var(--line); padding-block: 18px; }
 .marquee .track { display: inline-flex; gap: 48px; animation: marquee 38s linear infinite; padding-right: 48px; }
 .marquee span { font-family: var(--display); font-size: clamp(1.4rem, 2.6vw, 2.2rem); display: inline-flex; align-items: center; gap: 48px; }
-.marquee span::after { content: ""; background: var(--accent); -webkit-mask: url(../img/logo-hof.webp) center/contain no-repeat; mask: url(../img/logo-hof.webp) center/contain no-repeat; width: 34px; height: 30px; }
+.marquee span::after { content: ""; background: var(--accent); -webkit-mask: url(../img/logo-hof.svg) center/contain no-repeat; mask: url(../img/logo-hof.svg) center/contain no-repeat; width: 34px; height: 30px; }
 .marquee:hover .track { animation-play-state: paused; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
@@ -331,7 +331,7 @@ p { margin: 0; text-wrap: pretty; }
 .intro { position: relative; padding-block: calc(var(--nav-h) + 56px) 56px; overflow: hidden; }
 .intro .bg { position: absolute; inset: 0; }
 .intro .bg img { width: 100%; height: 100%; object-fit: cover; }
-.intro .bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(29, 208, 91, .28), rgba(239, 36, 255, .22)), linear-gradient(180deg, rgba(3, 12, 14, .5), rgba(6, 21, 23, .92) 75%, var(--ground)); }
+.intro .bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(46, 232, 92, .22), rgba(3, 18, 23, .2)), linear-gradient(180deg, rgba(3, 12, 14, .5), rgba(6, 21, 23, .92) 75%, var(--ground)); }
 .intro .wrap { position: relative; display: grid; gap: 18px; }
 .intro h1 { font-size: var(--fs-hero); line-height: .92; }
 .crumbs { font-size: var(--fs-small); color: var(--bone-mute); display: flex; gap: 8px; }
@@ -360,11 +360,30 @@ p { margin: 0; text-wrap: pretty; }
 .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .grad-bg { background: var(--grad); color: var(--ink); }
 
-/* ---------- original HOF signatures: neon green + green→magenta gradient ---------- */
+/* ---------- HOF signatures: neon green on night teal ---------- */
 .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.brand-mark { background: var(--grad); }
-.marquee span::after { background: var(--grad); }
+.marquee span::after { background: var(--accent); -webkit-mask: url(../img/logo-hof.svg) center/contain no-repeat; mask: url(../img/logo-hof.svg) center/contain no-repeat; width: 30px; height: 30px; }
 .chip[aria-pressed="true"], .chip.is-active { background: var(--accent); color: var(--ink); border-color: var(--accent); }
 .btn.grad { --b-bg: var(--grad); background: var(--grad); color: var(--ink); }
 .btn.grad:hover { filter: brightness(1.08); }
 h1, h2, h3, h4 { letter-spacing: 0; line-height: 1.08; }
+
+/* ---------- logo lockup ---------- */
+.brand { gap: 11px; }
+svg.brand-mark { width: 38px; height: 38px; flex: none; color: var(--accent); --logo-cut: var(--ground-deep); background: none; -webkit-mask: none; mask: none; }
+.footer svg.brand-mark { --logo-cut: var(--ground-deep); }
+.sheet svg.brand-mark { --logo-cut: var(--ground-deep); }
+.brand-words { display: grid; line-height: 1; gap: 4px; }
+.brand-words .brand-name { font-family: var(--display); font-size: 1.28rem; letter-spacing: .01em; white-space: nowrap; }
+.brand-sub { font-family: var(--body); font-size: .62rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); }
+@media (max-width: 420px) { svg.brand-mark { width: 32px; height: 32px; } .brand-words .brand-name { font-size: 1.08rem; } .brand-sub { font-size: .56rem; letter-spacing: .18em; } }
+
+/* ---------- PT / EN switch ---------- */
+.lang { display: inline-flex; padding: 3px; border-radius: 999px; border: 1.5px solid var(--line); gap: 2px; }
+.lang button { min-width: 38px; min-height: 30px; border: 0; border-radius: 999px; background: transparent; color: var(--bone-mute); font: 600 .78rem/1 var(--body); letter-spacing: .06em; cursor: pointer; transition: background .2s, color .2s; }
+.lang button:hover { color: var(--bone); }
+.lang button[aria-pressed="true"] { background: var(--accent); color: var(--ink); }
+.nav .lang { margin-left: 4px; }
+.sheet .lang { align-self: flex-start; }
+.sheet .lang button { min-width: 52px; min-height: 40px; font-size: .9rem; }
+@media (max-width: 860px) { .nav .lang { display: none; } }

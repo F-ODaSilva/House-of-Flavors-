@@ -1,6 +1,6 @@
 /* About: pinned timeline, count-up stats, join forms with validation */
 document.addEventListener("DOMContentLoaded", () => {
-  const { $, $$ } = HOF;
+  const { $, $$, t } = HOF;
 
   /* timeline */
   const tl = $(".timeline");
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!en.isIntersecting) return; io.unobserve(en.target);
     const el = en.target, to = Number(el.dataset.count); if (HOF.reduceMotion) return;
     const t0 = performance.now();
-    const f = (t) => { const k = Math.min(1, (t - t0) / 1200); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))).toLocaleString("en"); if (k < 1) requestAnimationFrame(f); };
+    const f = (t) => { const k = Math.min(1, (t - t0) / 1200); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))).toLocaleString(HOF.locale); if (k < 1) requestAnimationFrame(f); };
     requestAnimationFrame(f);
   }), { threshold: .6 });
   $$("[data-count]").forEach((el) => io.observe(el));
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#tab-comm").setAttribute("aria-selected", String(m === "comm"));
     $$(".team-only", form).forEach((el) => (el.hidden = m !== "team"));
     $("#jRole").required = m === "team";
-    $("#joinSubmit").textContent = m === "team" ? "Send application" : "Join the community";
+    $("#joinSubmit").textContent = m === "team" ? t("Enviar candidatura", "Send application") : t("Entrar na comunidade", "Join the community");
     $("#joinImg").src = HOF.img(m === "team" ? "about2" : "comunity");
     form.hidden = false; done.hidden = true;
   };
@@ -50,12 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#tab-comm").addEventListener("click", () => setMode("comm"));
 
   const rules = {
-    jFirst: (v) => v.trim().length >= 2 || "Enter your first name.",
-    jLast: (v) => v.trim().length >= 2 || "Enter your last name.",
-    jEmail: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) || "Enter an email like name@example.com.",
-    jPhone: (v) => !v || /^\+?[\d\s()-]{8,}$/.test(v) || "Use digits only, with the country code, e.g. +258 84 000 0000.",
-    jHouse: (v) => !!v || "Choose the house nearest to you.",
-    jRole: (v) => mode !== "team" || !!v || "Choose the role you're applying for."
+    jFirst: (v) => v.trim().length >= 2 || t("Escreva o seu nome.", "Enter your first name."),
+    jLast: (v) => v.trim().length >= 2 || t("Escreva o seu apelido.", "Enter your last name."),
+    jEmail: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) || t("Escreva um email como nome@exemplo.com.", "Enter an email like name@example.com."),
+    jPhone: (v) => !v || /^\+?[\d\s()-]{8,}$/.test(v) || t("Use só números, com o indicativo, ex.: +258 84 000 0000.", "Use digits only, with the country code, e.g. +258 84 000 0000."),
+    jHouse: (v) => !!v || t("Escolha a casa mais próxima.", "Choose the house nearest to you."),
+    jRole: (v) => mode !== "team" || !!v || t("Escolha a função a que se candidata.", "Choose the role you're applying for.")
   };
   const check = (id) => {
     const el = $("#" + id), r = rules[id](el.value), f = el.closest(".field");
@@ -67,10 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const ok = Object.keys(rules).map(check).every(Boolean);
     if (!ok) { form.querySelector(".invalid input, .invalid select")?.focus(); return; }
     const name = $("#jFirst").value.trim(), house = $("#jHouse").value;
-    $("#joinDoneTitle").textContent = mode === "team" ? "Application sent" : "You're on the list";
+    $("#joinDoneTitle").textContent = mode === "team" ? t("Candidatura enviada", "Application sent") : t("Já está na lista", "You're on the list");
     $("#joinDoneText").textContent = mode === "team"
-      ? `Thanks, ${name}. The ${house} house manager reads every application and replies within five working days. Your reference is ${HOF.ref("JOB")}.`
-      : `Welcome, ${name}. You'll hear about ${house} events a week before tickets go on sale.`;
+      ? t(`Obrigado, ${name}. O gerente da casa de ${house} lê todas as candidaturas e responde em cinco dias úteis. A sua referência é ${HOF.ref("JOB")}.`, `Thanks, ${name}. The ${house} house manager reads every application and replies within five working days. Your reference is ${HOF.ref("JOB")}.`)
+      : t(`Bem-vindo, ${name}. Vai saber dos eventos de ${house} uma semana antes de os bilhetes saírem.`, `Welcome, ${name}. You'll hear about ${house} events a week before tickets go on sale.`);
     form.reset(); form.hidden = true; done.hidden = false;
   });
   $("#joinAgain").addEventListener("click", () => setMode(mode));

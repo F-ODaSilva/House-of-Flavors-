@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Menu · House of Flavors</title>
+  <title data-en="Menu · House of Flavors">Menu · House of Flavors</title>
   <meta name="claude:viewport-fit-sides" content="cover">
-  <meta name="description" content="The full House of Flavors menu: burgers, chicken, pizza, coal-grill, seafood, sushi and the bar. Order for delivery or collection.">
+  <meta name="description" content="O menu completo do House of Flavors: hambúrgueres, frango, pizza, grelha a carvão, marisco, sushi e bar. Peça para entrega ou recolha." data-en-content="The full House of Flavors menu: burgers, chicken, pizza, coal-grill, seafood, sushi and the bar. Order for delivery or collection.">
   <meta name="theme-color" content="#030c0e">
-  <link rel="icon" href="assets/img/logo-hof.webp">
+  <link rel="icon" href="assets/img/logo-hof.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto+Slab:wght@400;500;600;700&display=swap">
@@ -20,18 +20,18 @@
   <section class="menu-hero grain" data-scene="pass">
     <div class="wrap">
       <div class="stack">
-        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Menu</span></nav>
-        <h1>Today’s menu</h1>
-        <p class="lede">Seventy dishes from seven stations. Everything can be delivered, collected or eaten here. Prices exclude 15% VAT.</p>
+        <nav class="crumbs" aria-label="Navegação estrutural" data-en-aria-label="Breadcrumb"><a href="index.html" data-en="Home">Início</a><span aria-hidden="true">/</span><span>Menu</span></nav>
+        <h1 data-en="Today’s menu">O menu de hoje</h1>
+        <p class="lede" data-en="Seventy dishes from seven stations. Everything can be delivered, collected or eaten here. Prices exclude 15% VAT.">Setenta pratos de sete estações. Tudo pode ser entregue, recolhido ou comido aqui. Os preços não incluem IVA de 15%.</p>
         <div class="row">
-          <a class="btn" href="#signature">Start with the signatures</a>
-          <button class="btn ghost" data-open-cart>View your order</button>
+          <a class="btn" href="#signature" data-en="Start with the signatures">Comece pelos pratos de assinatura</a>
+          <button class="btn ghost" data-open-cart data-en="View your order">Ver o seu pedido</button>
         </div>
       </div>
       <div class="plate-stage" aria-live="polite">
         <div class="ring" aria-hidden="true"></div>
         <div class="disc" aria-hidden="true" style="transform: rotate(calc(var(--p, 0) * 140deg))"></div>
-        <img id="plateImg" src="assets/img/burguernobg-1.webp" alt="Texas Double Decker BBQ burger" width="408" height="612">
+        <img id="plateImg" src="assets/img/burguernobg-1.webp" alt="Hambúrguer Texas Double Decker BBQ" data-en-alt="Texas Double Decker BBQ burger" width="408" height="612">
         <a class="plate-label" id="plateLabel" href="dish.html#texas-double-decker">Texas Double Decker · R105</a>
       </div>
     </div>
@@ -39,11 +39,11 @@
 
   <div class="menu-bar paper">
     <div class="wrap">
-      <div class="chips" id="catChips" role="navigation" aria-label="Menu sections"></div>
+      <div class="chips" id="catChips" role="navigation" aria-label="Secções do menu" data-en-aria-label="Menu sections"></div>
       <label class="menu-search">
-        <span class="sr-only">Search the menu</span>
+        <span class="sr-only" data-en="Search the menu">Pesquisar no menu</span>
         <svg aria-hidden="true"><use href="assets/icons.svg#search"/></svg>
-        <input class="input" id="menuSearch" type="search" placeholder="Search dishes or ingredients" autocomplete="off">
+        <input class="input" id="menuSearch" type="search" placeholder="Pesquisar pratos ou ingredientes" data-en-placeholder="Search dishes or ingredients" autocomplete="off">
       </label>
     </div>
   </div>
@@ -51,26 +51,26 @@
   <section class="paper band tight" aria-label="Menu">
     <div class="wrap">
       <div class="menu-filters">
-        <div class="row" role="group" aria-label="Filters">
-          <label class="toggle"><input type="checkbox" id="fSpicy" value="spicy"> Spicy</label>
-          <label class="toggle"><input type="checkbox" id="fVeg" value="veg"> Vegetarian</label>
-          <label class="toggle"><input type="checkbox" id="fShare" value="share"> To share</label>
-          <label class="toggle"><input type="checkbox" id="fCheap"> Under R80</label>
+        <div class="row" role="group" aria-label="Filtros" data-en-aria-label="Filters">
+          <label class="toggle"><input type="checkbox" id="fSpicy" value="spicy"> <span data-en="Spicy">Picante</span></label>
+          <label class="toggle"><input type="checkbox" id="fVeg" value="veg"> <span data-en="Vegetarian">Vegetariano</span></label>
+          <label class="toggle"><input type="checkbox" id="fShare" value="share"> <span data-en="To share">Para partilhar</span></label>
+          <label class="toggle"><input type="checkbox" id="fCheap"> <span data-en="Under R80">Até R80</span></label>
         </div>
-        <label class="row" for="sortSel"><span class="muted" style="font-size:.9rem">Sort</span>
+        <label class="row" for="sortSel"><span class="muted" style="font-size:.9rem" data-en="Sort">Ordenar</span>
           <select class="select" id="sortSel" style="min-height:42px;width:auto;border-radius:999px;padding:0 14px">
-            <option value="menu">Menu order</option>
-            <option value="price-asc">Price, low to high</option>
-            <option value="price-desc">Price, high to low</option>
-            <option value="rate">Most liked</option>
+            <option value="menu" data-en="Menu order">Ordem do menu</option>
+            <option value="price-asc" data-en="Price, low to high">Preço, do mais baixo</option>
+            <option value="price-desc" data-en="Price, high to low">Preço, do mais alto</option>
+            <option value="rate" data-en="Most liked">Mais apreciados</option>
           </select>
         </label>
       </div>
       <div id="menuSections"></div>
       <div class="no-results" id="noResults" hidden>
-        <h2>No dishes match that.</h2>
-        <p class="muted">Try another word, or clear the filters to see the whole menu.</p>
-        <button class="btn dark" id="clearFilters">Clear search and filters</button>
+        <h2 data-en="No dishes match that.">Nenhum prato corresponde.</h2>
+        <p class="muted" data-en="Try another word, or clear the filters to see the whole menu.">Experimente outra palavra ou limpe os filtros para ver o menu todo.</p>
+        <button class="btn dark" id="clearFilters" data-en="Clear search and filters">Limpar pesquisa e filtros</button>
       </div>
     </div>
   </section>
