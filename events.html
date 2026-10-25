@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-en="Events · House of Flavors">Eventos · House of Flavors</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="Concertos, festivais, provas e feriados no House of Flavors. Compre bilhetes ou reserve um lugar grátis." data-en-content="Concerts, festivals, tastings and holidays at House of Flavors. Buy tickets or save a free spot.">
+  <meta name="theme-color" content="#030c0e">
+  <link rel="icon" href="assets/img/logo-hof.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto+Slab:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/system.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="events" data-nav-over>
+
+<main>
+  <section class="intro grain">
+    <div class="bg"><img src="assets/img/eventfest.webp" alt="" width="1600" height="1067"></div>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Navegação estrutural" data-en-aria-label="Breadcrumb"><a href="index.html" data-en="Home">Início</a><span aria-hidden="true">/</span><span data-en="Events">Eventos</span></nav>
+      <h1 data-en="Events">Eventos</h1>
+      <p class="lede" data-en="Concerts, festivals, tastings and every holiday worth a long lunch. Tickets include food unless the listing says otherwise.">Concertos, festivais, provas e todos os feriados que merecem um almoço longo. Os bilhetes incluem comida, salvo indicação em contrário.</p>
+    </div>
+  </section>
+
+  <section class="band tight events-band">
+    <div class="wrap">
+      <article class="feature-event" id="featured"></article>
+      <div class="events-bar">
+        <div class="chips" role="group" aria-label="Filtrar eventos" data-en-aria-label="Filter events" id="evChips">
+          <button class="chip" aria-pressed="true" data-f="all" data-en="All">Todos</button>
+          <button class="chip" aria-pressed="false" data-f="upcoming" data-en="Upcoming">Próximos</button>
+          <button class="chip" aria-pressed="false" data-f="new" data-en="New">Novos</button>
+          <button class="chip" aria-pressed="false" data-f="seasonal" data-en="Seasonal">Sazonais</button>
+          <button class="chip" aria-pressed="false" data-f="past" data-en="Past">Passados</button>
+        </div>
+        <p class="muted" id="evCount" aria-live="polite"></p>
+      </div>
+      <div class="event-grid" id="evGrid"></div>
+    </div>
+  </section>
+</main>
+
+<dialog class="modal paper" id="evModal" aria-labelledby="mTitle">
+  <button class="icon-btn m-close" data-close aria-label="Fechar" data-en-aria-label="Close"><svg aria-hidden="true"><use href="assets/icons.svg#x"/></svg></button>
+  <img class="m-img" id="mImg" alt="" width="1600" height="900">
+  <div class="m-body">
+    <div class="stack" style="gap:8px">
+      <p class="kicker" id="mWhen"></p>
+      <h2 id="mTitle"></h2>
+      <p class="muted" id="mDesc"></p>
+    </div>
+    <div id="mBuy"></div>
+  </div>
+</dialog>
+
+<footer data-shell></footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/events.js"></script>
+</body>
+</html>

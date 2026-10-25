@@ -1,52 +1,30 @@
-# HyperionDev Full Stack Web Development Bootcamp - Level 1 - Task 15 - Compulsory Task II
+# House of Flavors — v3 redesign
 
-## Description 
-This task was my last task of the Web Dev Essentials, where I have to create a ecommerce website using everything that I learned in this first module.
-It will be of great use so I can show my skills in my portofolio later on.  
+A restaurant site and online store in plain **HTML, CSS and JavaScript** (no Bootstrap, no jQuery). The redesign keeps the original identity — teal-black rooms, neon green, the green→magenta gradient, Eagle Lake headings and the HOF chef-hat logo — and rebuilds every page and feature.
 
-## Table of Contents 
-* [Instructions](#instructions)
-* [Technologies](#technologies)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
+## Pages
+| Page | What it does |
+|---|---|
+| `index.html` | Video hero, pinned **story-scroll** (Fire → Hands → Plate → Table), horizontal "seven kitchens" scroll, signature dishes with hover preview, first-order coupon, rooms, reviews |
+| `menu.html` | 70 dishes in 8 sections, sticky category bar that follows the scroll, search, filters (spicy, veg, to share, under R80), sort |
+| `dish.html#<id>` | Product page: quantity, add to order, pairings, reviews, more from the station |
+| `about.html` | Pinned timeline story-scroll (2013 → 2026), houses, chefs, values, job / community forms with validation |
+| `events.html` | Next event, filters (upcoming, new, seasonal, past), ticket dialog that adds tickets to the order, free RSVP |
+| `cart.html` | Checkout: delivery or collection, delivery speeds, coupons (`YLJF37S05`, `HOUSE10`, `FREEDEL`), 15% VAT, order reference. `#book` tab: table booking with live time slots |
 
-## Instructions
-These where the instructions I was given to guide me in through this task:
+The cart lives in `localStorage`, so it follows the visitor across pages.
 
-**Follow these steps:**
+## Media
+All photos are WebP in two sizes (`name.webp` 1600 px, `name-sm.webp` 720 px) used through `srcset`. The hero video is WebM (VP9) with an H.264 MP4 fallback for older Safari, plus a WebP poster.
 
-1. Within the entirety of your site, you should have the following Javascript functionality:
-  * Create a functional shopping cart for your online store.
-  * Allow a quick "add to cart" from the catalogue page.
-  * Each product's page must also have the option to "add to cart"
-  * When an Item is added, an alert should tell the user what the current total is.
-  * Create a new html page for the cart section which allows the user to see what is in the cart, each item's price, and the totla cost(remember to add VAT!)
-  *Create a form which allows for "discount coupons".
-  *Create forms to allow a user to select "collection" or "delivery".
-  *Create forms for different delivery options.
-  *Your total should change based on what delivery option is chosen and whether a discount coupon is applied.
-  *Create a "confirm order" button wich alerts the user that their order was succesful and generates the, a reference number (keyword:generate)
-2. Whithin the entirety of your site, you should have at least the following Jquery functionality:
-  * A function which contains hiding/showing.
-  * A drop-down menu.
-  * Animation effects
-  * A function with chained effects.
+## Structure
+```
+assets/css/system.css   tokens and components (the design system)
+assets/css/pages.css    page compositions
+assets/js/data.js       menu, events, coupons, delivery options
+assets/js/core.js       shell (nav, cart drawer, footer), cart store, scroll scenes
+assets/js/*.js          one script per page
+```
+Open `index.html` in a browser, or serve the folder with any static server.
 
-### Technologies 
-This project uses:
-* HTML 5
-* CSS 3
-* Bootstrap
-* JQuery
-* Javascript ECMAScript 2021
-
-## Installation 
-ThiS project requires no special installation, as it is simply a webpage that used, HTML, CSS, Bootstrap, Javascript and JQuery. Open the homePage.html file in your browser.
-
-## Usage 
-This is a five page website with various buttons, forms, modals and animations. Simply click on the buttons and move your mouse over the various elements on the page to see what happens.
-
-
-## Credits 
-This project was created by Francisco Lourenco Do O Da Silva as a part of a task for HyperionDev Full Stack Web Development Bootcamp [GitHub profile](https://github.com/F-ODaSilva)
+Designed and built by Francisco Lourenço do Ó da Silva · OS.Design

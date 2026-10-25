@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-en="Order &amp; book · House of Flavors">Pedir e reservar · House of Flavors</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="Finalize o seu pedido no House of Flavors para entrega ou levantamento, ou reserve uma mesa." data-en-content="Check out your House of Flavors order for delivery or collection, or book a table.">
+  <meta name="theme-color" content="#030c0e">
+  <link rel="icon" href="assets/img/logo-hof.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto+Slab:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/system.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="book">
+
+<main class="checkout">
+  <div class="wrap">
+    <nav class="tabs" role="tablist" aria-label="Pedir ou reservar" data-en-aria-label="Order or book">
+      <a href="#order" role="tab" id="tabOrder" aria-selected="true" data-en="Your order">O seu pedido</a>
+      <a href="#book" role="tab" id="tabBook" aria-selected="false" data-en="Book a table">Reservar mesa</a>
+    </nav>
+
+    <!-- ORDER -->
+    <section id="orderPanel" role="tabpanel" aria-labelledby="tabOrder">
+      <div class="stack" style="margin-bottom:28px">
+        <h1 data-en="Checkout">Finalizar pedido</h1>
+        <p class="lede" data-en="Delivery across Maputo and Matola, or collect from the Marginal house.">Entregamos em Maputo e na Matola, ou levante na casa da Marginal.</p>
+      </div>
+      <div class="co-grid" id="coGrid">
+        <form class="stack" id="coForm" novalidate style="gap:20px">
+          <div class="paper co-card">
+            <div class="row" style="justify-content:space-between"><h2 data-en="Your order">O seu pedido</h2><span class="muted num" id="itemCount"></span></div>
+            <div class="lines" id="coLines"></div>
+            <div class="saved" id="savedBox" hidden></div>
+          </div>
+
+          <div class="paper co-card" id="fulfilCard">
+            <h2 data-en="How do you want it?">Como prefere receber?</h2>
+            <div class="mode-switch" role="radiogroup" aria-label="Entrega ou levantamento" data-en-aria-label="Delivery or collection">
+              <label><input type="radio" name="mode" value="delivery" checked><svg aria-hidden="true"><use href="assets/icons.svg#truck"/></svg><span data-en="Delivery">Entrega</span></label>
+              <label><input type="radio" name="mode" value="collect"><svg aria-hidden="true"><use href="assets/icons.svg#store"/></svg><span data-en="Collection">Levantamento</span></label>
+            </div>
+            <div id="deliveryBox" class="stack">
+              <div class="options" role="radiogroup" aria-label="Rapidez da entrega" data-en-aria-label="Delivery speed">
+                <label class="option"><input type="radio" name="speed" value="standard" checked><span><span class="o-t" data-en="Standard">Normal</span><br><span class="o-s">45–60 min</span></span><span class="num">R35</span></label>
+                <label class="option"><input type="radio" name="speed" value="express"><span><span class="o-t" data-en="Express">Expresso</span><br><span class="o-s" data-en="25–35 min, a dedicated rider">25–35 min, estafeta dedicado</span></span><span class="num">R60</span></label>
+                <label class="option"><input type="radio" name="speed" value="scheduled"><span><span class="o-t" data-en="Scheduled">Agendada</span><br><span class="o-s" data-en="Pick a time today">Escolha uma hora hoje</span></span><span class="num">R45</span></label>
+              </div>
+              <div class="field" id="schedField" hidden><label for="schedTime" data-en="Delivery time">Hora de entrega</label><select class="select" id="schedTime"></select></div>
+              <div class="field"><label for="addr" data-en="Street address">Morada</label><input class="input" id="addr" autocomplete="street-address" placeholder="Av. Julius Nyerere 1240, 3.º B" data-en-placeholder="Av. Julius Nyerere 1240, flat 3B"><span class="err"></span></div>
+              <div class="grid-2">
+                <div class="field"><label for="suburb" data-en="Neighbourhood">Bairro</label>
+                  <select class="select" id="suburb"><option value="" data-en="Choose one">Escolha um</option><option>Sommerschield</option><option>Polana Cimento</option><option>Coop</option><option>Malhangalene</option><option>Alto Maé</option><option>Costa do Sol</option><option>Matola Rio</option><option>Matola Cidade</option></select><span class="err"></span></div>
+                <div class="field"><label for="dNote" data-en="Note for the rider">Nota para o estafeta</label><input class="input" id="dNote" placeholder="Código do portão, ponto de referência" data-en-placeholder="Gate code, landmark"></div>
+              </div>
+            </div>
+            <div id="collectBox" class="stack" hidden>
+              <div class="option" style="cursor:default"><svg aria-hidden="true" style="width:22px;height:22px"><use href="assets/icons.svg#pin"/></svg><span><span class="o-t" data-en="Marginal house">Casa da Marginal</span><br><span class="o-s" data-en="Av. Marginal 4120 · ready in about 25 minutes">Av. Marginal 4120 · pronto em cerca de 25 minutos</span></span><span class="num" data-en="Free">Grátis</span></div>
+              <div class="field"><label for="pickTime" data-en="Collection time">Hora de levantamento</label><select class="select" id="pickTime"></select></div>
+            </div>
+          </div>
+
+          <div class="paper co-card">
+            <h2 data-en="Your details">Os seus dados</h2>
+            <div class="grid-2">
+              <div class="field"><label for="cName" data-en="Name">Nome</label><input class="input" id="cName" autocomplete="name"><span class="err"></span></div>
+              <div class="field"><label for="cPhone" data-en="Mobile">Telemóvel</label><input class="input" id="cPhone" type="tel" autocomplete="tel" placeholder="+258 84 000 0000"><span class="err"></span></div>
+            </div>
+            <fieldset class="field" style="border:0;padding:0;margin:0">
+              <legend style="font-size:var(--fs-small);font-weight:600;margin-bottom:6px" data-en="Pay with">Pagar com</legend>
+              <div class="options">
+                <label class="option"><input type="radio" name="pay" value="card" checked><span class="o-t" data-en="Card on delivery">Cartão na entrega</span><span></span></label>
+                <label class="option"><input type="radio" name="pay" value="mpesa"><span class="o-t" data-en="M-Pesa on delivery">M-Pesa na entrega</span><span></span></label>
+                <label class="option"><input type="radio" name="pay" value="cash"><span class="o-t" data-en="Cash">Dinheiro</span><span></span></label>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+
+        <aside class="paper co-card co-summary" aria-label="Resumo do pedido" data-en-aria-label="Order summary">
+          <h2 data-en="Summary">Resumo</h2>
+          <div class="stack" style="gap:6px" id="sumRows"></div>
+          <div class="stack" style="gap:8px">
+            <label for="couponIn" style="font-size:var(--fs-small);font-weight:600" data-en="Discount code">Código de desconto</label>
+            <div class="coupon-form"><input class="input" id="couponIn" placeholder="YLJF37S05" autocomplete="off"><button class="btn ghost" id="couponBtn" type="button" data-en="Apply">Aplicar</button></div>
+            <span class="coupon-msg" id="couponMsg" aria-live="polite"></span>
+          </div>
+          <button class="btn dark block" id="confirmBtn" type="submit" form="coForm" data-en="Confirm order">Confirmar pedido</button>
+          <p class="muted" style="font-size:.84rem" data-en="You pay when your food arrives. We&#x27;ll text the rider&#x27;s details to your mobile.">Paga quando a comida chegar. Enviamos os dados do estafeta por SMS.</p>
+        </aside>
+      </div>
+
+      <div class="paper co-card done-card" id="doneCard" hidden style="max-width:640px">
+        <div class="success" style="background:transparent;padding:0">
+          <div class="tick"><svg aria-hidden="true"><use href="assets/icons.svg#check"/></svg></div>
+          <h2 id="doneTitle" data-en="Order confirmed">Pedido confirmado</h2>
+          <p class="muted" id="doneText"></p>
+        </div>
+        <div class="receipt" id="receipt"></div>
+        <div class="progress-steps" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+        <div class="row"><a class="btn dark" href="menu.html" data-en="Back to the menu">Voltar ao menu</a><a class="btn ghost" href="#book" data-en="Book a table too">Reservar também uma mesa</a></div>
+      </div>
+    </section>
+
+    <!-- BOOK -->
+    <section id="bookPanel" role="tabpanel" aria-labelledby="tabBook" hidden>
+      <div class="book-grid">
+        <figure class="book-photo">
+          <img src="assets/img/eventwed-sm.webp" alt="Uma mesa comprida posta com flores e copos" data-en-alt="A long table set with flowers and glasses" width="720" height="480">
+          <figcaption data-en="Tables are held for 15 minutes. For 9 or more guests, call +258 84 300 4120 and we&#x27;ll set up the long table.">Guardamos a mesa 15 minutos. Para 9 ou mais pessoas, ligue +258 84 300 4120 e preparamos a mesa comprida.</figcaption>
+        </figure>
+        <div class="paper co-card">
+          <div class="stack" style="gap:8px">
+            <h1 style="font-size:var(--fs-2)" data-en="Book a table">Reservar mesa</h1>
+            <p class="muted" data-en="Maputo house, Av. Marginal 4120.">Casa de Maputo, Av. Marginal 4120.</p>
+          </div>
+          <form class="stack" id="bookForm" novalidate style="gap:20px">
+            <div class="grid-2">
+              <div class="field"><label for="bName" data-en="Name">Nome</label><input class="input" id="bName" autocomplete="name"><span class="err"></span></div>
+              <div class="field"><label for="bPhone" data-en="Mobile">Telemóvel</label><input class="input" id="bPhone" type="tel" autocomplete="tel" placeholder="+258 84 000 0000"><span class="err"></span></div>
+            </div>
+            <fieldset class="field" style="border:0;padding:0;margin:0"><legend style="font-size:var(--fs-small);font-weight:600;margin-bottom:8px" data-en="Guests">Pessoas</legend>
+              <div class="party" id="party"></div></fieldset>
+            <div class="field"><label for="bDate" data-en="Date">Data</label><input class="input" id="bDate" type="date"><span class="err"></span></div>
+            <fieldset class="field" style="border:0;padding:0;margin:0"><legend style="font-size:var(--fs-small);font-weight:600;margin-bottom:8px" data-en="Time">Hora</legend>
+              <div class="slots" id="slots"></div><span class="err" id="slotErr"></span></fieldset>
+            <fieldset class="field" style="border:0;padding:0;margin:0"><legend style="font-size:var(--fs-small);font-weight:600;margin-bottom:8px" data-en="What&#x27;s the occasion?">Qual é a ocasião?</legend>
+              <div class="occasions">
+                <label><input type="radio" name="occ" value="Just dinner" checked><span data-en="Just dinner">Só jantar</span></label>
+                <label><input type="radio" name="occ" value="Romantic"><span data-en="Romantic">Romântico</span></label>
+                <label><input type="radio" name="occ" value="Birthday"><span data-en="Birthday">Aniversário</span></label>
+                <label><input type="radio" name="occ" value="Business meeting"><span data-en="Business meeting">Reunião de negócios</span></label>
+                <label><input type="radio" name="occ" value="Gathering"><span data-en="Gathering">Encontro</span></label>
+              </div></fieldset>
+            <div class="field"><label for="bNote" data-en="Anything we should know?">Algo que devamos saber?</label><textarea class="textarea" id="bNote" placeholder="Alergias, cadeira de bebé, um canto sossegado" data-en-placeholder="Allergies, a high chair, a quiet corner"></textarea></div>
+            <button class="btn dark block" type="submit" data-en="Book the table">Reservar a mesa</button>
+          </form>
+          <div id="bookDone" class="done-card" hidden>
+            <div class="success" style="background:transparent;padding:0">
+              <div class="tick"><svg aria-hidden="true"><use href="assets/icons.svg#check"/></svg></div>
+              <h2 data-en="Table booked">Mesa reservada</h2>
+            </div>
+            <div class="receipt" id="bookReceipt"></div>
+            <button class="btn ghost" id="bookAgain" style="justify-self:start" data-en="Make another booking">Fazer outra reserva</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer data-shell></footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/cart.js"></script>
+</body>
+</html>
